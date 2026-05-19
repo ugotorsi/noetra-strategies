@@ -27,6 +27,12 @@ const initialFormData: InquiryFormData = {
 
 type FormState = "idle" | "loading" | "success" | "error";
 
+type ContactApiResponse = {
+  error?: string;
+  requestId?: string;
+  success?: boolean;
+};
+
 type ContactSectionProps = {
   locale: Locale;
 };
@@ -62,31 +68,86 @@ export function ContactSection({ locale }: ContactSectionProps) {
     setFormState("loading");
     setFeedback("");
 
+    const endpoint = "/api/contact";
+    const startedAt = Date.now();
+    let requestId: string | undefined;
+
+    console.info("[contact-form] submit:start", {
+      endpoint,
+      locale,
+      hasCompany: Boolean(formData.company.trim()),
+      messageLength: formData.message.length,
+      nameLength: formData.name.length,
+    });
+
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
         },
+        cache: "no-store",
+        credentials: "same-origin",
         body: JSON.stringify(formData),
       });
 
-      const payload = (await response.json()) as
-        | { error?: string; success?: boolean }
-        | undefined;
+      const rawResponse = await response.text();
+      const contentType = response.headers.get("content-type") ?? "unknown";
+
+      let payload: ContactApiResponse | undefined;
+
+      if (rawResponse.length > 0) {
+        try {
+          payload = JSON.parse(rawResponse) as ContactApiResponse;
+        } catch (parseError) {
+          console.error("[contact-form] submit:parse-error", {
+            contentType,
+            parseError,
+            rawPreview: rawResponse.slice(0, 200),
+          });
+        }
+      }
+
+      requestId = payload?.requestId;
+
+      console.info("[contact-form] submit:response", {
+        contentType,
+        durationMs: Date.now() - startedAt,
+        ok: response.ok,
+        requestId,
+        status: response.status,
+      });
 
       if (!response.ok) {
-        throw new Error(payload?.error || messages.form.error);
+        throw new Error(payload?.error || `Request failed with status ${response.status}`);
+      }
+
+      if (!payload?.success) {
+        throw new Error(messages.form.error);
       }
 
       setFormState("success");
       setFeedback(messages.form.success);
       setFormData(initialFormData);
+
+      console.info("[contact-form] submit:success", {
+        durationMs: Date.now() - startedAt,
+        requestId,
+      });
     } catch (error) {
       const message = error instanceof Error ? error.message : messages.form.error;
+      const feedbackMessage = requestId ? `${message} (Ref: ${requestId})` : message;
+
+      console.error("[contact-form] submit:error", {
+        durationMs: Date.now() - startedAt,
+        endpoint,
+        error,
+        requestId,
+      });
 
       setFormState("error");
-      setFeedback(message);
+      setFeedback(feedbackMessage);
     }
   };
 

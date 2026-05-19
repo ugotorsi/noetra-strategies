@@ -1,8 +1,18 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { z } from "zod";
 
 import { siteConfig } from "@/lib/site";
+
+export const runtime = "nodejs";
+
+const LOG_NAMESPACE = "[contact-api]";
+
+type ContactApiResponse = {
+  error?: string;
+  requestId: string;
+  success?: boolean;
+};
 
 const contactSchema = z.object({
   name: z.string().trim().min(2).max(120),
@@ -60,13 +70,45 @@ function renderEmailTemplate(input: z.infer<typeof contactSchema>) {
   `;
 }
 
-export async function POST(request: Request) {
+function maskEmail(value: string) {
+  const [localPart, domain] = value.split("@");
+
+  if (!localPart || !domain) {
+    return "invalid-email";
+  }
+
+  return `${localPart.slice(0, 2)}***@${domain}`;
+}
+
+function serializeError(error: unknown) {
+  if (error instanceof Error) {
+    return {
+      message: error.message,
+      name: error.name,
+      stack: error.stack,
+    };
+  }
+
+  return { value: String(error) };
+}
+
+export async function POST(request: NextRequest) {
+  const requestId = crypto.randomUUID();
+  const logPrefix = `${LOG_NAMESPACE}[${requestId}]`;
   const resendApiKey = process.env.RESEND_API_KEY;
   const destinationEmail = process.env.CONTACT_EMAIL || siteConfig.emails.advisory;
+  const senderEmail = process.env.RESEND_FROM_EMAIL || `${siteConfig.name} <onboarding@resend.dev>`;
+
+  console.info(`${logPrefix} Incoming request`, {
+    method: request.method,
+    path: request.nextUrl.pathname,
+  });
 
   if (!resendApiKey) {
+    console.error(`${logPrefix} Missing RESEND_API_KEY`);
+
     return NextResponse.json(
-      { error: "Email service is not configured." },
+      { error: "Email service is not configured.", requestId } satisfies ContactApiResponse,
       { status: 500 },
     );
   }
@@ -75,17 +117,37 @@ export async function POST(request: Request) {
 
   try {
     payload = await request.json();
-  } catch {
-    return NextResponse.json({ error: "Invalid request payload." }, { status: 400 });
+  } catch (error) {
+    console.error(`${logPrefix} Invalid JSON payload`, serializeError(error));
+
+    return NextResponse.json(
+      { error: "Invalid request payload.", requestId } satisfies ContactApiResponse,
+      { status: 400 },
+    );
   }
+
+  const payloadRecord =
+    typeof payload === "object" && payload !== null
+      ? (payload as Record<string, unknown>)
+      : undefined;
+
+  console.info(`${logPrefix} Payload received`, {
+    hasCompany: Boolean(payloadRecord?.company),
+    hasEmail: typeof payloadRecord?.email === "string",
+    hasName: typeof payloadRecord?.name === "string",
+    messageLength:
+      typeof payloadRecord?.message === "string" ? payloadRecord.message.length : 0,
+  });
 
   const parsed = contactSchema.safeParse(payload);
 
   if (!parsed.success) {
+    console.warn(`${logPrefix} Validation failed`, parsed.error.flatten().fieldErrors);
+
     return NextResponse.json(
       {
         error: "Validation failed.",
-        details: parsed.error.flatten().fieldErrors,
+        requestId,
       },
       { status: 400 },
     );
@@ -94,21 +156,45 @@ export async function POST(request: Request) {
   const resend = new Resend(resendApiKey);
   const { name, email, company, message } = parsed.data;
 
-  const { error } = await resend.emails.send({
-    from: `${siteConfig.name} <onboarding@resend.dev>`,
-    to: [destinationEmail],
-    replyTo: email,
-    subject: `Strategic Consultation Request — ${name}`,
-    html: renderEmailTemplate({ name, email, company, message }),
-    text: `New advisory request\n\nName: ${name}\nEmail: ${email}\nOrganization: ${company || "Not provided"}\n\nMessage:\n${message}`,
+  console.info(`${logPrefix} Dispatching email`, {
+    from: senderEmail,
+    hasCompany: Boolean(company),
+    messageLength: message.length,
+    replyTo: maskEmail(email),
+    to: maskEmail(destinationEmail),
   });
 
-  if (error) {
+  try {
+    const { data, error } = await resend.emails.send({
+      from: senderEmail,
+      to: [destinationEmail],
+      replyTo: email,
+      subject: `Strategic Consultation Request - ${name}`,
+      html: renderEmailTemplate({ name, email, company, message }),
+      text: `New advisory request\n\nName: ${name}\nEmail: ${email}\nOrganization: ${company || "Not provided"}\n\nMessage:\n${message}`,
+    });
+
+    if (error) {
+      console.error(`${logPrefix} Resend rejected request`, error);
+
+      return NextResponse.json(
+        { error: "Unable to send inquiry at this time.", requestId } satisfies ContactApiResponse,
+        { status: 502 },
+      );
+    }
+
+    console.info(`${logPrefix} Email sent`, {
+      resendId: data?.id ?? null,
+      to: maskEmail(destinationEmail),
+    });
+
+    return NextResponse.json({ requestId, success: true } satisfies ContactApiResponse);
+  } catch (error) {
+    console.error(`${logPrefix} Resend runtime error`, serializeError(error));
+
     return NextResponse.json(
-      { error: "Unable to send inquiry at this time." },
+      { error: "Unable to send inquiry at this time.", requestId } satisfies ContactApiResponse,
       { status: 502 },
     );
   }
-
-  return NextResponse.json({ success: true });
 }
