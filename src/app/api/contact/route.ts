@@ -11,7 +11,10 @@ const LOG_NAMESPACE = "[contact-api]";
 type ContactApiResponse = {
   error?: string;
   requestId: string;
-  success?: boolean;
+  resendId?: string | null;
+  resendStatusCode?: number;
+  statusCode: number;
+  success: boolean;
 };
 
 type ResendErrorMeta = {
@@ -121,9 +124,8 @@ function getResendErrorMeta(error: unknown): ResendErrorMeta {
   };
 }
 
-function isSenderForbidden(error: unknown) {
-  const meta = getResendErrorMeta(error);
-  return meta.statusCode === 403;
+function buildJsonResponse(response: ContactApiResponse) {
+  return NextResponse.json(response, { status: response.statusCode });
 }
 
 export async function POST(request: NextRequest) {
@@ -131,9 +133,7 @@ export async function POST(request: NextRequest) {
   const logPrefix = `${LOG_NAMESPACE}[${requestId}]`;
   const resendApiKey = process.env.RESEND_API_KEY;
   const destinationEmail = process.env.CONTACT_EMAIL || siteConfig.emails.advisory;
-  const primarySenderEmail =
-    process.env.RESEND_FROM_EMAIL || "NOETRA STRATEGIES <noreply@noetra.it>";
-  const fallbackSenderEmail = "NOETRA STRATEGIES <onboarding@resend.dev>";
+  const senderEmail = "NOETRA STRATEGIES <advisory@noetra.it>";
 
   console.info(`${logPrefix} Incoming request`, {
     method: request.method,
@@ -143,10 +143,12 @@ export async function POST(request: NextRequest) {
   if (!resendApiKey) {
     console.error(`${logPrefix} Missing RESEND_API_KEY`);
 
-    return NextResponse.json(
-      { error: "Email service is not configured.", requestId } satisfies ContactApiResponse,
-      { status: 500 },
-    );
+    return buildJsonResponse({
+      error: "Email service is not configured.",
+      requestId,
+      statusCode: 500,
+      success: false,
+    });
   }
 
   let payload: unknown;
@@ -156,10 +158,12 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error(`${logPrefix} Invalid JSON payload`, serializeError(error));
 
-    return NextResponse.json(
-      { error: "Invalid request payload.", requestId } satisfies ContactApiResponse,
-      { status: 400 },
-    );
+    return buildJsonResponse({
+      error: "Invalid request payload.",
+      requestId,
+      statusCode: 400,
+      success: false,
+    });
   }
 
   const payloadRecord =
@@ -180,20 +184,19 @@ export async function POST(request: NextRequest) {
   if (!parsed.success) {
     console.warn(`${logPrefix} Validation failed`, parsed.error.flatten().fieldErrors);
 
-    return NextResponse.json(
-      {
-        error: "Validation failed.",
-        requestId,
-      },
-      { status: 400 },
-    );
+    return buildJsonResponse({
+      error: "Validation failed.",
+      requestId,
+      statusCode: 400,
+      success: false,
+    });
   }
 
   const resend = new Resend(resendApiKey);
   const { name, email, company, message } = parsed.data;
 
-  const buildPayload = (from: string) => ({
-    from,
+  const buildPayload = () => ({
+    from: senderEmail,
     to: [destinationEmail],
     replyTo: email,
     subject: `Strategic Consultation Request - ${name}`,
@@ -202,7 +205,7 @@ export async function POST(request: NextRequest) {
   });
 
   console.info(`${logPrefix} Dispatching email`, {
-    from: primarySenderEmail,
+    from: senderEmail,
     hasCompany: Boolean(company),
     messageLength: message.length,
     replyTo: maskEmail(email),
@@ -210,31 +213,30 @@ export async function POST(request: NextRequest) {
   });
 
   try {
-    let result = await resend.emails.send(buildPayload(primarySenderEmail));
+    const result = await resend.emails.send(buildPayload());
+    const resendErrorMeta = result.error ? getResendErrorMeta(result.error) : {};
+    const resendStatusCode = resendErrorMeta.statusCode ?? 200;
 
-    if (result.error && primarySenderEmail !== fallbackSenderEmail && isSenderForbidden(result.error)) {
-      console.warn(`${logPrefix} Primary sender rejected with 403, retrying fallback sender`, {
-        fallbackFrom: fallbackSenderEmail,
-        primaryFrom: primarySenderEmail,
-        resendError: serializeError(result.error),
-      });
-
-      result = await resend.emails.send(buildPayload(fallbackSenderEmail));
-    }
+    console.info(`${logPrefix} Resend response`, {
+      resendId: result.data?.id ?? null,
+      resendStatusCode,
+      success: !result.error,
+    });
 
     if (result.error) {
       console.error(`${logPrefix} Resend rejected request`, {
-        attemptedFrom:
-          primarySenderEmail === fallbackSenderEmail
-            ? [primarySenderEmail]
-            : [primarySenderEmail, fallbackSenderEmail],
+        resendErrorMeta,
         resendError: serializeError(result.error),
+        resendStatusCode,
       });
 
-      return NextResponse.json(
-        { error: "Unable to send inquiry at this time.", requestId } satisfies ContactApiResponse,
-        { status: 502 },
-      );
+      return buildJsonResponse({
+        error: "Unable to send inquiry at this time.",
+        requestId,
+        resendStatusCode,
+        statusCode: 502,
+        success: false,
+      });
     }
 
     console.info(`${logPrefix} Email sent`, {
@@ -242,13 +244,28 @@ export async function POST(request: NextRequest) {
       to: maskEmail(destinationEmail),
     });
 
-    return NextResponse.json({ requestId, success: true } satisfies ContactApiResponse);
+    return buildJsonResponse({
+      requestId,
+      resendId: result.data?.id ?? null,
+      resendStatusCode,
+      statusCode: 200,
+      success: true,
+    });
   } catch (error) {
-    console.error(`${logPrefix} Resend runtime error`, serializeError(error));
+    const resendErrorMeta = getResendErrorMeta(error);
 
-    return NextResponse.json(
-      { error: "Unable to send inquiry at this time.", requestId } satisfies ContactApiResponse,
-      { status: 502 },
-    );
+    console.error(`${logPrefix} Resend runtime error`, {
+      resendErrorMeta,
+      resendError: serializeError(error),
+      resendStatusCode: resendErrorMeta.statusCode,
+    });
+
+    return buildJsonResponse({
+      error: "Unable to send inquiry at this time.",
+      requestId,
+      resendStatusCode: resendErrorMeta.statusCode,
+      statusCode: 502,
+      success: false,
+    });
   }
 }

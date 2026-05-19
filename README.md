@@ -65,6 +65,14 @@ CONTACT_EMAIL=info@noetra.it
 4. Use `npm run build` as verification before promoting to production.
 5. Ensure domain-level DNS and HTTPS are configured.
 
+## DNS SPF Alignment
+
+For noetra.it email deliverability with Register mail and Amazon SES / Resend, document and use this SPF TXT value:
+
+```text
+v=spf1 include:amazonses.com include:spf.webapps.net ~all
+```
+
 ## GitHub Setup
 
 ```bash
