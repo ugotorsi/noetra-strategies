@@ -571,14 +571,31 @@
       ],
       "areaLabel": "Domain",
       "areas": [
-        "Legal",
-        "Tax",
-        "Compliance",
-        "Engineering",
-        "Technical Experts",
-        "Corporate Advisory"
-      ],
-      "areaDescription": "Institutional-level coordination standards for complex strategic and procedural initiatives."
+        {
+          "title": "Legal",
+          "description": "Multidisciplinary strategic support for high-complexity litigation, regulatory and negotiation-driven operations."
+        },
+        {
+          "title": "Tax",
+          "description": "Analysis and coordination of tax, fiscal and corporate profiles integrated into corporate and asset operations."
+        },
+        {
+          "title": "Compliance",
+          "description": "Control structures, regulatory verification and risk management aligned with governance and operational accountability."
+        },
+        {
+          "title": "Engineering",
+          "description": "Technical and infrastructure expertise supporting operational evaluations, project verification and complex scenarios."
+        },
+        {
+          "title": "Technical Consulting",
+          "description": "Specialized documentary and expert technical support integrated into decision processes and contentious contexts."
+        },
+        {
+          "title": "Corporate Advisory",
+          "description": "Strategic assistance for corporate structures, extraordinary transactions, governance and institutional development."
+        }
+      ]
     },
     "contact": {
       "eyebrow": "Contact",

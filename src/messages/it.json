@@ -565,14 +565,31 @@
       ],
       "areaLabel": "Ambito",
       "areas": [
-        "Legale",
-        "Fiscale",
-        "Compliance",
-        "Ingegneria",
-        "Consulenza tecnica",
-        "Corporate advisory"
-      ],
-      "areaDescription": "Competenze attivate in logica integrata, con coordinamento NOETRA e responsabilità operative esplicite."
+        {
+          "title": "Legale",
+          "description": "Supporto strategico multidisciplinare in operazioni contenziose, regolatorie e negoziali ad elevata complessità."
+        },
+        {
+          "title": "Fiscale",
+          "description": "Analisi e coordinamento di profili fiscali, tributari e societari integrati in operazioni corporate e patrimoniali."
+        },
+        {
+          "title": "Compliance",
+          "description": "Strutture di controllo, verifica normativa e gestione del rischio orientate a governance e accountability operativa."
+        },
+        {
+          "title": "Ingegneria",
+          "description": "Competenze tecniche e infrastrutturali a supporto di valutazioni operative, verifiche progettuali e scenari complessi."
+        },
+        {
+          "title": "Consulenza tecnica",
+          "description": "Supporto specialistico documentale e tecnico-peritale integrato nei processi decisionali e nei contesti contenziosi."
+        },
+        {
+          "title": "Corporate advisory",
+          "description": "Assistenza strategica per assetti societari, operazioni straordinarie, governance e sviluppo istituzionale."
+        }
+      ]
     },
     "contact": {
       "eyebrow": "Contatti",

@@ -126,9 +126,9 @@ export function NetworkSection({ locale }: NetworkSectionProps) {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {messages.areas.map((item, index) => (
+          {messages.areas.map((area, index) => (
             <motion.div
-              key={item}
+              key={area.title}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -138,9 +138,9 @@ export function NetworkSection({ locale }: NetworkSectionProps) {
                 <p className="text-xs uppercase tracking-[0.2em] text-[#4DA3FF]">
                   {messages.areaLabel}
                 </p>
-                <h3 className="mt-3 text-2xl font-semibold text-[#F5F7FA]">{item}</h3>
+                <h3 className="mt-3 text-2xl font-semibold text-[#F5F7FA]">{area.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-[#F5F7FA]/72">
-                  {messages.areaDescription}
+                  {area.description}
                 </p>
               </Card>
             </motion.div>
