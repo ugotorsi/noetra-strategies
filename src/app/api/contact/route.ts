@@ -174,7 +174,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: senderEmail,
+      from: "NOETRA STRATEGIES <onboarding@resend.dev>",
       to: [destinationEmail],
       replyTo: email,
       subject: `Strategic Consultation Request - ${name}`,
