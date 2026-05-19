@@ -14,6 +14,12 @@ type ContactApiResponse = {
   success?: boolean;
 };
 
+type ResendErrorMeta = {
+  message?: string;
+  name?: string;
+  statusCode?: number;
+};
+
 const contactSchema = z.object({
   name: z.string().trim().min(2).max(120),
   email: z.string().trim().email().max(180),
@@ -100,12 +106,34 @@ function serializeError(error: unknown) {
   return { value: String(error) };
 }
 
+function getResendErrorMeta(error: unknown): ResendErrorMeta {
+  if (typeof error !== "object" || error === null) {
+    return {};
+  }
+
+  const candidate = error as Record<string, unknown>;
+
+  return {
+    message: typeof candidate.message === "string" ? candidate.message : undefined,
+    name: typeof candidate.name === "string" ? candidate.name : undefined,
+    statusCode:
+      typeof candidate.statusCode === "number" ? candidate.statusCode : undefined,
+  };
+}
+
+function isSenderForbidden(error: unknown) {
+  const meta = getResendErrorMeta(error);
+  return meta.statusCode === 403;
+}
+
 export async function POST(request: NextRequest) {
   const requestId = crypto.randomUUID();
   const logPrefix = `${LOG_NAMESPACE}[${requestId}]`;
   const resendApiKey = process.env.RESEND_API_KEY;
   const destinationEmail = process.env.CONTACT_EMAIL || siteConfig.emails.advisory;
-  const senderEmail = "NOETRA STRATEGIES <onboarding@resend.dev>";
+  const primarySenderEmail =
+    process.env.RESEND_FROM_EMAIL || "NOETRA STRATEGIES <noreply@noetra.it>";
+  const fallbackSenderEmail = "NOETRA STRATEGIES <onboarding@resend.dev>";
 
   console.info(`${logPrefix} Incoming request`, {
     method: request.method,
@@ -164,8 +192,17 @@ export async function POST(request: NextRequest) {
   const resend = new Resend(resendApiKey);
   const { name, email, company, message } = parsed.data;
 
+  const buildPayload = (from: string) => ({
+    from,
+    to: [destinationEmail],
+    replyTo: email,
+    subject: `Strategic Consultation Request - ${name}`,
+    html: renderEmailTemplate({ name, email, company, message }),
+    text: `New advisory request\n\nName: ${name}\nEmail: ${email}\nOrganization: ${company || "Not provided"}\n\nMessage:\n${message}`,
+  });
+
   console.info(`${logPrefix} Dispatching email`, {
-    from: senderEmail,
+    from: primarySenderEmail,
     hasCompany: Boolean(company),
     messageLength: message.length,
     replyTo: maskEmail(email),
@@ -173,18 +210,25 @@ export async function POST(request: NextRequest) {
   });
 
   try {
-    const { data, error } = await resend.emails.send({
-      from: "NOETRA STRATEGIES <onboarding@resend.dev>",
-      to: [destinationEmail],
-      replyTo: email,
-      subject: `Strategic Consultation Request - ${name}`,
-      html: renderEmailTemplate({ name, email, company, message }),
-      text: `New advisory request\n\nName: ${name}\nEmail: ${email}\nOrganization: ${company || "Not provided"}\n\nMessage:\n${message}`,
-    });
+    let result = await resend.emails.send(buildPayload(primarySenderEmail));
 
-    if (error) {
+    if (result.error && primarySenderEmail !== fallbackSenderEmail && isSenderForbidden(result.error)) {
+      console.warn(`${logPrefix} Primary sender rejected with 403, retrying fallback sender`, {
+        fallbackFrom: fallbackSenderEmail,
+        primaryFrom: primarySenderEmail,
+        resendError: serializeError(result.error),
+      });
+
+      result = await resend.emails.send(buildPayload(fallbackSenderEmail));
+    }
+
+    if (result.error) {
       console.error(`${logPrefix} Resend rejected request`, {
-        resendError: serializeError(error),
+        attemptedFrom:
+          primarySenderEmail === fallbackSenderEmail
+            ? [primarySenderEmail]
+            : [primarySenderEmail, fallbackSenderEmail],
+        resendError: serializeError(result.error),
       });
 
       return NextResponse.json(
@@ -194,7 +238,7 @@ export async function POST(request: NextRequest) {
     }
 
     console.info(`${logPrefix} Email sent`, {
-      resendId: data?.id ?? null,
+      resendId: result.data?.id ?? null,
       to: maskEmail(destinationEmail),
     });
 
