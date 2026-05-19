@@ -1,0 +1,54 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1120" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0F14"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="glowBlue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1020 130) rotate(160) scale(330 220)">
+      <stop stop-color="#4DA3FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#4DA3FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowGold" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(220 500) rotate(22) scale(300 220)">
+      <stop stop-color="#C6A96B" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#C6A96B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glowBlue)"/>
+  <rect width="1200" height="630" fill="url(#glowGold)"/>
+
+  <g opacity="0.18" stroke="#F5F7FA">
+    <path d="M0 95H1200"/>
+    <path d="M0 175H1200"/>
+    <path d="M0 255H1200"/>
+    <path d="M0 335H1200"/>
+    <path d="M0 415H1200"/>
+    <path d="M0 495H1200"/>
+    <path d="M130 0V630"/>
+    <path d="M290 0V630"/>
+    <path d="M450 0V630"/>
+    <path d="M610 0V630"/>
+    <path d="M770 0V630"/>
+    <path d="M930 0V630"/>
+    <path d="M1090 0V630"/>
+  </g>
+
+  <g>
+    <circle cx="170" cy="148" r="14" fill="#C6A96B"/>
+    <text x="215" y="168" fill="#F5F7FA" font-size="64" font-family="Inter, Arial, sans-serif" font-weight="700" letter-spacing="8">
+      NOETRA STRATEGIES
+    </text>
+    <text x="215" y="232" fill="#F5F7FA" fill-opacity="0.78" font-size="30" font-family="Inter, Arial, sans-serif" letter-spacing="2">
+      Strategic Advisory &amp; AI Innovation
+    </text>
+  </g>
+
+  <g opacity="0.92">
+    <path d="M695 430C770 360 835 350 920 290" stroke="#4DA3FF" stroke-width="4"/>
+    <path d="M920 290C990 244 1060 230 1130 160" stroke="#C6A96B" stroke-width="4"/>
+    <circle cx="695" cy="430" r="10" fill="#4DA3FF"/>
+    <circle cx="920" cy="290" r="10" fill="#4DA3FF"/>
+    <circle cx="1130" cy="160" r="10" fill="#C6A96B"/>
+  </g>
+</svg>

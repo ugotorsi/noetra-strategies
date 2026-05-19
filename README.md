@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NOETRA STRATEGIES
 
-## Getting Started
+Production-ready web platform for NOETRA STRATEGIES, positioned as an international strategic intelligence and AI-driven advisory firm.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Framework: Next.js 15 (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS + custom cinematic motion system
+- Runtime: React 19
+- Deployment target: Vercel
+- Contact pipeline: Next.js API Route + Resend
+- Observability: Vercel Analytics
+
+## Technology Stack
+
+- next, react, react-dom
+- framer-motion, gsap, lucide-react
+- clsx, tailwind-merge
+- resend, zod
+- @vercel/analytics
+
+## Architecture
+
+```text
+src/
+	app/
+		api/contact/route.ts     # Contact form backend (Resend)
+		sitemap.ts               # XML sitemap generation
+		robots.ts                # Robots policy
+		layout.tsx               # Global metadata + JSON-LD + analytics
+		page.tsx                 # Homepage composition
+		about/, services/, innovation/, network/, contact/, legal/, noetralex/
+	components/
+		layout/                  # Navbar, Footer, Container, visual runtime layers
+		sections/                # Business sections and disclosure components
+		ui/                      # Reusable UI primitives
+	lib/
+		site.ts                  # Global site configuration and SEO constants
+		utils.ts                 # Class utilities
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev`: Start local development server
+- `npm run lint`: Run ESLint checks
+- `npm run build`: Build production bundle
+- `npm run start`: Serve production build locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+Copy `.env.example` and configure values for your environment.
 
-To learn more about Next.js, take a look at the following resources:
+```env
+RESEND_API_KEY=
+NEXT_PUBLIC_SITE_URL=
+CONTACT_EMAIL=info@noetra.it
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment Instructions (Vercel)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push this repository to GitHub.
+2. Import the repository in Vercel.
+3. Set environment variables in Vercel Project Settings.
+4. Use `npm run build` as verification before promoting to production.
+5. Ensure domain-level DNS and HTTPS are configured.
 
-## Deploy on Vercel
+## GitHub Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+git remote add origin <your-github-repository-url>
+git branch -M main
+git push -u origin main
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Production Pipeline Highlights
+
+- Security headers and CSP placeholders configured in `next.config.ts`
+- Static caching strategy for immutable assets
+- Canonical metadata, OpenGraph, Twitter cards, JSON-LD placeholders
+- Sitemap and robots generated automatically by App Router metadata routes
+- Contact form includes validation, async state handling, and backend delivery
+
+## Validation
+
+Before deployment run:
+
+```bash
+npm run lint
+npm run build
+```
