@@ -412,6 +412,8 @@
       "eyebrow": "Strategic Signal Dashboard",
       "title": "Dashboard di signal intelligence",
       "description": "Interfaccia di monitoraggio per governance, contenzioso, compliance e legal-tech operations in ambienti istituzionali.",
+      "contextTitle": "Framework di monitoraggio strategico",
+      "contextText": "NOETRA integra strumenti di monitoraggio operativo, analisi documentale e coordinamento multidisciplinare per supportare processi decisionali complessi in contesti corporate, regolatori e contenziosi.",
       "statusChips": [
         "Governance Signals",
         "Operational Monitoring",
@@ -489,7 +491,8 @@
         "Governance escalation protocol active",
         "Litigation intelligence feed synchronized",
         "Compliance control loop validated"
-      ]
+      ],
+      "methodologyNote": "Le rappresentazioni visuali presenti nella dashboard hanno finalità illustrative e descrivono modelli operativi, flussi di analisi e framework di intelligence utilizzati nei processi di advisory strategico e legal-tech."
     },
     "capabilities": {
       "eyebrow": "Capacità",

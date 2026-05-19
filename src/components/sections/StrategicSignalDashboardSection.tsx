@@ -34,6 +34,17 @@ export function StrategicSignalDashboardSection({ locale }: StrategicSignalDashb
           description={messages.description}
         />
 
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+          className="max-w-4xl rounded-2xl border border-white/12 bg-white/[0.02] px-6 py-5"
+        >
+          <p className="text-xs uppercase tracking-[0.2em] text-[#C6A96B]">{messages.contextTitle}</p>
+          <p className="mt-3 text-sm leading-7 text-[#F5F7FA]/76">{messages.contextText}</p>
+        </motion.div>
+
         <div className="grid gap-5 xl:grid-cols-[1.02fr_0.98fr]">
           <Card className="relative overflow-hidden border-white/12 bg-[#0B0F14]/80 p-6 sm:p-7">
             <div className="absolute inset-0 bg-[linear-gradient(140deg,rgba(77,163,255,0.12),transparent_58%)]" />
@@ -159,6 +170,12 @@ export function StrategicSignalDashboardSection({ locale }: StrategicSignalDashb
               </div>
             </div>
           </Card>
+        </div>
+
+        <div className="border-t border-white/10 pt-5">
+          <p className="max-w-5xl text-xs leading-7 text-[#F5F7FA]/58">
+            {messages.methodologyNote}
+          </p>
         </div>
       </Container>
     </section>
