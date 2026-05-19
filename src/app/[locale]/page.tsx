@@ -8,8 +8,10 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { Hero } from "@/components/sections/Hero";
 import { MethodSection } from "@/components/sections/MethodSection";
 import { NetworkSection } from "@/components/sections/NetworkSection";
+import { OperationalScenariosSection } from "@/components/sections/OperationalScenariosSection";
 import { OperationalCapabilities } from "@/components/sections/OperationalCapabilities";
 import { ServicesSection } from "@/components/sections/ServicesSection";
+import { StrategicSignalDashboardSection } from "@/components/sections/StrategicSignalDashboardSection";
 
 import { getLocalizedMetadata, getLocaleForPage, type LocalePageProps } from "./locale-utils";
 
@@ -33,10 +35,12 @@ export default async function LocalizedHomePage({ params }: LocalePageProps) {
         <Hero locale={locale} />
         <AboutSection locale={locale} />
         <ServicesSection locale={locale} />
+        <OperationalScenariosSection locale={locale} />
         <OperationalCapabilities locale={locale} />
         <MethodSection locale={locale} />
         <AISection locale={locale} />
         <NetworkSection locale={locale} />
+        <StrategicSignalDashboardSection locale={locale} />
         <ContactSection locale={locale} />
         <Footer locale={locale} />
       </div>

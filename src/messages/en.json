@@ -359,6 +359,142 @@
         }
       ]
     },
+    "operationalScenarios": {
+      "eyebrow": "Operational Scenarios",
+      "title": "Operational Scenarios",
+      "description": "Three anonymized institutional scenarios showing how NOETRA manages complex mandates through multidisciplinary coordination and controlled decision workflow.",
+      "timelineLabel": "Executive timeline",
+      "statusChips": [
+        "Anonymized Mandates",
+        "Operational Monitoring",
+        "Strategic Review",
+        "Institutional Workflow"
+      ],
+      "scenarios": [
+        {
+          "tag": "REGULATORY & LITIGATION",
+          "title": "Regulatory and litigation coordination",
+          "summary": "Strategic oversight of a multi-layer regulatory and litigation context with high-exposure negotiation dynamics.",
+          "status": "IN PROGRESS",
+          "flow": [
+            "Regulatory Mapping",
+            "Litigation Intelligence",
+            "Executive Steering"
+          ],
+          "outcomeLabel": "Outcome",
+          "outcome": "Alignment between legal strategy, operational priorities and executive decision timing."
+        },
+        {
+          "tag": "CORPORATE GOVERNANCE",
+          "title": "Corporate reorganization and risk governance",
+          "summary": "Multidisciplinary support during a corporate reorganization phase affecting governance architecture, accountability and operational continuity.",
+          "status": "MONITORED",
+          "flow": [
+            "Governance Review",
+            "Risk Structuring",
+            "Operational Alignment"
+          ],
+          "outcomeLabel": "Outcome",
+          "outcome": "Reduced organizational friction and strengthened governance control framework."
+        },
+        {
+          "tag": "LEGAL-TECH INTELLIGENCE",
+          "title": "AI-assisted documentary analysis",
+          "summary": "Legal-tech pipeline for advanced documentary analysis and strategic decision support in high-intensity information environments.",
+          "status": "AI-ASSISTED",
+          "flow": [
+            "Document Intake",
+            "AI-assisted Analysis",
+            "Strategic Decision Support"
+          ],
+          "outcomeLabel": "Outcome",
+          "outcome": "Faster review cycles and stronger consistency across the decision baseline."
+        }
+      ]
+    },
+    "signalDashboard": {
+      "eyebrow": "Strategic Signal Dashboard",
+      "title": "Strategic Signal Dashboard",
+      "description": "Monitoring interface for governance, litigation, compliance and legal-tech operations in institutional environments.",
+      "statusChips": [
+        "Governance Signals",
+        "Operational Monitoring",
+        "Strategic Review",
+        "Litigation Intelligence"
+      ],
+      "panels": [
+        {
+          "label": "Governance Signals",
+          "value": "Stable",
+          "note": "Continuous oversight of decision priorities and executive escalation points."
+        },
+        {
+          "label": "Litigation Monitoring",
+          "value": "Active",
+          "note": "Dynamic tracking of contentious nodes and critical procedural milestones."
+        },
+        {
+          "label": "Compliance Status",
+          "value": "Controlled",
+          "note": "Regulatory controls active with periodic verification of operational risk indicators."
+        },
+        {
+          "label": "AI-assisted Review",
+          "value": "Enabled",
+          "note": "AI-assisted documentary analysis configured for strategic decision support."
+        }
+      ],
+      "counters": [
+        {
+          "label": "Monitored Mandates",
+          "value": "06"
+        },
+        {
+          "label": "Critical Workflows",
+          "value": "14"
+        },
+        {
+          "label": "Weekly Reviews",
+          "value": "28"
+        },
+        {
+          "label": "Priority Signals",
+          "value": "42"
+        }
+      ],
+      "chartTitle": "Operational Metrics",
+      "monitoringTitle": "Monitoring Panels",
+      "signals": [
+        {
+          "label": "Regulatory Mapping",
+          "value": 82
+        },
+        {
+          "label": "Institutional Workflow",
+          "value": 76
+        },
+        {
+          "label": "Strategic Review",
+          "value": 88
+        },
+        {
+          "label": "Operational Monitoring",
+          "value": 71
+        }
+      ],
+      "nodesTitle": "Intelligence Nodes",
+      "nodes": [
+        "Mandate Intake",
+        "Regulatory Mapping",
+        "Strategic Review",
+        "Executive Output"
+      ],
+      "workflowSignals": [
+        "Governance escalation protocol active",
+        "Litigation intelligence feed synchronized",
+        "Compliance control loop validated"
+      ]
+    },
     "capabilities": {
       "eyebrow": "Capabilities",
       "title": "Operational Capabilities",
