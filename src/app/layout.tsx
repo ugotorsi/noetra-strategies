@@ -69,12 +69,16 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "/",
+    canonical: "/it",
+    languages: {
+      it: "/it",
+      en: "/en",
+    },
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: siteConfig.url,
+    locale: "it_IT",
+    url: `${siteConfig.url}/it`,
     title: siteConfig.title,
     description: siteConfig.description,
     siteName: siteConfig.name,

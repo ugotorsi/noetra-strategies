@@ -14,82 +14,24 @@ import {
 import { Container } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { getMessages, type Locale } from "@/lib/i18n";
 
-const services: {
-  title: string;
-  description: string;
-  capabilities: string[];
-  icon: LucideIcon;
-}[] = [
-  {
-    title: "Strategic & Corporate Advisory",
-    description:
-      "Executive advisory for strategic positioning, governance architecture and growth-oriented corporate decisions.",
-    capabilities: [
-      "governance architecture",
-      "business planning",
-      "strategic communication",
-    ],
-    icon: Building2,
-  },
-  {
-    title: "Legal & Regulatory Coordination",
-    description:
-      "Integrated legal-regulatory coordination for complex assignments requiring technical precision and compliance control.",
-    capabilities: [
-      "compliance frameworks",
-      "regulatory mapping",
-      "documentation systems",
-    ],
-    icon: Scale,
-  },
-  {
-    title: "AI Systems & Digital Innovation",
-    description:
-      "Design and implementation of AI-enabled operating systems for intelligent automation and scalable workflows.",
-    capabilities: [
-      "operational automation",
-      "decision intelligence",
-      "knowledge systems",
-    ],
-    icon: Cpu,
-  },
-  {
-    title: "Real Estate & Asset Consulting",
-    description:
-      "Strategic and technical support for asset enhancement, real estate initiatives and operational roadmapping.",
-    capabilities: [
-      "asset strategy",
-      "documentation systems",
-      "institutional interface",
-    ],
-    icon: Landmark,
-  },
-  {
-    title: "Institutional & Commercial Relations",
-    description:
-      "Institutional and commercial relationship management for market positioning, partnerships and executive dialogue.",
-    capabilities: [
-      "stakeholder engagement",
-      "strategic communication",
-      "institutional relations",
-    ],
-    icon: Handshake,
-  },
-  {
-    title: "Executive Training & Knowledge Systems",
-    description:
-      "High-level executive training programs with strategic, regulatory and AI-governance-oriented knowledge frameworks.",
-    capabilities: [
-      "executive training",
-      "knowledge systems",
-      "operational methodologies",
-    ],
-    icon: GraduationCap,
-  },
+const serviceIcons: LucideIcon[] = [
+  Building2,
+  Scale,
+  Cpu,
+  Landmark,
+  Handshake,
+  GraduationCap,
 ];
 
-export function ServicesSection() {
+type ServicesSectionProps = {
+  locale: Locale;
+};
+
+export function ServicesSection({ locale }: ServicesSectionProps) {
+  const messages = getMessages(locale).sections.services;
+
   return (
     <section
       id="services"
@@ -97,9 +39,9 @@ export function ServicesSection() {
     >
       <Container className="space-y-14">
         <SectionTitle
-          eyebrow="Services"
-          title="Strategic Services for Complex Organizations"
-          description="Integrated service architecture for strategic intelligence, legal-regulatory coordination and AI-enabled operational execution."
+          eyebrow={messages.eyebrow}
+          title={messages.title}
+          description={messages.description}
         />
 
         <motion.div
@@ -112,8 +54,8 @@ export function ServicesSection() {
           }}
           className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3"
         >
-          {services.map((service) => {
-            const Icon = service.icon;
+          {messages.cards.map((service, index) => {
+            const Icon = serviceIcons[index] ?? Building2;
 
             return (
               <motion.div

@@ -1,11 +1,15 @@
 import { cn } from "@/lib/utils";
+import { getMessages, type Locale } from "@/lib/i18n";
 
 type LegalDisclaimerProps = {
+  locale: Locale;
   className?: string;
   compact?: boolean;
 };
 
-export function LegalDisclaimer({ className, compact = false }: LegalDisclaimerProps) {
+export function LegalDisclaimer({ locale, className, compact = false }: LegalDisclaimerProps) {
+  const messages = getMessages(locale).legalDisclaimer;
+
   return (
     <section className={cn("relative", className)} aria-label="Regulatory disclaimer">
       <div
@@ -15,17 +19,13 @@ export function LegalDisclaimer({ className, compact = false }: LegalDisclaimerP
         )}
       >
         <p className="text-[11px] uppercase tracking-[0.22em] text-[#C6A96B]">
-          Regulatory & Professional Disclaimer
+          {messages.title}
         </p>
         <p className="mt-3 text-sm leading-7 text-[#F5F7FA]/72">
-          Activities reserved by law to licensed professionals are performed
-          exclusively by duly authorized professionals operating with full
-          technical, professional and ethical independence pursuant to
-          applicable regulations.
+          {messages.paragraphOne}
         </p>
         <p className="mt-3 text-sm leading-7 text-[#F5F7FA]/72">
-          The assignment of legal representation and professional mandates is
-          conferred directly by the client to the appointed professional.
+          {messages.paragraphTwo}
         </p>
       </div>
     </section>

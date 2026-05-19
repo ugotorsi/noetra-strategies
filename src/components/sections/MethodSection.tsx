@@ -5,40 +5,23 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { getMessages, type Locale } from "@/lib/i18n";
 
-const steps = [
-  {
-    key: "ANALYZE",
-    description: "Strategic assessment and multidisciplinary evaluation.",
-    tag: "Assessment Layer",
-  },
-  {
-    key: "STRUCTURE",
-    description: "Operational and organizational framework definition.",
-    tag: "Framework Layer",
-  },
-  {
-    key: "COORDINATE",
-    description:
-      "Integrated management of professional activities and workflows.",
-    tag: "Coordination Layer",
-  },
-  {
-    key: "EXECUTE",
-    description: "Technology-enabled operational support and implementation.",
-    tag: "Execution Layer",
-  },
-];
+type MethodSectionProps = {
+  locale: Locale;
+};
 
-export function MethodSection() {
+export function MethodSection({ locale }: MethodSectionProps) {
+  const messages = getMessages(locale).sections.method;
+
   return (
     <section id="method" className="relative py-24 sm:py-30">
       <div className="section-transition-glow absolute inset-x-0 top-0" />
       <Container className="space-y-14">
         <SectionTitle
-          eyebrow="Method"
-          title="Operational Method Framework"
-          description="A four-step model designed to convert complexity into controlled strategic execution."
+          eyebrow={messages.eyebrow}
+          title={messages.title}
+          description={messages.description}
         />
 
         <Card className="relative overflow-hidden border-white/15 p-6 sm:p-8 lg:p-10">
@@ -46,7 +29,7 @@ export function MethodSection() {
           <div className="pointer-events-none absolute left-[1.15rem] top-9 h-[calc(100%-5rem)] w-px bg-gradient-to-b from-[#4DA3FF]/0 via-[#4DA3FF]/75 to-[#C6A96B]/0 lg:left-16 lg:top-1/2 lg:h-px lg:w-[calc(100%-8rem)] lg:-translate-y-1/2 lg:bg-gradient-to-r" />
 
           <div className="relative grid gap-7 lg:grid-cols-4">
-            {steps.map((step, index) => (
+            {messages.steps.map((step, index) => (
               <motion.div
                 key={step.key}
                 initial={{ opacity: 0, y: 24 }}
@@ -59,7 +42,7 @@ export function MethodSection() {
 
                 <Card className="h-full border-white/12 p-6 lg:mt-20">
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#C6A96B]">
-                    Step {index + 1}
+                    {messages.stepLabel} {index + 1}
                   </p>
                   <h3 className="mt-3 text-2xl font-semibold text-[#F5F7FA]">{step.key}</h3>
                   <p className="mt-2 text-xs uppercase tracking-[0.18em] text-[#4DA3FF]">

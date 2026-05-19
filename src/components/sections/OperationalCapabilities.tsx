@@ -16,65 +16,52 @@ import {
 import { Container } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { getMessages, type Locale } from "@/lib/i18n";
 
 type Capability = {
-  title: string;
   icon: LucideIcon;
-  detail: string;
 };
 
 const capabilities: Capability[] = [
+  { icon: BriefcaseBusiness },
   {
-    title: "Strategic Advisory",
-    icon: BriefcaseBusiness,
-    detail: "Executive advisory and high-impact strategic positioning.",
-  },
-  {
-    title: "Decision Intelligence",
     icon: Sparkles,
-    detail: "Data-informed frameworks for complex decision environments.",
   },
   {
-    title: "AI Integration",
     icon: Workflow,
-    detail: "AI systems integration across workflows and operations.",
   },
   {
-    title: "Legal Coordination",
     icon: Gavel,
-    detail: "Structured legal coordination within multidisciplinary contexts.",
   },
   {
-    title: "Documentation Systems",
     icon: FileText,
-    detail: "Advanced document architecture and controlled information flows.",
   },
   {
-    title: "Regulatory Support",
     icon: ShieldCheck,
-    detail: "Regulatory alignment and compliance framework implementation.",
   },
   {
-    title: "Corporate Structuring",
     icon: Building,
-    detail: "Operational structuring for growth, governance and resilience.",
   },
   {
-    title: "Institutional Relations",
     icon: Network,
-    detail: "Institutional interface strategy and strategic communication support.",
   },
 ];
 
-export function OperationalCapabilities() {
+type OperationalCapabilitiesProps = {
+  locale: Locale;
+};
+
+export function OperationalCapabilities({ locale }: OperationalCapabilitiesProps) {
+  const messages = getMessages(locale).sections.capabilities;
+
   return (
     <section id="capabilities" className="relative py-24 sm:py-28">
       <div className="section-transition-glow absolute inset-x-0 top-0" />
       <Container className="space-y-12">
         <SectionTitle
-          eyebrow="Capabilities"
-          title="Operational Capabilities"
-          description="A modular operating stack designed for complex strategic operations, institutional governance and AI-enabled execution."
+          eyebrow={messages.eyebrow}
+          title={messages.title}
+          description={messages.description}
         />
 
         <motion.div
@@ -87,8 +74,8 @@ export function OperationalCapabilities() {
           }}
           className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4"
         >
-          {capabilities.map((item) => {
-            const Icon = item.icon;
+          {messages.items.map((item, index) => {
+            const Icon = capabilities[index]?.icon ?? BriefcaseBusiness;
 
             return (
               <motion.div

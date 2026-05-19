@@ -8,6 +8,7 @@ import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { getMessages, type Locale, withLocalePath } from "@/lib/i18n";
 
 type InquiryFormData = {
   name: string;
@@ -25,7 +26,12 @@ const initialFormData: InquiryFormData = {
 
 type FormState = "idle" | "loading" | "success" | "error";
 
-export function ContactSection() {
+type ContactSectionProps = {
+  locale: Locale;
+};
+
+export function ContactSection({ locale }: ContactSectionProps) {
+  const messages = getMessages(locale).sections.contact;
   const [formData, setFormData] = useState<InquiryFormData>(initialFormData);
   const [formState, setFormState] = useState<FormState>("idle");
   const [feedback, setFeedback] = useState("");
@@ -64,19 +70,14 @@ export function ContactSection() {
         | undefined;
 
       if (!response.ok) {
-        throw new Error(payload?.error || "Unable to submit your request right now.");
+        throw new Error(payload?.error || messages.form.error);
       }
 
       setFormState("success");
-      setFeedback(
-        "Your strategic consultation request has been submitted successfully.",
-      );
+      setFeedback(messages.form.success);
       setFormData(initialFormData);
     } catch (error) {
-      const message =
-        error instanceof Error
-          ? error.message
-          : "Unable to submit your request right now.";
+      const message = error instanceof Error ? error.message : messages.form.error;
 
       setFormState("error");
       setFeedback(message);
@@ -92,9 +93,9 @@ export function ContactSection() {
       <div className="orb-drift pointer-events-none absolute -left-12 top-20 h-36 w-36 rounded-full bg-[#C6A96B]/12 blur-[70px]" />
       <Container className="space-y-12">
         <SectionTitle
-          eyebrow="Contact"
-          title="Request Strategic Consultation"
-          description="NOETRA STRATEGIES supports organizations, professionals and investors in strategic operations, innovation initiatives and multidisciplinary coordination activities."
+          eyebrow={messages.eyebrow}
+          title={messages.title}
+          description={messages.description}
         />
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
@@ -106,32 +107,25 @@ export function ContactSection() {
             className="space-y-6"
           >
             <Card className="border-[#C6A96B]/35 p-7">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#C6A96B]">Executive Inquiry Box</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-[#C6A96B]">{messages.boxEyebrow}</p>
               <h3 className="mt-3 text-xl font-semibold text-[#F5F7FA]">
-                Strategic Operations Intake
+                {messages.boxTitle}
               </h3>
               <p className="mt-3 text-sm leading-7 text-[#F5F7FA]/75">
-                Share your operational context, strategic priorities and expected
-                execution horizon to receive an aligned advisory response.
+                {messages.boxDescription}
               </p>
               <ul className="mt-4 space-y-2 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/62">
-                <li className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#4DA3FF]" />
-                  Strategic intelligence briefing
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#4DA3FF]" />
-                  Operational coordination scoping
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#4DA3FF]" />
-                  AI innovation alignment
-                </li>
+                {messages.boxBullets.map((bullet) => (
+                  <li key={bullet} className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#4DA3FF]" />
+                    {bullet}
+                  </li>
+                ))}
               </ul>
               <div className="mt-5">
-                <Button href="/contact" variant="outline" size="md">
+                <Button href={withLocalePath(locale, "/contact")} variant="outline" size="md">
                   <CalendarCheck2 size={16} />
-                  Schedule Advisory Call
+                  {messages.boxCta}
                 </Button>
               </div>
             </Card>
@@ -141,11 +135,11 @@ export function ContactSection() {
               <div className="relative flex h-56 flex-col justify-between bg-[linear-gradient(130deg,rgba(77,163,255,0.2),rgba(198,169,107,0.12),rgba(11,15,20,0.85))] p-6">
                 <div className="hero-grid absolute inset-0 opacity-20" />
                 <p className="relative text-xs uppercase tracking-[0.22em] text-[#F5F7FA]/72">
-                  Advisory Coordination Interface
+                  {messages.panelLabel}
                 </p>
                 <div className="relative inline-flex w-max items-center gap-2 rounded-full border border-white/15 bg-[#0B0F14]/50 px-3 py-1.5 text-[11px] uppercase tracking-[0.16em] text-[#F5F7FA]/72">
                   <Zap size={12} className="text-[#4DA3FF]" />
-                  Priority Response Channel
+                  {messages.panelBadge}
                 </div>
               </div>
             </Card>
@@ -160,7 +154,7 @@ export function ContactSection() {
             <Card className="p-7 sm:p-8">
               <form className="grid gap-4" onSubmit={handleSubmit}>
                 <label className="space-y-2 text-sm text-[#F5F7FA]/80">
-                  Nome
+                  {messages.form.name}
                   <input
                     name="name"
                     required
@@ -168,12 +162,12 @@ export function ContactSection() {
                     onChange={handleChange}
                     disabled={isLoading}
                     className="h-12 w-full rounded-xl border border-white/15 bg-[#0B0F14]/70 px-4 text-[#F5F7FA] outline-none transition-all duration-300 focus:border-[#C6A96B]/70 focus:shadow-[0_0_0_3px_rgba(198,169,107,0.14)]"
-                    placeholder="Nome e cognome"
+                    placeholder={messages.form.namePlaceholder}
                   />
                 </label>
 
                 <label className="space-y-2 text-sm text-[#F5F7FA]/80">
-                  Email
+                  {messages.form.email}
                   <input
                     type="email"
                     name="email"
@@ -182,24 +176,24 @@ export function ContactSection() {
                     onChange={handleChange}
                     disabled={isLoading}
                     className="h-12 w-full rounded-xl border border-white/15 bg-[#0B0F14]/70 px-4 text-[#F5F7FA] outline-none transition-all duration-300 focus:border-[#C6A96B]/70 focus:shadow-[0_0_0_3px_rgba(198,169,107,0.14)]"
-                    placeholder="name@company.com"
+                    placeholder={messages.form.emailPlaceholder}
                   />
                 </label>
 
                 <label className="space-y-2 text-sm text-[#F5F7FA]/80">
-                  Azienda
+                  {messages.form.company}
                   <input
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
                     disabled={isLoading}
                     className="h-12 w-full rounded-xl border border-white/15 bg-[#0B0F14]/70 px-4 text-[#F5F7FA] outline-none transition-all duration-300 focus:border-[#C6A96B]/70 focus:shadow-[0_0_0_3px_rgba(198,169,107,0.14)]"
-                    placeholder="Nome azienda"
+                    placeholder={messages.form.companyPlaceholder}
                   />
                 </label>
 
                 <label className="space-y-2 text-sm text-[#F5F7FA]/80">
-                  Messaggio
+                  {messages.form.message}
                   <textarea
                     name="message"
                     required
@@ -209,13 +203,13 @@ export function ContactSection() {
                     onChange={handleChange}
                     disabled={isLoading}
                     className="w-full rounded-xl border border-white/15 bg-[#0B0F14]/70 px-4 py-3 text-[#F5F7FA] outline-none transition-all duration-300 focus:border-[#C6A96B]/70 focus:shadow-[0_0_0_3px_rgba(198,169,107,0.14)]"
-                    placeholder="Descrivi obiettivi e contesto operativo"
+                    placeholder={messages.form.messagePlaceholder}
                   />
                 </label>
 
                 <div className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/62">
                   <Sparkles size={14} className="mr-2 inline text-[#C6A96B]" />
-                  Institutional inquiry channel for complex strategic and multidisciplinary assignments.
+                  {messages.form.microcopy}
                 </div>
 
                 {feedback ? (
@@ -237,7 +231,7 @@ export function ContactSection() {
                     className="w-full sm:w-auto"
                     disabled={isLoading}
                   >
-                    {isLoading ? "Sending..." : "Schedule Advisory Call"}
+                    {isLoading ? messages.form.loading : messages.form.submit}
                   </Button>
                 </div>
               </form>

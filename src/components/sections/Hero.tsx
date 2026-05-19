@@ -7,36 +7,18 @@ import gsap from "gsap";
 
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
+import { getMessages, type Locale, withLocalePath } from "@/lib/i18n";
 
 const reveal = {
   hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0 },
 };
 
-const executiveBadges = [
-  "AI Systems",
-  "Corporate Advisory",
-  "Regulatory Support",
-  "Strategic Operations",
-];
-
-const trustIndicators = [
-  "Independent Strategic Intelligence Firm",
-  "Multidisciplinary Coordination Platform",
-  "AI-Driven Operational Advisory",
-];
-
-const insightMetrics = [
-  { label: "Operational Clarity", value: 94 },
-  { label: "Coordination Index", value: 91 },
-  { label: "AI Enablement", value: 88 },
-];
-
-const floatingLabels = [
-  { text: "Board-Level Advisory", top: "10%", left: "6%" },
-  { text: "Decision Intelligence", top: "82%", left: "14%" },
-  { text: "Operational Control", top: "16%", right: "7%" },
-  { text: "Regulatory Visibility", top: "78%", right: "10%" },
+const floatingLabelPositions = [
+  { top: "10%", left: "6%" },
+  { top: "82%", left: "14%" },
+  { top: "16%", right: "7%" },
+  { top: "78%", right: "10%" },
 ];
 
 const particles = Array.from({ length: 18 }, (_, index) => ({
@@ -47,11 +29,17 @@ const particles = Array.from({ length: 18 }, (_, index) => ({
   duration: 8 + (index % 4) * 1.2,
 }));
 
-export function Hero() {
+type HeroProps = {
+  locale: Locale;
+};
+
+export function Hero({ locale }: HeroProps) {
   const dashboardRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   const parallaxY = useTransform(scrollY, [0, 900], [0, 130]);
   const reverseParallaxY = useTransform(scrollY, [0, 900], [0, -95]);
+  const messages = getMessages(locale).sections.hero;
+  const categoryIcons = [Building2, Gavel, ShieldCheck];
 
   useEffect(() => {
     if (!dashboardRef.current) {
@@ -99,23 +87,27 @@ export function Hero() {
       />
 
       <div className="pointer-events-none absolute inset-0 hidden md:block" aria-hidden="true">
-        {floatingLabels.map((label, index) => (
-          <motion.span
-            key={label.text}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: [0.3, 0.9, 0.3], y: [0, -6, 0] }}
-            transition={{
-              duration: 5 + index * 0.7,
-              repeat: Infinity,
-              delay: index * 0.4,
-              ease: "easeInOut",
-            }}
-            className="absolute rounded-full border border-white/14 bg-[#0B0F14]/55 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-[#F5F7FA]/65 backdrop-blur-md"
-            style={{ top: label.top, left: label.left, right: label.right }}
-          >
-            {label.text}
-          </motion.span>
-        ))}
+        {messages.floatingLabels.map((label, index) => {
+          const position = floatingLabelPositions[index % floatingLabelPositions.length];
+
+          return (
+            <motion.span
+              key={label}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: [0.3, 0.9, 0.3], y: [0, -6, 0] }}
+              transition={{
+                duration: 5 + index * 0.7,
+                repeat: Infinity,
+                delay: index * 0.4,
+                ease: "easeInOut",
+              }}
+              className="absolute rounded-full border border-white/14 bg-[#0B0F14]/55 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-[#F5F7FA]/65 backdrop-blur-md"
+              style={{ top: position.top, left: position.left, right: position.right }}
+            >
+              {label}
+            </motion.span>
+          );
+        })}
       </div>
 
       <div className="pointer-events-none absolute inset-0">
@@ -148,7 +140,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-4 py-2 text-xs font-medium uppercase tracking-[0.26em] text-[#F5F7FA]/80"
           >
             <Sparkles size={14} className="text-[#C6A96B]" />
-            Strategic Advisory | AI Innovation | Legal Coordination
+            {messages.eyebrow}
           </motion.p>
 
           <motion.h1
@@ -156,9 +148,9 @@ export function Hero() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="max-w-3xl text-balance text-4xl font-semibold leading-[1.04] text-[#F5F7FA] sm:text-5xl md:text-6xl lg:text-[4.25rem]"
           >
-            Strategic Intelligence
+            {messages.headlineLineOne}
             <br />
-            for Complex Operations
+            {messages.headlineLineTwo}
           </motion.h1>
 
           <motion.p
@@ -166,10 +158,7 @@ export function Hero() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="max-w-2xl text-pretty text-base leading-8 text-[#F5F7FA]/78 sm:text-lg"
           >
-            NOETRA STRATEGIES supporta imprese, investitori, professionisti ed
-            organizzazioni nella gestione di operazioni strategiche, innovazione
-            tecnologica, coordinamento multidisciplinare e processi decisionali ad
-            alta complessita.
+            {messages.subheadline}
           </motion.p>
 
           <motion.div
@@ -177,11 +166,11 @@ export function Hero() {
             transition={{ duration: 0.75, ease: "easeOut" }}
             className="flex flex-wrap items-center gap-3"
           >
-            <Button href="/contact" variant="gold" size="lg">
-              Schedule Advisory Call
+            <Button href={withLocalePath(locale, "/contact")} variant="gold" size="lg">
+              {messages.primaryCta}
             </Button>
-            <Button href="/services" variant="outline" size="lg">
-              Explore Capabilities
+            <Button href={withLocalePath(locale, "/services")} variant="outline" size="lg">
+              {messages.secondaryCta}
               <ArrowRight size={16} />
             </Button>
           </motion.div>
@@ -191,7 +180,7 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="grid gap-3 sm:grid-cols-2"
           >
-            {executiveBadges.map((badge) => (
+            {messages.executiveBadges.map((badge) => (
               <span
                 key={badge}
                 className="inline-flex items-center rounded-full border border-white/14 bg-white/[0.04] px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-[#F5F7FA]/72"
@@ -206,7 +195,7 @@ export function Hero() {
             transition={{ duration: 0.85, ease: "easeOut" }}
             className="grid gap-3 sm:grid-cols-3"
           >
-            {insightMetrics.map((metric, index) => (
+            {messages.metrics.map((metric, index) => (
               <div
                 key={metric.label}
                 className="rounded-2xl border border-white/12 bg-white/[0.03] px-4 py-3 backdrop-blur-xl"
@@ -233,7 +222,7 @@ export function Hero() {
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="space-y-2 text-sm text-[#F5F7FA]/68"
           >
-            {trustIndicators.map((item) => (
+            {messages.trustIndicators.map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#4DA3FF]" />
                 {item}
@@ -254,36 +243,31 @@ export function Hero() {
             <div className="relative space-y-6">
               <div className="flex items-center justify-between">
                 <p className="text-xs uppercase tracking-[0.26em] text-[#F5F7FA]/65">
-                  Strategic Operations Layer
+                  {messages.dashboard.title}
                 </p>
                 <span className="rounded-full border border-[#4DA3FF]/40 bg-[#4DA3FF]/10 px-3 py-1 text-[11px] font-medium text-[#4DA3FF]">
-                  Live Nodes
+                  {messages.dashboard.badge}
                 </span>
               </div>
 
               <div className="grid grid-cols-3 gap-2">
-                {[
-                  { icon: Building2, text: "Corporate" },
-                  { icon: Gavel, text: "Regulatory" },
-                  { icon: ShieldCheck, text: "Execution" },
-                ].map((item) => (
+                {messages.dashboard.categoryTags.map((tag, index) => {
+                  const Icon = categoryIcons[index] ?? Building2;
+
+                  return (
                   <div
-                    key={item.text}
+                    key={tag}
                     className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 text-[11px] uppercase tracking-[0.14em] text-[#F5F7FA]/72"
                   >
-                    <item.icon size={13} className="text-[#4DA3FF]" />
-                    {item.text}
+                    <Icon size={13} className="text-[#4DA3FF]" />
+                    {tag}
                   </div>
-                ))}
+                  );
+                })}
               </div>
 
               <div className="grid grid-cols-2 gap-3">
-                {[
-                  "Decision Flow",
-                  "Legal Signals",
-                  "Market Pulse",
-                  "Execution Sync",
-                ].map((item, index) => (
+                {messages.dashboard.flowCards.map((item, index) => (
                   <div
                     key={item}
                     className="rounded-2xl border border-white/10 bg-[#0B0F14]/70 p-3"

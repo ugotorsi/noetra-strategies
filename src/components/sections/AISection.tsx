@@ -6,30 +6,16 @@ import { Bot, ChartColumnBig, FileSearch, Workflow } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { getMessages, type Locale } from "@/lib/i18n";
 
-export function AISection() {
-  const aiCards = [
-    {
-      title: "Workflow Automation",
-      detail: "Process acceleration through intelligent orchestration and adaptive automation.",
-      icon: Workflow,
-    },
-    {
-      title: "Document Intelligence",
-      detail: "Semantic extraction and structured document management for operational continuity.",
-      icon: FileSearch,
-    },
-    {
-      title: "Knowledge Systems",
-      detail: "Unified knowledge layers for strategic teams and decision-critical workflows.",
-      icon: Bot,
-    },
-    {
-      title: "Operational Analytics",
-      detail: "Intelligence metrics and performance analytics for execution governance.",
-      icon: ChartColumnBig,
-    },
-  ];
+const aiIcons = [Workflow, FileSearch, Bot, ChartColumnBig];
+
+type AISectionProps = {
+  locale: Locale;
+};
+
+export function AISection({ locale }: AISectionProps) {
+  const messages = getMessages(locale).sections.ai;
 
   return (
     <section
@@ -46,35 +32,37 @@ export function AISection() {
           className="space-y-8"
         >
           <SectionTitle
-            eyebrow="Innovation"
-            title="AI-Driven Strategic Operations"
-            description="NOETRA STRATEGIES integra sistemi di intelligenza artificiale, automazione avanzata e infrastrutture digitali evolute nei processi organizzativi, documentali e decisionali, creando soluzioni scalabili orientate all'efficienza operativa ed alla gestione intelligente delle informazioni."
+            eyebrow={messages.eyebrow}
+            title={messages.title}
+            description={messages.description}
           />
 
           <Card className="border-[#4DA3FF]/30 p-6">
             <p className="text-sm leading-7 text-[#F5F7FA]/78">
-              AI architecture, automation pipelines and intelligence dashboards
-              designed for advisory operations, regulatory alignment and strategic
-              decision execution.
+              {messages.intro}
             </p>
           </Card>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            {aiCards.map((card, index) => (
-              <motion.div
-                key={card.title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.45, delay: index * 0.09 }}
-              >
-                <Card className="h-full border-white/12 p-5">
-                  <card.icon size={18} className="text-[#4DA3FF]" />
-                  <h3 className="mt-3 text-lg font-semibold text-[#F5F7FA]">{card.title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-[#F5F7FA]/72">{card.detail}</p>
-                </Card>
-              </motion.div>
-            ))}
+            {messages.cards.map((card, index) => {
+              const Icon = aiIcons[index] ?? Workflow;
+
+              return (
+                <motion.div
+                  key={card.title}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.45, delay: index * 0.09 }}
+                >
+                  <Card className="h-full border-white/12 p-5">
+                    <Icon size={18} className="text-[#4DA3FF]" />
+                    <h3 className="mt-3 text-lg font-semibold text-[#F5F7FA]">{card.title}</h3>
+                    <p className="mt-2 text-sm leading-7 text-[#F5F7FA]/72">{card.detail}</p>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -94,7 +82,7 @@ export function AISection() {
 
             <div className="relative space-y-5">
               <div className="grid gap-3 sm:grid-cols-3">
-                {["Predictive Layer", "Automation Engine", "Advisory Core"].map(
+                {messages.predictiveLabels.map(
                   (item, index) => (
                     <div
                       key={item}
@@ -120,7 +108,7 @@ export function AISection() {
               <div className="grid gap-3 md:grid-cols-[1fr_0.85fr]">
                 <div className="rounded-2xl border border-white/10 bg-[#111827]/65 p-4">
                   <p className="text-xs uppercase tracking-[0.2em] text-[#F5F7FA]/65">
-                    Intelligence Metrics
+                    {messages.metricsTitle}
                   </p>
                   <div className="mt-4 grid h-32 grid-cols-7 items-end gap-2">
                     {[35, 52, 40, 68, 56, 83, 74].map((height, index) => (
@@ -139,10 +127,10 @@ export function AISection() {
 
                 <div className="rounded-2xl border border-white/10 bg-[#111827]/65 p-4">
                   <p className="text-xs uppercase tracking-[0.2em] text-[#F5F7FA]/65">
-                    Automation Pipeline
+                    {messages.pipelineTitle}
                   </p>
                   <div className="mt-3 space-y-3">
-                    {["Input Layer", "Inference Engine", "Decision Output"].map(
+                    {messages.pipelineNodes.map(
                       (node, index) => (
                       <motion.div
                         key={node}
@@ -162,14 +150,10 @@ export function AISection() {
 
               <div className="rounded-2xl border border-white/10 bg-[#111827]/55 p-4">
                 <p className="text-xs uppercase tracking-[0.2em] text-[#F5F7FA]/65">
-                  AI Architecture Diagram
+                  {messages.diagramTitle}
                 </p>
                 <div className="mt-3 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-3">
-                  {[
-                    "Signal Intake",
-                    "Intelligence Layer",
-                    "Advisory Output",
-                  ].map((node, index) => (
+                  {messages.diagramNodes.map((node, index) => (
                     <div key={node} className="contents">
                       <motion.div
                         className="rounded-lg border border-white/12 bg-[#0B0F14]/70 px-3 py-2 text-center text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/75"

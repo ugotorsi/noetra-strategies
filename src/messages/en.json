@@ -1,0 +1,532 @@
+{
+  "site": {
+    "title": "NOETRA STRATEGIES | Strategic Intelligence Firm",
+    "description": "International platform for strategic advisory, AI innovation and multidisciplinary operational coordination.",
+    "keywords": [
+      "strategic intelligence",
+      "AI advisory",
+      "corporate strategy",
+      "operational intelligence",
+      "legal coordination",
+      "innovation systems"
+    ]
+  },
+  "seo": {
+    "home": {
+      "title": "Strategic Intelligence Firm",
+      "description": "International platform for strategic advisory, AI innovation and multidisciplinary operational coordination.",
+      "keywords": [
+        "strategic intelligence",
+        "AI advisory",
+        "corporate strategy",
+        "operational intelligence",
+        "legal coordination",
+        "innovation systems"
+      ]
+    },
+    "about": {
+      "title": "Strategic Profile",
+      "description": "Independent strategic advisory with multidisciplinary coordination and AI-enabled operational frameworks.",
+      "keywords": [
+        "strategic advisory",
+        "multidisciplinary coordination",
+        "strategic intelligence",
+        "AI operations"
+      ]
+    },
+    "services": {
+      "title": "Services",
+      "description": "Integrated service architecture for complex operations: corporate advisory, legal-regulatory coordination and AI systems.",
+      "keywords": [
+        "corporate advisory",
+        "AI systems",
+        "operational intelligence",
+        "legal coordination"
+      ]
+    },
+    "innovation": {
+      "title": "Innovation",
+      "description": "AI-driven strategic operations with automation, knowledge systems and document intelligence.",
+      "keywords": [
+        "AI innovation",
+        "document intelligence",
+        "automation systems",
+        "strategic operations"
+      ]
+    },
+    "network": {
+      "title": "Network",
+      "description": "Integrated professional network for multidisciplinary execution with full technical and professional autonomy.",
+      "keywords": [
+        "professional network",
+        "strategic intelligence",
+        "institutional relations",
+        "legal coordination"
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact NOETRA STRATEGIES for strategic operations, innovation and multidisciplinary coordination.",
+      "keywords": [
+        "advisory contact",
+        "strategic intelligence",
+        "AI advisory",
+        "operational coordination"
+      ]
+    },
+    "legal": {
+      "title": "Legal Information",
+      "description": "Legal and corporate information for the NOETRA STRATEGIES platform.",
+      "keywords": [
+        "legal information",
+        "legal advisory",
+        "corporate information"
+      ]
+    },
+    "noetralex": {
+      "title": "NOETRALEX",
+      "description": "Legal Intelligence Systems: advanced AI-driven legal coordination, regulatory intelligence and document systems.",
+      "keywords": [
+        "legal intelligence",
+        "AI systems",
+        "regulatory coordination",
+        "document intelligence",
+        "compliance automation"
+      ]
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "innovation": "Innovation",
+    "network": "Network",
+    "contact": "Contact",
+    "legal": "Legal",
+    "toggle": "Open navigation"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "it": "IT",
+    "en": "EN"
+  },
+  "footer": {
+    "company": "NOETRA STRATEGIES s.r.l.s.",
+    "descriptor": "Strategic Advisory & AI Innovation",
+    "country": "Italy",
+    "tagline": "International platform for strategic intelligence and multidisciplinary operational advisory.",
+    "links": {
+      "about": "About",
+      "services": "Services",
+      "innovation": "Innovation",
+      "network": "Network",
+      "contact": "Contact",
+      "legal": "Legal"
+    }
+  },
+  "legalDisclaimer": {
+    "title": "Regulatory and Professional Disclaimer",
+    "paragraphOne": "Activities legally reserved to licensed professionals are exclusively performed by authorized practitioners acting with full technical, professional and ethical autonomy under applicable regulations.",
+    "paragraphTwo": "Legal representation mandates and direct professional assignments are entered into directly between the client and the appointed professional."
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "Strategic Advisory | AI Innovation | Legal Coordination",
+      "headlineLineOne": "Strategic Intelligence",
+      "headlineLineTwo": "for Complex Operations",
+      "subheadline": "NOETRA STRATEGIES supports companies, investors, professionals and organizations in complex strategic operations, technology innovation, multidisciplinary coordination and high-stakes decision environments.",
+      "primaryCta": "Book an Advisory Call",
+      "secondaryCta": "Explore Capabilities",
+      "executiveBadges": [
+        "AI Systems",
+        "Corporate Advisory",
+        "Regulatory Support",
+        "Strategic Operations"
+      ],
+      "trustIndicators": [
+        "Independent strategic intelligence firm",
+        "Multidisciplinary coordination platform",
+        "AI-driven operational advisory"
+      ],
+      "metrics": [
+        {
+          "label": "Operational Clarity",
+          "value": 94
+        },
+        {
+          "label": "Coordination Index",
+          "value": 91
+        },
+        {
+          "label": "AI Enablement",
+          "value": 88
+        }
+      ],
+      "floatingLabels": [
+        "Board-Level Advisory",
+        "Decision Intelligence",
+        "Operational Control",
+        "Regulatory Visibility"
+      ],
+      "dashboard": {
+        "title": "Strategic Operations Layer",
+        "badge": "Live Nodes",
+        "categoryTags": [
+          "Corporate",
+          "Regulatory",
+          "Execution"
+        ],
+        "flowCards": [
+          "Decision Flow",
+          "Legal Signals",
+          "Market Pulse",
+          "Execution Sync"
+        ]
+      }
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "Strategic Advisory Beyond Conventional Consulting",
+      "description": "NOETRA STRATEGIES operates as an independent strategic advisory organization with high multidisciplinary integration, supporting executive, organizational, technological and documentation needs in complex operations and high-value decision processes.",
+      "paragraphOne": "The company integrates strategic expertise, professional coordination, advanced technology and digital systems, delivering scalable operational frameworks for companies, investors, professionals and institutions.",
+      "paragraphTwo": "Every engagement is managed through an institutional approach, executive accountability and a method architecture focused on operational continuity, decision performance and risk control.",
+      "valueTitle": "Institutional Value Proposition",
+      "valueHeadline": "Strategic Intelligence Firm + AI-Driven Advisory Platform",
+      "premiumBlocks": [
+        {
+          "title": "Executive Positioning",
+          "text": "Independent strategic platform with institutional-grade advisory standards."
+        },
+        {
+          "title": "Operational Design",
+          "text": "Scalable frameworks engineered for complex operational and decision environments."
+        },
+        {
+          "title": "Intelligence Enablement",
+          "text": "Digital intelligence layers for decision support, document systems and process control."
+        }
+      ],
+      "methodologyCards": [
+        {
+          "title": "Strategic Layer",
+          "detail": "Scenario analysis, strategic priorities and decision governance setup."
+        },
+        {
+          "title": "Coordination Layer",
+          "detail": "Multidisciplinary orchestration of workflows, stakeholders and assignments."
+        },
+        {
+          "title": "Execution Layer",
+          "detail": "Operational implementation, performance alignment and continuous optimization."
+        }
+      ],
+      "frameworkTitle": "Operational Framework",
+      "frameworkItems": [
+        "Strategic Inputs",
+        "Decision Layer",
+        "Execution Orchestration",
+        "Outcome Tracking"
+      ],
+      "metrics": [
+        {
+          "title": "Strategic Operations",
+          "value": "Integrated Governance Stack",
+          "detail": "Governance design, decision architecture and strategic execution oversight."
+        },
+        {
+          "title": "AI Integration",
+          "value": "Intelligence Infrastructure",
+          "detail": "AI-enabled document systems, workflow automation and operational intelligence."
+        },
+        {
+          "title": "Multidisciplinary Coordination",
+          "value": "Cross-Functional Orchestration",
+          "detail": "Integrated coordination model for complex projects and institutional interfaces."
+        }
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Strategic Services for Complex Organizations",
+      "description": "Integrated service architecture for strategic intelligence, legal-regulatory coordination and AI-enabled execution.",
+      "cards": [
+        {
+          "title": "Strategic & Corporate Advisory",
+          "description": "Executive advisory for strategic positioning, governance architecture and growth-oriented corporate decisions.",
+          "capabilities": [
+            "governance architecture",
+            "business planning",
+            "strategic communication"
+          ]
+        },
+        {
+          "title": "Legal & Regulatory Coordination",
+          "description": "Integrated legal and regulatory coordination for complex mandates requiring technical oversight and compliance control.",
+          "capabilities": [
+            "compliance frameworks",
+            "regulatory mapping",
+            "documentation systems"
+          ]
+        },
+        {
+          "title": "AI Systems & Digital Innovation",
+          "description": "Design and implementation of AI-enabled operational systems for intelligent automation and scalable workflows.",
+          "capabilities": [
+            "operational automation",
+            "decision intelligence",
+            "knowledge systems"
+          ]
+        },
+        {
+          "title": "Real Estate & Asset Consulting",
+          "description": "Strategic and technical support for asset enhancement, real estate initiatives and operational roadmapping.",
+          "capabilities": [
+            "asset strategy",
+            "documentation systems",
+            "institutional interface"
+          ]
+        },
+        {
+          "title": "Institutional & Commercial Relations",
+          "description": "Institutional and commercial relationship management for market positioning, partnerships and executive dialogue.",
+          "capabilities": [
+            "stakeholder engagement",
+            "strategic communication",
+            "institutional relations"
+          ]
+        },
+        {
+          "title": "Executive Training & Knowledge Systems",
+          "description": "High-level executive programs with frameworks focused on strategy, compliance and AI governance.",
+          "capabilities": [
+            "executive training",
+            "knowledge systems",
+            "operational methodologies"
+          ]
+        }
+      ]
+    },
+    "capabilities": {
+      "eyebrow": "Capabilities",
+      "title": "Operational Capabilities",
+      "description": "Modular operational stack designed for complex strategic operations, institutional governance and AI-enabled execution.",
+      "items": [
+        {
+          "title": "Strategic Advisory",
+          "detail": "Executive advisory and high-impact strategic positioning."
+        },
+        {
+          "title": "Decision Intelligence",
+          "detail": "Data-informed frameworks for complex decision environments."
+        },
+        {
+          "title": "AI Integration",
+          "detail": "AI system integration across workflows and operational processes."
+        },
+        {
+          "title": "Legal Coordination",
+          "detail": "Structured legal coordination in multidisciplinary contexts."
+        },
+        {
+          "title": "Documentation Systems",
+          "detail": "Advanced document architectures and controlled information flows."
+        },
+        {
+          "title": "Regulatory Support",
+          "detail": "Regulatory alignment and compliance framework implementation."
+        },
+        {
+          "title": "Corporate Structuring",
+          "detail": "Operational structuring for growth, governance and resilience."
+        },
+        {
+          "title": "Institutional Relations",
+          "detail": "Institutional interface strategy and strategic communication support."
+        }
+      ]
+    },
+    "method": {
+      "eyebrow": "Method",
+      "title": "Operational Method Framework",
+      "description": "Four-phase model designed to transform complexity into controlled strategic execution.",
+      "stepLabel": "Step",
+      "steps": [
+        {
+          "key": "ANALYZE",
+          "tag": "Assessment Layer",
+          "description": "Strategic assessment and multidisciplinary evaluation."
+        },
+        {
+          "key": "STRUCTURE",
+          "tag": "Framework Layer",
+          "description": "Operational and organizational framework definition."
+        },
+        {
+          "key": "COORDINATE",
+          "tag": "Coordination Layer",
+          "description": "Integrated management of professional activities and workflows."
+        },
+        {
+          "key": "EXECUTE",
+          "tag": "Execution Layer",
+          "description": "Technology-enabled operational support and implementation."
+        }
+      ]
+    },
+    "ai": {
+      "eyebrow": "Innovation",
+      "title": "AI-Driven Strategic Operations",
+      "description": "NOETRA STRATEGIES integrates artificial intelligence systems, advanced automation and modern digital infrastructure into organizational, documentary and decision processes, creating scalable solutions focused on operational efficiency and intelligent information management.",
+      "intro": "AI architectures, automation pipelines and intelligence dashboards designed for advisory operations, regulatory alignment and strategic execution.",
+      "cards": [
+        {
+          "title": "Workflow Automation",
+          "detail": "Process acceleration through intelligent orchestration and adaptive automation."
+        },
+        {
+          "title": "Document Intelligence",
+          "detail": "Semantic extraction and structured document management for operational continuity."
+        },
+        {
+          "title": "Knowledge Systems",
+          "detail": "Unified knowledge layers for strategic teams and critical decision workflows."
+        },
+        {
+          "title": "Operational Analytics",
+          "detail": "Intelligence metrics and performance analytics for executive governance."
+        }
+      ],
+      "predictiveLabels": [
+        "Predictive Layer",
+        "Automation Engine",
+        "Advisory Core"
+      ],
+      "metricsTitle": "Intelligence Metrics",
+      "pipelineTitle": "Automation Pipeline",
+      "pipelineNodes": [
+        "Input Layer",
+        "Inference Engine",
+        "Decision Output"
+      ],
+      "diagramTitle": "AI Architecture Diagram",
+      "diagramNodes": [
+        "Signal Intake",
+        "Intelligence Layer",
+        "Advisory Output"
+      ]
+    },
+    "network": {
+      "eyebrow": "Network",
+      "title": "Integrated Professional Network",
+      "description": "The company coordinates multidisciplinary activities through qualified external professionals operating with full technical, professional and ethical autonomy under applicable regulations.",
+      "flowTitle": "Professional Coordination Flow",
+      "flowNodes": [
+        "Client Mandate",
+        "NOETRA Coordination",
+        "Professional Execution"
+      ],
+      "diagramTitle": "Institutional Diagram",
+      "diagramSteps": [
+        "Mandate Definition",
+        "Specialist Activation",
+        "Regulatory Alignment",
+        "Operational Reporting"
+      ],
+      "areaLabel": "Area",
+      "areas": [
+        "Legal",
+        "Tax",
+        "Compliance",
+        "Engineering",
+        "Technical Experts",
+        "Corporate Advisory"
+      ],
+      "areaDescription": "Institutional coordination, elevated standards and integrated execution across complex initiatives."
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Request Strategic Consultation",
+      "description": "NOETRA STRATEGIES supports organizations, professionals and investors in strategic operations, innovation initiatives and multidisciplinary coordination activities.",
+      "boxEyebrow": "Executive Inquiry Box",
+      "boxTitle": "Strategic Operations Intake",
+      "boxDescription": "Share your operational context, strategic priorities and expected execution horizon to receive an aligned advisory response.",
+      "boxBullets": [
+        "Strategic intelligence briefing",
+        "Operational coordination scoping",
+        "AI innovation alignment"
+      ],
+      "boxCta": "Schedule Advisory Call",
+      "panelLabel": "Advisory Coordination Interface",
+      "panelBadge": "Priority Response Channel",
+      "form": {
+        "name": "Name",
+        "namePlaceholder": "Full name",
+        "email": "Email",
+        "emailPlaceholder": "name@company.com",
+        "company": "Company",
+        "companyPlaceholder": "Company name",
+        "message": "Message",
+        "messagePlaceholder": "Describe your strategic objectives and operational context",
+        "microcopy": "Institutional channel for complex strategic requests and multidisciplinary mandates.",
+        "submit": "Schedule Advisory Call",
+        "loading": "Sending...",
+        "success": "Your strategic consultation request has been submitted successfully.",
+        "error": "Unable to submit your request at the moment."
+      }
+    }
+  },
+  "legalPage": {
+    "eyebrow": "Legal",
+    "title": "Legal Information",
+    "description": "Institutional placeholders for public legal and corporate information.",
+    "institutionalName": "NOETRA STRATEGIES s.r.l.s.",
+    "rows": [
+      {
+        "label": "Registered Office",
+        "value": "Italy"
+      },
+      {
+        "label": "VAT Number",
+        "value": "[PLACEHOLDER]"
+      },
+      {
+        "label": "REA",
+        "value": "[PLACEHOLDER]"
+      },
+      {
+        "label": "Certified Email",
+        "value": "[PLACEHOLDER]"
+      }
+    ],
+    "emailLabel": "Email"
+  },
+  "noetralexPage": {
+    "eyebrow": "NOETRALEX",
+    "title": "Legal Intelligence Systems",
+    "description": "Advanced AI-driven legal coordination, regulatory intelligence, document systems and strategic operational support.",
+    "cards": [
+      {
+        "title": "AI Legal Systems",
+        "detail": "AI-enabled frameworks for legal coordination, strategic analysis and specialist operational support."
+      },
+      {
+        "title": "Document Intelligence",
+        "detail": "Structured document pipelines, extraction layers and knowledge retrieval systems."
+      },
+      {
+        "title": "Regulatory Coordination",
+        "detail": "Regulatory monitoring and coordination support for complex operational contexts."
+      },
+      {
+        "title": "Litigation Support Systems",
+        "detail": "Workflow-oriented legal support architecture for strategic litigation processes."
+      },
+      {
+        "title": "Compliance Automation",
+        "detail": "Automated compliance controls and structured governance workflows."
+      }
+    ],
+    "comingSoon": "Coming Soon",
+    "comingNote": "Cyber legal-tech division currently in strategic rollout."
+  }
+}
