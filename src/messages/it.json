@@ -278,110 +278,80 @@
     },
     "services": {
       "eyebrow": "Servizi",
-      "title": "Servizi strategico-operativi per organizzazioni complesse",
-      "description": "Un'offerta concreta che integra advisory strategico, coordinamento legale, AI legal intelligence e gestione di operazioni ad alta complessità.",
+      "title": "Executive operational matrix",
+      "description": "Interfaccia istituzionale di advisory e legal-tech operations, progettata per decisioni complesse e execution controllata.",
       "cards": [
         {
-          "title": "Advisory strategico e direzionale",
-          "description": "Supporto al vertice aziendale su scelte strategiche, governance decisionale, assetto organizzativo e priorità di execution.",
-          "executiveParagraph": "Intervento dedicato a board e leadership team impegnati in trasformazioni, crescita o ristrutturazioni complesse.",
-          "operationalTerms": [
-            "board advisory",
-            "strategic planning",
-            "execution governance"
+          "title": "Legale",
+          "microTag": "LITIGATION",
+          "tier": "primary",
+          "status": "ACTIVE",
+          "description": "Coordinamento strategico in contenziosi, negoziazioni e operazioni regolatorie complesse.",
+          "indicators": [
+            "REGULATORY",
+            "MANDATE CONTROL"
           ],
-          "capabilities": [
-            "analisi scenario e opzioni",
-            "supporto alle decisioni critiche",
-            "impostazione governance",
-            "allineamento stakeholder"
-          ],
-          "reveal": "Decision architecture"
+          "signal": "EXECUTION PRIORITY"
         },
         {
-          "title": "Coordinamento legale, compliance e governance",
-          "description": "Regia operativa di temi legali e regolatori con presidio compliance, governance documentale e continuità esecutiva.",
-          "executiveParagraph": "Pensato per mandati in cui rischio regolatorio, tempi e qualità istruttoria devono restare sotto controllo costante.",
-          "operationalTerms": [
-            "legal coordination",
-            "compliance control",
-            "governance assurance"
+          "title": "Corporate advisory",
+          "microTag": "STRATEGIC",
+          "tier": "primary",
+          "status": "ACTIVE",
+          "description": "Supporto executive per governance, assetti societari e operazioni straordinarie.",
+          "indicators": [
+            "GOVERNANCE",
+            "BOARD TRACK"
           ],
-          "capabilities": [
-            "coordinamento legal-tech",
-            "monitoraggio compliance",
-            "strutturazione flussi autorizzativi",
-            "controllo istruttorie"
-          ],
-          "reveal": "Regulatory control layer"
+          "signal": "INSTITUTIONAL DIRECTION"
         },
         {
-          "title": "Document intelligence e AI legal operations",
-          "description": "Analisi documentale avanzata, classificazione semantica e supporto istruttorio attraverso infrastrutture AI integrate.",
-          "executiveParagraph": "Riduce attrito operativo e tempi di revisione in processi ad alta intensita documentale, mantenendo auditabilita e tracciabilita.",
-          "operationalTerms": [
-            "document analysis",
-            "ai legal intelligence",
-            "workflow automation"
+          "title": "Compliance",
+          "microTag": "REGULATORY",
+          "tier": "primary",
+          "status": "MONITORED",
+          "description": "Framework di controllo e gestione del rischio orientati a governance e accountability.",
+          "indicators": [
+            "RISK",
+            "ACCOUNTABILITY"
           ],
-          "capabilities": [
-            "estrazione informazioni critiche",
-            "mappatura evidenze documentali",
-            "supporto dossier complessi",
-            "ottimizzazione workflow legali"
-          ],
-          "reveal": "Intelligence processing engine"
+          "signal": "CONTROL FRAMEWORK"
         },
         {
-          "title": "Operazioni complesse e crisis & strategic operations",
-          "description": "Pianificazione e gestione di operazioni straordinarie o critiche, con cabina di regia unica e coordinamento interfunzionale.",
-          "executiveParagraph": "Approccio indicato per scenari con forte pressione temporale, esposizione reputazionale o elevata frammentazione decisionale.",
-          "operationalTerms": [
-            "crisis coordination",
-            "strategic operations",
-            "continuity planning"
+          "title": "Consulenza tecnica",
+          "microTag": "OPERATIONS",
+          "tier": "primary",
+          "status": "AI-ASSISTED",
+          "description": "Analisi tecnico-documentale integrata in processi decisionali e contenziosi.",
+          "indicators": [
+            "NOETRALEX / LEGAL-TECH",
+            "EVIDENCE FLOW"
           ],
-          "capabilities": [
-            "war-room governance",
-            "presidio continuità operativa",
-            "coordinamento stakeholder critici",
-            "reporting executive in tempo reale"
-          ],
-          "reveal": "Crisis response cockpit"
+          "signal": "LEGAL SIGNAL PANEL"
         },
         {
-          "title": "Relazioni istituzionali e stakeholder management",
-          "description": "Impostazione e gestione di relazioni istituzionali, interlocuzioni qualificate e processi di allineamento multi-stakeholder.",
-          "executiveParagraph": "Consolida credibilita istituzionale e coerenza comunicativa in fasi di negoziazione o transizione operativa.",
-          "operationalTerms": [
-            "institutional relations",
-            "stakeholder alignment",
-            "strategic communication"
+          "title": "Fiscale",
+          "microTag": "CORPORATE",
+          "tier": "secondary",
+          "status": "LIVE",
+          "description": "Analisi tributaria e societaria integrata in operazioni patrimoniali e corporate.",
+          "indicators": [
+            "TAX",
+            "ASSET IMPACT"
           ],
-          "capabilities": [
-            "mappatura stakeholder",
-            "governo interlocuzioni",
-            "preparazione executive briefing",
-            "allineamento posizionamento istituzionale"
-          ],
-          "reveal": "Institutional interface layer"
+          "signal": "FISCAL TRACK"
         },
         {
-          "title": "Supporto al contenzioso e analisi tecnico-documentale",
-          "description": "Supporto strategico al contenzioso tramite analisi normativa e documentale, organizzazione dei fatti e integrazione di evidenze complesse.",
-          "executiveParagraph": "NOETRA supporta la preparazione istruttoria e il coordinamento operativo, nel rispetto dei ruoli dei professionisti legali incaricati.",
-          "operationalTerms": [
-            "litigation support",
-            "evidence mapping",
-            "procedural intelligence"
+          "title": "Ingegneria",
+          "microTag": "TECHNICAL",
+          "tier": "secondary",
+          "status": "ON-CALL",
+          "description": "Supporto infrastrutturale e tecnico in scenari operativi ad alta complessità.",
+          "indicators": [
+            "TECHNICAL",
+            "PROJECT REVIEW"
           ],
-          "capabilities": [
-            "analisi normativa avanzata",
-            "ricostruzione timeline e fatti",
-            "organizzazione set documentali",
-            "coordinamento tecnico-procedurale"
-          ],
-          "reveal": "Contenzioso intelligence support"
+          "signal": "INFRASTRUCTURE TRACE"
         }
       ]
     },

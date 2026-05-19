@@ -282,112 +282,80 @@
     },
     "services": {
       "eyebrow": "Services",
-      "title": "Enterprise Strategic Services for Complex Organizations",
-      "description": "Integrated service architecture for strategic intelligence, institutional advisory, legal-tech coordination and AI-enabled executive execution.",
+      "title": "Executive Operational Matrix",
+      "description": "Institutional advisory interface for legal-tech execution, governance control and high-stakes decision support.",
       "cards": [
         {
-          "title": "Strategic and Corporate Advisory",
-          "description": "Executive advisory for strategic positioning, governance architecture and high-impact institutional decisions.",
-          "executiveParagraph": "Designed for leadership teams managing growth, transformation and strategic complexity across multiple fronts.",
-          "operationalTerms": [
-            "board governance",
-            "strategic planning",
-            "execution control"
+          "title": "Legal",
+          "microTag": "LITIGATION",
+          "tier": "primary",
+          "status": "ACTIVE",
+          "description": "Strategic coordination for complex litigation, negotiation and regulatory operations.",
+          "indicators": [
+            "REGULATORY",
+            "MANDATE CONTROL"
           ],
-          "capabilities": [
-            "governance architecture",
-            "executive communication",
-            "decision support",
-            "institutional strategy"
-          ],
-          "reveal": "Executive mandate acceleration"
+          "signal": "EXECUTION PRIORITY"
         },
         {
-          "title": "Legal and Regulatory Coordination",
-          "description": "Integrated legal-regulatory coordination for assignments requiring procedural precision, risk framing and compliance control.",
-          "executiveParagraph": "Structured legal-tech alignment for mandates where regulatory exposure and execution timing are mission critical.",
-          "operationalTerms": [
-            "regulatory mapping",
-            "procedural control",
-            "compliance assurance"
+          "title": "Corporate Advisory",
+          "microTag": "STRATEGIC",
+          "tier": "primary",
+          "status": "ACTIVE",
+          "description": "Executive support for governance, corporate structures and extraordinary operations.",
+          "indicators": [
+            "GOVERNANCE",
+            "BOARD TRACK"
           ],
-          "capabilities": [
-            "compliance frameworks",
-            "regulatory intelligence",
-            "documentation systems",
-            "legal workflow alignment"
-          ],
-          "reveal": "Regulatory resilience layer"
+          "signal": "INSTITUTIONAL DIRECTION"
         },
         {
-          "title": "AI Systems and Digital Innovation",
-          "description": "Design and implementation of AI-enabled operating systems for intelligent orchestration and scalable decision workflows.",
-          "executiveParagraph": "Built for organizations requiring operational automation without sacrificing governance, traceability or strategic control.",
-          "operationalTerms": [
-            "AI orchestration",
-            "knowledge infrastructure",
-            "automation control"
+          "title": "Compliance",
+          "microTag": "REGULATORY",
+          "tier": "primary",
+          "status": "MONITORED",
+          "description": "Control frameworks and risk management aligned with governance and accountability.",
+          "indicators": [
+            "RISK",
+            "ACCOUNTABILITY"
           ],
-          "capabilities": [
-            "operational automation",
-            "document intelligence",
-            "strategic analytics",
-            "workflow intelligence"
-          ],
-          "reveal": "AI coordination engine"
+          "signal": "CONTROL FRAMEWORK"
         },
         {
-          "title": "Strategic Operations and Institutional Advisory",
-          "description": "Strategic and operational support for complex operations, institutional interfaces, organizational governance and multidisciplinary decision ecosystems.",
-          "executiveParagraph": "Dedicated to high-stakes initiatives where execution continuity and cross-functional coordination define outcome quality.",
-          "operationalTerms": [
-            "institutional interface",
-            "operational governance",
-            "strategic continuity"
+          "title": "Technical Consulting",
+          "microTag": "OPERATIONS",
+          "tier": "primary",
+          "status": "AI-ASSISTED",
+          "description": "Integrated technical-documentary analysis across decision workflows and contentious contexts.",
+          "indicators": [
+            "NOETRALEX / LEGAL-TECH",
+            "EVIDENCE FLOW"
           ],
-          "capabilities": [
-            "operational coordination",
-            "governance support",
-            "institutional relations",
-            "strategic planning",
-            "executive advisory",
-            "operational intelligence"
-          ],
-          "reveal": "Institutional operations cockpit"
+          "signal": "LEGAL SIGNAL PANEL"
         },
         {
-          "title": "Institutional and Commercial Relations",
-          "description": "Strategic relationship architecture for institutional positioning, stakeholder engagement and executive-level market dialogue.",
-          "executiveParagraph": "Supports organizations navigating institutional ecosystems, partnerships and strategic representation.",
-          "operationalTerms": [
-            "stakeholder mapping",
-            "institutional dialogue",
-            "market positioning"
+          "title": "Tax",
+          "microTag": "CORPORATE",
+          "tier": "secondary",
+          "status": "LIVE",
+          "description": "Integrated fiscal and corporate-tax analysis for asset and corporate operations.",
+          "indicators": [
+            "TAX",
+            "ASSET IMPACT"
           ],
-          "capabilities": [
-            "stakeholder engagement",
-            "institutional relations",
-            "strategic communication",
-            "partnership enablement"
-          ],
-          "reveal": "Strategic influence layer"
+          "signal": "FISCAL TRACK"
         },
         {
-          "title": "Executive Training and Knowledge Systems",
-          "description": "High-level executive programs and knowledge frameworks focused on strategic governance, regulatory awareness and AI literacy.",
-          "executiveParagraph": "Transforms strategic and operational know-how into repeatable institutional competence across leadership teams.",
-          "operationalTerms": [
-            "executive enablement",
-            "knowledge transfer",
-            "AI governance"
+          "title": "Engineering",
+          "microTag": "TECHNICAL",
+          "tier": "secondary",
+          "status": "ON-CALL",
+          "description": "Technical and infrastructure support for high-complexity operational scenarios.",
+          "indicators": [
+            "TECHNICAL",
+            "PROJECT REVIEW"
           ],
-          "capabilities": [
-            "executive training",
-            "knowledge systems",
-            "operational methodologies",
-            "governance education"
-          ],
-          "reveal": "Leadership capability amplification"
+          "signal": "INFRASTRUCTURE TRACE"
         }
       ]
     },
