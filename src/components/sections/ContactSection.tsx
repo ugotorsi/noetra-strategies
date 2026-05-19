@@ -160,7 +160,7 @@ export function ContactSection() {
             <Card className="p-7 sm:p-8">
               <form className="grid gap-4" onSubmit={handleSubmit}>
                 <label className="space-y-2 text-sm text-[#F5F7FA]/80">
-                  Name
+                  Nome
                   <input
                     name="name"
                     required
@@ -168,7 +168,7 @@ export function ContactSection() {
                     onChange={handleChange}
                     disabled={isLoading}
                     className="h-12 w-full rounded-xl border border-white/15 bg-[#0B0F14]/70 px-4 text-[#F5F7FA] outline-none transition-all duration-300 focus:border-[#C6A96B]/70 focus:shadow-[0_0_0_3px_rgba(198,169,107,0.14)]"
-                    placeholder="Full name"
+                    placeholder="Nome e cognome"
                   />
                 </label>
 
@@ -187,19 +187,19 @@ export function ContactSection() {
                 </label>
 
                 <label className="space-y-2 text-sm text-[#F5F7FA]/80">
-                  Organization
+                  Azienda
                   <input
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
                     disabled={isLoading}
                     className="h-12 w-full rounded-xl border border-white/15 bg-[#0B0F14]/70 px-4 text-[#F5F7FA] outline-none transition-all duration-300 focus:border-[#C6A96B]/70 focus:shadow-[0_0_0_3px_rgba(198,169,107,0.14)]"
-                    placeholder="Organization name"
+                    placeholder="Nome azienda"
                   />
                 </label>
 
                 <label className="space-y-2 text-sm text-[#F5F7FA]/80">
-                  Message
+                  Messaggio
                   <textarea
                     name="message"
                     required
@@ -209,7 +209,7 @@ export function ContactSection() {
                     onChange={handleChange}
                     disabled={isLoading}
                     className="w-full rounded-xl border border-white/15 bg-[#0B0F14]/70 px-4 py-3 text-[#F5F7FA] outline-none transition-all duration-300 focus:border-[#C6A96B]/70 focus:shadow-[0_0_0_3px_rgba(198,169,107,0.14)]"
-                    placeholder="Describe your strategic context, objectives and expected timeline"
+                    placeholder="Descrivi obiettivi e contesto operativo"
                   />
                 </label>
 
