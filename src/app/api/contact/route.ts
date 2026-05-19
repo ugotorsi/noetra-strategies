@@ -89,6 +89,14 @@ function serializeError(error: unknown) {
     };
   }
 
+  if (typeof error === "object" && error !== null) {
+    try {
+      return JSON.parse(JSON.stringify(error));
+    } catch {
+      return { value: String(error) };
+    }
+  }
+
   return { value: String(error) };
 }
 
@@ -97,7 +105,7 @@ export async function POST(request: NextRequest) {
   const logPrefix = `${LOG_NAMESPACE}[${requestId}]`;
   const resendApiKey = process.env.RESEND_API_KEY;
   const destinationEmail = process.env.CONTACT_EMAIL || siteConfig.emails.advisory;
-  const senderEmail = process.env.RESEND_FROM_EMAIL || `${siteConfig.name} <onboarding@resend.dev>`;
+  const senderEmail = "NOETRA STRATEGIES <onboarding@resend.dev>";
 
   console.info(`${logPrefix} Incoming request`, {
     method: request.method,
@@ -175,7 +183,9 @@ export async function POST(request: NextRequest) {
     });
 
     if (error) {
-      console.error(`${logPrefix} Resend rejected request`, error);
+      console.error(`${logPrefix} Resend rejected request`, {
+        resendError: serializeError(error),
+      });
 
       return NextResponse.json(
         { error: "Unable to send inquiry at this time.", requestId } satisfies ContactApiResponse,
