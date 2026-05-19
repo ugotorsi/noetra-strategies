@@ -1,114 +1,110 @@
 {
   "site": {
-    "title": "NOETRA STRATEGIES | Piattaforma di Strategic Intelligence e AI Advisory",
-    "description": "Piattaforma elite di strategic intelligence per AI advisory, legal intelligence systems e coordinamento esecutivo multidisciplinare.",
+    "title": "NOETRA STRATEGIES | Piattaforma istituzionale di strategic intelligence, advisory e legal-tech operations",
+    "description": "Piattaforma istituzionale di strategic intelligence per advisory direzionale, legal-tech operations e coordinamento multidisciplinare ad alta complessità.",
     "keywords": [
+      "intelligence strategica",
       "strategic intelligence",
-      "operational intelligence",
-      "AI advisory",
-      "legal intelligence",
-      "document intelligence",
-      "executive coordination",
-      "multidisciplinary advisory",
-      "AI systems",
-      "institutional advisory"
+      "advisory direzionale",
+      "legal-tech operations",
+      "ai legal intelligence",
+      "coordinamento multidisciplinare",
+      "governance operativa",
+      "supporto al contenzioso",
+      "compliance e governance"
     ]
   },
   "seo": {
     "home": {
-      "title": "Piattaforma di Strategic Intelligence e AI Advisory",
-      "description": "Piattaforma elite di strategic intelligence per AI advisory, legal intelligence systems e coordinamento esecutivo multidisciplinare.",
+      "title": "Piattaforma istituzionale di strategic intelligence e advisory",
+      "description": "NOETRA STRATEGIES integra strategic intelligence, advisory direzionale e legal-tech operations per operazioni corporate e istituzionali complesse.",
       "keywords": [
-        "strategic intelligence",
-        "operational intelligence",
-        "AI advisory",
-        "legal intelligence",
-        "document intelligence",
-        "executive coordination",
-        "multidisciplinary advisory",
-        "AI systems",
-        "institutional advisory"
+        "intelligence strategica",
+        "advisory direzionale",
+        "legal-tech operations",
+        "governance operativa",
+        "coordinamento executive"
       ]
     },
     "about": {
-      "title": "Profilo Strategico",
-      "description": "Profilo istituzionale di una realta indipendente di strategic intelligence che integra advisory, sistemi AI e governance operativa.",
+      "title": "Identita istituzionale",
+      "description": "Profilo istituzionale di NOETRA: intelligence strategica, coordinamento multidisciplinare e supporto decisionale in contesti complessi.",
       "keywords": [
-        "strategic intelligence",
-        "multidisciplinary advisory",
-        "operational philosophy",
-        "executive coordination"
+        "identita istituzionale",
+        "intelligence strategica",
+        "supporto decisionale",
+        "coordinamento multidisciplinare"
       ]
     },
     "services": {
-      "title": "Servizi Strategici",
-      "description": "Servizi enterprise per operazioni complesse, advisory istituzionale, coordinamento legal-tech ed esecuzione assistita da AI.",
+      "title": "Servizi strategico-operativi",
+      "description": "Servizi concreti per advisory strategico, coordinamento legale, analisi documentale, compliance, governance e crisis operations.",
       "keywords": [
-        "institutional advisory",
-        "operational intelligence",
-        "executive coordination",
-        "multidisciplinary advisory"
+        "advisory strategico",
+        "coordinamento legale",
+        "analisi documentale",
+        "supporto contenzioso",
+        "crisis operations"
       ]
     },
     "innovation": {
-      "title": "Sistemi di Innovazione AI",
-      "description": "Sistemi di coordinamento AI, document intelligence, orchestrazione dei workflow e analitica strategica per contesti executive.",
+      "title": "AI e legal intelligence",
+      "description": "Infrastrutture AI e legal intelligence per document analysis, workflow orchestration e decision support in ambienti regolati.",
       "keywords": [
-        "AI systems",
-        "document intelligence",
-        "operational automation",
-        "strategic analytics"
+        "ai legal intelligence",
+        "document analysis",
+        "workflow orchestration",
+        "decision support"
       ]
     },
     "network": {
-      "title": "Network Istituzionale",
-      "description": "Framework di orchestrazione multidisciplinare per esecuzione legale, tecnica e istituzionale.",
+      "title": "Network istituzionale",
+      "description": "Rete professionale qualificata coordinata da NOETRA per mandati corporate e istituzionali ad alta complessità.",
       "keywords": [
-        "executive coordination",
-        "institutional advisory",
-        "legal intelligence",
-        "operational intelligence"
+        "network istituzionale",
+        "coordinamento professionale",
+        "governance mandato",
+        "execution control"
       ]
     },
     "contact": {
-      "title": "Contatto Executive",
-      "description": "Canale istituzionale per consulenze strategiche, incarichi complessi e progetti di coordinamento AI.",
+      "title": "Contatto istituzionale",
+      "description": "Canale riservato per richieste di advisory strategico, legal-tech operations e coordinamento multidisciplinare.",
       "keywords": [
-        "strategic consultation",
-        "executive coordination",
-        "AI advisory",
-        "institutional advisory"
+        "contatto istituzionale",
+        "advisory strategico",
+        "inquiry riservata",
+        "coordinamento executive"
       ]
     },
     "legal": {
-      "title": "Informazioni Legali",
-      "description": "Informazioni legali e societarie istituzionali per NOETRA STRATEGIES e i sistemi di legal intelligence NOETRALEX.",
+      "title": "Informazioni legali e societarie",
+      "description": "Riferimenti legali e societari di NOETRA STRATEGIES e quadro istituzionale operativo di NOETRALEX.",
       "keywords": [
-        "legal intelligence",
-        "legal information",
-        "institutional advisory",
-        "executive coordination"
+        "informazioni legali",
+        "informazioni societarie",
+        "noetralex",
+        "legal-tech"
       ]
     },
     "noetralex": {
-      "title": "NOETRALEX | Legal Intelligence Systems",
-      "description": "Coordinamento legale avanzato guidato da AI, procedural intelligence, sistemi documentali e supporto operativo strategico.",
+      "title": "NOETRALEX | Piattaforma di legal intelligence",
+      "description": "NOETRALEX è una piattaforma legal-tech per intelligence giuridica, supporto strategico al contenzioso e integrazione AI nelle legal operations.",
       "keywords": [
-        "legal intelligence",
-        "procedural intelligence",
-        "document intelligence",
-        "AI legal systems",
-        "operational support"
+        "piattaforma legal-tech",
+        "intelligence giuridica",
+        "supporto contenzioso",
+        "ai legal operations"
       ]
     }
   },
   "navigation": {
     "home": "Home",
-    "about": "Profilo",
+    "about": "Chi siamo",
     "services": "Servizi",
     "innovation": "Innovazione",
     "network": "Network",
-    "contact": "Contatto",
+    "contact": "Contatti",
     "legal": "Legale",
     "toggle": "Apri navigazione"
   },
@@ -119,510 +115,508 @@
   },
   "footer": {
     "company": "NOETRA STRATEGIES s.r.l.s.",
-    "descriptor": "Strategic Intelligence, AI Advisory e Coordinamento Legal-Tech",
+    "descriptor": "Strategic intelligence, advisory direzionale e legal-tech operations",
     "country": "Italia",
-    "tagline": "Piattaforma operativa internazionale per strategic intelligence, advisory istituzionale e coordinamento esecutivo assistito da AI.",
+    "tagline": "Piattaforma istituzionale per intelligence strategica, governance operativa e coordinamento multidisciplinare in contesti complessi.",
     "links": {
-      "about": "Profilo",
+      "about": "Chi siamo",
       "services": "Servizi",
       "innovation": "Innovazione",
       "network": "Network",
-      "contact": "Contatto",
+      "contact": "Contatti",
       "legal": "Legale"
     },
-    "channelsLabel": "Canali Professionali",
-    "domainsLabel": "Domini NoetraLex",
-    "domainNote": "Domini di legal intelligence dedicati all'innovazione procedurale e ai workflow legali assistiti da AI.",
+    "channelsLabel": "Canali professionali",
+    "domainsLabel": "Domini NOETRALEX",
+    "domainNote": "Domini dedicati a intelligence giuridica, analisi normativa e legal operations assistite da AI.",
     "emails": {
-      "info": "Desk Informativo",
-      "advisory": "Desk Advisory",
-      "contact": "Desk Coordinamento"
+      "info": "Canale istituzionale",
+      "advisory": "Canale advisory",
+      "contact": "Canale operativo"
     }
   },
   "legalDisclaimer": {
     "ariaLabel": "Disclaimer normativo",
-    "title": "Disclaimer Normativo e Professionale",
-    "paragraphOne": "Le attivita riservate dalla legge a professionisti abilitati sono svolte esclusivamente da soggetti autorizzati, in piena autonomia tecnica, professionale ed etica secondo la normativa vigente.",
+    "title": "Disclaimer normativo e professionale",
+    "paragraphOne": "Le attività riservate per legge ai professionisti abilitati sono svolte esclusivamente da soggetti autorizzati, in piena autonomia tecnica, professionale ed etica, nel rispetto della normativa vigente.",
     "paragraphTwo": "Gli incarichi di rappresentanza legale e i mandati professionali diretti sono conferiti direttamente tra cliente e professionista incaricato."
   },
   "sections": {
     "hero": {
-      "eyebrow": "Strategic Intelligence | AI Advisory | Coordinamento Legal-Tech",
-      "headlineLineOne": "Intelligenza Executive",
-      "headlineLineTwo": "per Operazioni Strategiche Complesse",
-      "subheadline": "NOETRA STRATEGIES supporta istituzioni, imprese, investitori e reti professionali in operazioni strategiche ad alto impatto, trasformazione AI, coordinamento legal-tech e governance decisionale.",
-      "primaryCta": "Richiedi Consultazione Strategica",
-      "secondaryCta": "Esplora le Capacita Operative",
+      "eyebrow": "Strategic Intelligence | Advisory | Legal-Tech Operations",
+      "headlineLineOne": "Intelligence strategica",
+      "headlineLineTwo": "per decisioni ad alta complessità",
+      "subheadline": "NOETRA STRATEGIES affianca istituzioni, imprese e investitori nella gestione di operazioni complesse, con un modello integrato di advisory direzionale, coordinamento legale e AI-enabled operations.",
+      "primaryCta": "Richiedi consultazione strategica",
+      "secondaryCta": "Esplora le capacità operative",
       "executiveBadges": [
-        "Strategic Intelligence",
-        "AI Advisory",
-        "Legal Intelligence",
-        "Institutional Coordination"
+        "Strategic intelligence",
+        "Advisory direzionale",
+        "Legal intelligence",
+        "Operations governance"
       ],
       "trustIndicators": [
-        "Realta indipendente di strategic intelligence",
-        "Orchestrazione multidisciplinare di livello istituzionale",
-        "Advisory operativo potenziato da sistemi AI"
+        "Presidio istituzionale indipendente",
+        "Coordinamento multidisciplinare con accountability chiara",
+        "Approccio operativo orientato a continuità e controllo"
       ],
       "metrics": [
         {
-          "label": "Prontezza Operativa",
+          "label": "Operational readiness",
           "value": 96
         },
         {
-          "label": "Indice di Coordinamento Executive",
+          "label": "Coordination index",
           "value": 93
         },
         {
-          "label": "Integrazione Sistemi AI",
+          "label": "AI integration",
           "value": 91
         }
       ],
       "operationalIndicators": [
         {
-          "label": "Decision Governance",
+          "label": "Decision governance",
           "status": "Attiva"
         },
         {
-          "label": "Monitoraggio Regolatorio",
-          "status": "Live"
+          "label": "Presidio regolatorio",
+          "status": "Continuo"
         },
         {
-          "label": "Allineamento Esecutivo",
-          "status": "Calibrato"
+          "label": "Execution alignment",
+          "status": "Monitorato"
         }
       ],
-      "premiumMicrocopy": "Progettato per contesti board-level in cui esecuzione strategica, precisione legale e intelligence AI devono operare in un unico sistema sincronizzato.",
+      "premiumMicrocopy": "Struttura progettata per contesti board-level in cui precisione legale, visione strategica ed execution devono operare in un unico framework di governo.",
       "floatingLabels": [
-        "Board Advisory Matrix",
-        "Operational Intelligence Layer",
-        "Legal-Tech Synchronization",
-        "Institutional Signal Control"
+        "Mandate Control Matrix",
+        "Intelligence Orchestration Layer",
+        "Legal-Tech Signal Flow",
+        "Executive Decision Grid"
       ],
       "dashboard": {
-        "title": "Layer di Controllo delle Operazioni Strategiche",
-        "badge": "Nodi Executive Live",
+        "title": "Cabina di controllo strategico-operativa",
+        "badge": "Executive live monitoring",
         "categoryTags": [
           "Governance",
-          "Regolatorio",
+          "Compliance",
           "Execution"
         ],
         "flowCards": [
-          "Decision Intelligence",
-          "Segnali Procedurali",
-          "Pulse Istituzionale",
-          "Execution Continuum"
+          "Scenario intelligence",
+          "Legal signals",
+          "Institutional alignment",
+          "Execution continuity"
         ]
       }
     },
     "about": {
-      "eyebrow": "Profilo",
-      "title": "Strategic Intelligence oltre la Consulenza Convenzionale",
-      "description": "NOETRA STRATEGIES opera come piattaforma indipendente di strategic intelligence e advisory, progettata per contesti istituzionali complessi in cui profondita operativa, coordinamento legale e sistemi AI devono convergere.",
-      "paragraphOne": "La struttura integra advisory strategico, coordinamento executive, digital intelligence e orchestrazione multidisciplinare per generare modelli operativi resilienti in iniziative ad alta criticita.",
-      "paragraphTwo": "Ogni mandato e gestito con rigore istituzionale, accountability e architettura di continuita, garantendo chiarezza strategica, esecuzione controllata e resilienza di governance.",
-      "valueTitle": "Proposta di Valore Istituzionale",
-      "valueHeadline": "Strategic Intelligence Firm + Infrastruttura Advisory assistita da AI",
+      "eyebrow": "Chi siamo",
+      "title": "NOETRA: intelligence strategica per contesti complessi",
+      "description": "NOETRA STRATEGIES è una piattaforma istituzionale che integra analisi strategica, coordinamento multidisciplinare e supporto decisionale per operazioni corporate e istituzionali ad alta complessità.",
+      "paragraphOne": "L'identità NOETRA nasce dall'unione tra rigore metodologico, presidio legale-operativo e capacità di orchestrare competenze eterogenee in mandati dove il margine di errore è minimo.",
+      "paragraphTwo": "Ogni incarico viene strutturato con criteri di governance, responsabilità tracciabili e controllo delle dipendenze operative, per garantire continuità esecutiva e qualità decisionale.",
+      "valueTitle": "Posizionamento istituzionale",
+      "valueHeadline": "Strategic intelligence platform con governance operativa integrata",
       "premiumBlocks": [
         {
-          "title": "Methodology Governance",
-          "text": "Una metodologia strutturata che allinea input strategici, vincoli legali e delivery operativo in un unico framework di controllo."
+          "title": "Identita",
+          "text": "NOETRA opera come intelligence partner indipendente per decisioni complesse e mandati multi-stakeholder."
         },
         {
-          "title": "Operational Philosophy",
-          "text": "Disciplina esecutiva, trasparenza decisionale e standard di livello istituzionale in ogni layer di coordinamento."
+          "title": "Coordinamento",
+          "text": "Regia multidisciplinare di profili legali, tecnici e direzionali con un unico presidio metodologico."
         },
         {
-          "title": "Advisory Architecture",
-          "text": "Modello integrato di advisory progettato per dinamiche board-level, mandati ad alta complessita e iniziative trasformative."
+          "title": "Supporto decisionale",
+          "text": "Produzione di quadri informativi, analitici e operativi per decisioni tempestive, documentate e difendibili."
         }
       ],
       "methodologyCards": [
         {
-          "title": "Layer Strategico",
-          "detail": "Scenario intelligence, mappatura dell'orizzonte strategico e architettura delle priorita decisionali."
+          "title": "Strategic intelligence",
+          "detail": "Analisi di scenario, priorità decisionali e mappatura dei rischi in funzione degli obiettivi di mandato."
         },
         {
-          "title": "Layer di Coordinamento",
-          "detail": "Orchestrazione multidisciplinare di workflow legali, tecnici ed executive."
+          "title": "Regia multidisciplinare",
+          "detail": "Coordinamento integrato tra competenze legali, regolatorie, tecniche e corporate lungo l'intero ciclo operativo."
         },
         {
-          "title": "Layer Esecutivo",
-          "detail": "Deployment operativo, control loop e ottimizzazione adattiva sotto supervisione di governance."
+          "title": "Execution governance",
+          "detail": "Controllo operativo, monitoraggio avanzamento e riallineamento continuo rispetto a tempi, vincoli e risultati."
         }
       ],
-      "frameworkTitle": "Framework di Coordinamento Strategico",
+      "frameworkTitle": "Framework operativo NOETRA",
       "frameworkItems": [
-        "Input Istituzionali",
-        "Decision Governance",
-        "Orchestrazione Cross-Functional",
-        "Outcome Assurance"
+        "Scoping istituzionale",
+        "Decision support strutturato",
+        "Orchestrazione cross-functional",
+        "Outcome assurance"
       ],
-      "operationalPhilosophyTitle": "Filosofia Operativa",
-      "operationalPhilosophy": "La complessita viene governata con architettura controllata: ogni workflow e documentato, ogni mandato e coordinato, ogni risultato e misurato rispetto all'intento strategico.",
-      "advisoryModelTitle": "Modello Advisory",
-      "advisoryModel": "Il modello advisory NOETRA integra analisi intelligence-led, rigore procedurale e steering executive per garantire azione coerente tra stakeholder e domini operativi.",
+      "operationalPhilosophyTitle": "Filosofia operativa",
+      "operationalPhilosophy": "La complessità viene governata attraverso processi chiari, ownership definite e metriche condivise: ogni passaggio deve essere comprensibile, verificabile e orientato al risultato.",
+      "advisoryModelTitle": "Modello advisory",
+      "advisoryModel": "Il modello NOETRA combina strategic intelligence, coordinamento legale-operativo e gestione della continuità decisionale, con un approccio calibrato su governance, impatti e tempistiche.",
       "metrics": [
         {
-          "title": "Operazioni Strategiche",
+          "title": "Mandati strategici",
           "value": "Governance Control Stack",
-          "detail": "Progettazione end-to-end della governance operativa con supervisione, escalation e tracciabilita decisionale."
+          "detail": "Disegno e presidio di architetture di governance per operazioni complesse a rilevanza istituzionale o corporate."
         },
         {
-          "title": "Integrazione AI",
-          "value": "Operational Intelligence Infrastructure",
-          "detail": "Sistemi di coordinamento AI per document intelligence, automazione workflow e analytics strategico."
+          "title": "Intelligenza operativa",
+          "value": "AI-Enabled Decision Layer",
+          "detail": "Utilizzo di strumenti AI per document analysis, prioritizzazione informativa e accelerazione dei flussi decisionali."
         },
         {
-          "title": "Coordinamento Multidisciplinare",
+          "title": "Coordinamento professionale",
           "value": "Institutional Execution Fabric",
-          "detail": "Orchestrazione unificata di competenze legali, tecniche ed executive in mandati strategici complessi."
+          "detail": "Integrazione ordinata di competenze esterne con reporting executive e controllo delle dipendenze critiche."
         }
       ]
     },
     "services": {
       "eyebrow": "Servizi",
-      "title": "Servizi Strategici Enterprise per Organizzazioni Complesse",
-      "description": "Architettura integrata di servizi per strategic intelligence, advisory istituzionale, coordinamento legal-tech ed esecuzione executive assistita da AI.",
+      "title": "Servizi strategico-operativi per organizzazioni complesse",
+      "description": "Un'offerta concreta che integra advisory strategico, coordinamento legale, AI legal intelligence e gestione di operazioni ad alta complessità.",
       "cards": [
         {
-          "title": "Advisory Strategico e Corporate",
-          "description": "Consulenza executive per posizionamento strategico, architetture di governance e decisioni istituzionali ad alto impatto.",
-          "executiveParagraph": "Pensato per leadership team che gestiscono crescita, trasformazione e complessita strategica su piu fronti.",
+          "title": "Advisory strategico e direzionale",
+          "description": "Supporto al vertice aziendale su scelte strategiche, governance decisionale, assetto organizzativo e priorità di execution.",
+          "executiveParagraph": "Intervento dedicato a board e leadership team impegnati in trasformazioni, crescita o ristrutturazioni complesse.",
           "operationalTerms": [
-            "board governance",
+            "board advisory",
             "strategic planning",
-            "execution control"
+            "execution governance"
           ],
           "capabilities": [
-            "governance architecture",
-            "executive communication",
-            "decision support",
-            "institutional strategy"
+            "analisi scenario e opzioni",
+            "supporto alle decisioni critiche",
+            "impostazione governance",
+            "allineamento stakeholder"
           ],
-          "reveal": "Accelerazione dei mandati executive"
+          "reveal": "Decision architecture"
         },
         {
-          "title": "Coordinamento Legale e Regolatorio",
-          "description": "Coordinamento legale-regolatorio integrato per incarichi che richiedono precisione procedurale, risk framing e controllo compliance.",
-          "executiveParagraph": "Allineamento legal-tech strutturato per mandati in cui esposizione regolatoria e timing esecutivo sono critici.",
+          "title": "Coordinamento legale, compliance e governance",
+          "description": "Regia operativa di temi legali e regolatori con presidio compliance, governance documentale e continuità esecutiva.",
+          "executiveParagraph": "Pensato per mandati in cui rischio regolatorio, tempi e qualità istruttoria devono restare sotto controllo costante.",
           "operationalTerms": [
-            "regulatory mapping",
-            "procedural control",
-            "compliance assurance"
+            "legal coordination",
+            "compliance control",
+            "governance assurance"
           ],
           "capabilities": [
-            "compliance frameworks",
-            "regulatory intelligence",
-            "documentation systems",
-            "legal workflow alignment"
+            "coordinamento legal-tech",
+            "monitoraggio compliance",
+            "strutturazione flussi autorizzativi",
+            "controllo istruttorie"
           ],
-          "reveal": "Layer di resilienza regolatoria"
+          "reveal": "Regulatory control layer"
         },
         {
-          "title": "Sistemi AI e Innovazione Digitale",
-          "description": "Design e implementazione di sistemi operativi AI-enabled per orchestrazione intelligente e workflow decisionali scalabili.",
-          "executiveParagraph": "Costruito per organizzazioni che richiedono automazione operativa senza compromessi su governance, tracciabilita e controllo strategico.",
+          "title": "Document intelligence e AI legal operations",
+          "description": "Analisi documentale avanzata, classificazione semantica e supporto istruttorio attraverso infrastrutture AI integrate.",
+          "executiveParagraph": "Riduce attrito operativo e tempi di revisione in processi ad alta intensita documentale, mantenendo auditabilita e tracciabilita.",
           "operationalTerms": [
-            "AI orchestration",
-            "knowledge infrastructure",
-            "automation control"
+            "document analysis",
+            "ai legal intelligence",
+            "workflow automation"
           ],
           "capabilities": [
-            "operational automation",
-            "document intelligence",
-            "strategic analytics",
-            "workflow intelligence"
+            "estrazione informazioni critiche",
+            "mappatura evidenze documentali",
+            "supporto dossier complessi",
+            "ottimizzazione workflow legali"
           ],
-          "reveal": "Motore di coordinamento AI"
+          "reveal": "Intelligence processing engine"
         },
         {
-          "title": "Strategic Operations e Institutional Advisory",
-          "description": "Supporto strategico-operativo per operazioni complesse, interfacce istituzionali, governance organizzativa ed ecosistemi decisionali multidisciplinari.",
-          "executiveParagraph": "Dedicato a iniziative ad alta rilevanza in cui continuita esecutiva e coordinamento cross-functional determinano la qualita del risultato.",
+          "title": "Operazioni complesse e crisis & strategic operations",
+          "description": "Pianificazione e gestione di operazioni straordinarie o critiche, con cabina di regia unica e coordinamento interfunzionale.",
+          "executiveParagraph": "Approccio indicato per scenari con forte pressione temporale, esposizione reputazionale o elevata frammentazione decisionale.",
           "operationalTerms": [
-            "institutional interface",
-            "operational governance",
-            "strategic continuity"
+            "crisis coordination",
+            "strategic operations",
+            "continuity planning"
           ],
           "capabilities": [
-            "operational coordination",
-            "governance support",
+            "war-room governance",
+            "presidio continuità operativa",
+            "coordinamento stakeholder critici",
+            "reporting executive in tempo reale"
+          ],
+          "reveal": "Crisis response cockpit"
+        },
+        {
+          "title": "Relazioni istituzionali e stakeholder management",
+          "description": "Impostazione e gestione di relazioni istituzionali, interlocuzioni qualificate e processi di allineamento multi-stakeholder.",
+          "executiveParagraph": "Consolida credibilita istituzionale e coerenza comunicativa in fasi di negoziazione o transizione operativa.",
+          "operationalTerms": [
             "institutional relations",
-            "strategic planning",
-            "executive advisory",
-            "operational intelligence"
-          ],
-          "reveal": "Cockpit operativo istituzionale"
-        },
-        {
-          "title": "Relazioni Istituzionali e Commerciali",
-          "description": "Architettura relazionale strategica per posizionamento istituzionale, engagement degli stakeholder e dialogo di mercato a livello executive.",
-          "executiveParagraph": "Supporta organizzazioni che operano in ecosistemi istituzionali, partnership strategiche e rappresentanza qualificata.",
-          "operationalTerms": [
-            "stakeholder mapping",
-            "institutional dialogue",
-            "market positioning"
+            "stakeholder alignment",
+            "strategic communication"
           ],
           "capabilities": [
-            "stakeholder engagement",
-            "institutional relations",
-            "strategic communication",
-            "partnership enablement"
+            "mappatura stakeholder",
+            "governo interlocuzioni",
+            "preparazione executive briefing",
+            "allineamento posizionamento istituzionale"
           ],
-          "reveal": "Layer di influenza strategica"
+          "reveal": "Institutional interface layer"
         },
         {
-          "title": "Formazione Executive e Sistemi di Conoscenza",
-          "description": "Programmi executive e framework di conoscenza focalizzati su governance strategica, awareness regolatoria e AI literacy.",
-          "executiveParagraph": "Trasforma competenze strategiche e operative in capacita istituzionale replicabile per i leadership team.",
+          "title": "Supporto al contenzioso e analisi tecnico-documentale",
+          "description": "Supporto strategico al contenzioso tramite analisi normativa e documentale, organizzazione dei fatti e integrazione di evidenze complesse.",
+          "executiveParagraph": "NOETRA supporta la preparazione istruttoria e il coordinamento operativo, nel rispetto dei ruoli dei professionisti legali incaricati.",
           "operationalTerms": [
-            "executive enablement",
-            "knowledge transfer",
-            "AI governance"
+            "litigation support",
+            "evidence mapping",
+            "procedural intelligence"
           ],
           "capabilities": [
-            "executive training",
-            "knowledge systems",
-            "operational methodologies",
-            "governance education"
+            "analisi normativa avanzata",
+            "ricostruzione timeline e fatti",
+            "organizzazione set documentali",
+            "coordinamento tecnico-procedurale"
           ],
-          "reveal": "Amplificazione della capacita di leadership"
+          "reveal": "Contenzioso intelligence support"
         }
       ]
     },
     "capabilities": {
-      "eyebrow": "Capacita",
-      "title": "Capacita Operative",
-      "description": "Stack esecutivo modulare progettato per operazioni strategiche, governance istituzionale ed ecosistemi decisionali assistiti da AI.",
+      "eyebrow": "Capacità",
+      "title": "Capacità operative",
+      "description": "Stack operativo modulare per advisory, governance e legal-tech operations in ambienti istituzionali e corporate.",
       "items": [
         {
-          "title": "Strategic Advisory",
-          "detail": "Advisory executive e architettura strategica per mandati ad alta complessita."
+          "title": "Strategic advisory",
+          "detail": "Supporto direzionale su scenari complessi, priorità strategiche e opzioni di esecuzione."
         },
         {
-          "title": "Decision Intelligence",
-          "detail": "Framework decisionali data-informed per contesti istituzionali e board-level."
+          "title": "Decision intelligence",
+          "detail": "Costruzione di quadri decisionali documentati per board, top management e funzioni critiche."
         },
         {
           "title": "Integrazione AI",
-          "detail": "Integrazione di sistemi AI in workflow, governance e infrastrutture di conoscenza."
+          "detail": "Applicazione di modelli AI in processi documentali e flussi operativi ad alta intensita informativa."
         },
         {
-          "title": "Coordinamento Legale",
-          "detail": "Coordinamento legal-tech strutturato in contesti operativi multidisciplinari."
+          "title": "Coordinamento legale",
+          "detail": "Regia delle interazioni legali e regolatorie con presidio di tempi, qualità e compliance."
         },
         {
-          "title": "Sistemi Documentali",
-          "detail": "Document intelligence e architettura informativa controllata per continuita procedurale."
+          "title": "Document intelligence",
+          "detail": "Analisi e strutturazione di corpus documentali complessi per supportare decisioni e istruttorie."
         },
         {
-          "title": "Supporto Regolatorio",
-          "detail": "Allineamento regolatorio e framework compliance per operazioni strategiche."
+          "title": "Compliance e governance",
+          "detail": "Definizione di controlli e assetti di governance per mitigare rischi operativi e regolatori."
         },
         {
-          "title": "Corporate Structuring",
-          "detail": "Design di modelli operativi per crescita, resilienza e governance executive."
+          "title": "Corporate operations",
+          "detail": "Supporto a trasformazioni organizzative, integrazioni operative e percorsi di continuità."
         },
         {
-          "title": "Relazioni Istituzionali",
-          "detail": "Strategia di interfaccia istituzionale e gestione relazionale a livello executive."
+          "title": "Institutional relations",
+          "detail": "Gestione strutturata delle relazioni istituzionali e dell'allineamento con stakeholder chiave."
         }
       ]
     },
     "method": {
       "eyebrow": "Metodo",
-      "title": "Framework Metodologico Operativo",
-      "description": "Modello operativo in quattro fasi progettato per trasformare complessita strategica in esecuzione istituzionale controllata.",
+      "title": "Framework metodologico operativo",
+      "description": "Percorso in quattro fasi per trasformare complessità strategica e regolatoria in execution controllata.",
       "stepLabel": "Fase",
       "steps": [
         {
           "key": "ANALYZE",
           "tag": "Intelligence Layer",
-          "description": "Assessment strategico, risk framing e mappatura del contesto multidisciplinare."
+          "description": "Analisi del contesto, definizione delle priorità e mappatura dei rischi di mandato."
         },
         {
           "key": "STRUCTURE",
-          "tag": "Architecture Layer",
-          "description": "Definizione di architettura di governance, sequenziamento dei workflow e strutturazione del mandato."
+          "tag": "Governance Layer",
+          "description": "Strutturazione di governance, ruoli, responsabilità e sequenza operativa delle attività."
         },
         {
           "key": "COORDINATE",
-          "tag": "Orchestration Layer",
-          "description": "Orchestrazione integrata di attori legali, tecnici ed executive."
+          "tag": "Execution Layer",
+          "description": "Coordinamento integrato delle funzioni coinvolte e presidio delle dipendenze critiche."
         },
         {
           "key": "EXECUTE",
-          "tag": "Delivery Layer",
-          "description": "Esecuzione controllata con operational intelligence, monitoraggio e ottimizzazione adattiva."
+          "tag": "Control Layer",
+          "description": "Esecuzione monitorata con reporting decisionale, gestione eccezioni e riallineamento continuo."
         }
       ]
     },
     "ai": {
       "eyebrow": "Innovazione",
-      "title": "Sistemi di Coordinamento AI per Operazioni Strategiche",
-      "description": "NOETRA STRATEGIES progetta sistemi di coordinamento AI che integrano document intelligence, orchestrazione workflow, automazione operativa e analitica strategica in ambienti di esecuzione istituzionale.",
-      "intro": "Infrastruttura AI di livello executive: conforme, tracciabile e allineata agli standard di governance legale-regolatoria e operativa.",
+      "title": "AI e legal intelligence per operations regolamentate",
+      "description": "NOETRA integra sistemi AI e legal intelligence per accelerare analisi documentale, orchestrazione dei workflow e supporto alle decisioni in contesti ad alta criticita.",
+      "intro": "Un'architettura AI orientata a tracciabilità, controllo e qualità decisionale: progettata per ambienti istituzionali, non per uso sperimentale.",
       "focusAreas": [
         "document intelligence",
+        "legal signal monitoring",
         "workflow orchestration",
         "operational automation",
-        "strategic analytics",
-        "AI coordination systems",
-        "knowledge infrastructure"
+        "executive decision support",
+        "knowledge governance"
       ],
       "cards": [
         {
-          "title": "Document Intelligence",
-          "detail": "Estrazione semantica e controllo procedurale dei documenti per continuita legale e operativa."
+          "title": "Analisi documentale avanzata",
+          "detail": "Estrazione e correlazione di contenuti rilevanti per istruttorie legali e processi decisionali complessi."
         },
         {
-          "title": "Workflow Orchestration",
-          "detail": "Logiche di coordinamento end-to-end per workstream multidisciplinari e cicli decisionali."
+          "title": "Workflow orchestration",
+          "detail": "Disegno e coordinamento di workflow multidisciplinari con livelli di controllo coerenti con i vincoli normativi."
         },
         {
-          "title": "Operational Automation",
-          "detail": "Layer di automazione che riducono attrito mantenendo governance e auditabilita."
+          "title": "Automazione operativa",
+          "detail": "Automazione selettiva dei passaggi ripetitivi per aumentare velocità e ridurre rischio di errore."
         },
         {
-          "title": "Strategic Analytics",
-          "detail": "Indicatori operativi e metriche intelligence per steering executive."
+          "title": "Strategic analytics",
+          "detail": "Indicatori operativi e segnali predittivi a supporto di decisioni tempestive e documentate."
         }
       ],
       "predictiveLabels": [
-        "Segnali Legali",
+        "Legal Signals",
         "Automation Core",
         "Decision Engine"
       ],
-      "metricsTitle": "Metriche di AI Intelligence",
-      "pipelineTitle": "Pipeline di Orchestrazione",
+      "metricsTitle": "Operational intelligence metrics",
+      "pipelineTitle": "Pipeline di coordinamento",
       "pipelineNodes": [
-        "Signal Intake",
-        "Inference Coordination",
-        "Executive Output"
+        "Intake strutturato",
+        "Analisi e priorità",
+        "Output decisionale"
       ],
       "widgets": [
         {
-          "label": "Document Throughput",
+          "label": "Document throughput",
           "value": "2.4x",
-          "detail": "Rapporto di accelerazione nelle operazioni documentali strutturate."
+          "detail": "Incremento medio della capacità di trattamento documentale in workflow complessi."
         },
         {
-          "label": "Workflow Integrity",
+          "label": "Workflow integrity",
           "value": "99.2%",
-          "detail": "Stabilita di controllo su workflow mission critical."
+          "detail": "Stabilita dei flussi coordinati in processi critici soggetti a vincoli legali e operativi."
         },
         {
-          "label": "Strategic Signal Latency",
+          "label": "Decision latency",
           "value": "-38%",
-          "detail": "Generazione insight piu rapida nei cicli decisionali executive."
+          "detail": "Riduzione media dei tempi di preparazione delle decisioni in contesti multi-stakeholder."
         }
       ],
-      "diagramTitle": "Neural Coordination Matrix",
+      "diagramTitle": "Neural coordination matrix",
       "diagramNodes": [
-        "Procedural Intake",
+        "Intake",
         "Intelligence Core",
-        "Strategic Action"
+        "Action"
       ],
-      "domainLabel": "Domini di Legal Intelligence",
-      "domainNote": "I domini NOETRALEX ospitano esperienze legal-tech dedicate al coordinamento procedurale AI-enabled.",
-      "neuralSignal": "Continuita del segnale neurale monitorata"
+      "domainLabel": "Domini di legal intelligence",
+      "domainNote": "I domini NOETRALEX supportano analisi normativa avanzata, document intelligence e legal operations integrate.",
+      "neuralSignal": "Segnale operativo monitorato in continuo"
     },
     "network": {
       "eyebrow": "Network",
-      "title": "Network Istituzionale Multidisciplinare",
-      "description": "Network coordinato di professionisti esterni qualificati che operano in piena autonomia tecnica, etica e professionale secondo la normativa vigente.",
-      "executiveCopy": "NOETRA agisce come intelligence layer di coordinamento nei mandati istituzionali, allineando competenze legali, tecniche e operative in un'unica architettura esecutiva.",
-      "flowTitle": "Flusso di Coordinamento Executive",
+      "title": "Network professionale a presidio istituzionale",
+      "description": "NOETRA coordina una rete qualificata di professionisti esterni, con ruoli chiari, processi strutturati e standard operativi coerenti con incarichi ad alta complessità.",
+      "executiveCopy": "Il network NOETRA non è una sommatoria di competenze: è una struttura di execution governance che integra profili legali, tecnici e corporate con reporting executive e responsabilità definite.",
+      "flowTitle": "Catena di coordinamento del mandato",
       "flowNodes": [
-        "Mandate Intake",
-        "NOETRA Orchestration",
-        "Specialist Execution"
+        "Scoping mandato",
+        "Cabina NOETRA",
+        "Esecuzione specialistica"
       ],
-      "diagramTitle": "Diagramma di Orchestrazione Professionale",
+      "diagramTitle": "Sequenza operativa istituzionale",
       "diagramSteps": [
-        "Strutturazione del Mandato",
-        "Attivazione Specialisti",
-        "Allineamento Regolatorio",
-        "Reporting Executive"
+        "Definizione obiettivi e perimetro",
+        "Attivazione competenze necessarie",
+        "Presidio legale-regolatorio",
+        "Reporting e riallineamento"
       ],
       "orchestrationLayers": [
-        "interfaccia legal-tech",
-        "liaison istituzionale",
-        "governance procedurale",
-        "supervisione operativa"
+        "governance di mandato",
+        "legal-tech coordination",
+        "controllo operativo",
+        "allineamento stakeholder"
       ],
       "coordinationMetrics": [
         {
-          "label": "Velocita Attivazione Professionisti",
+          "label": "Tempo medio di attivazione",
           "value": "< 48h",
-          "detail": "Attivazione rapida di professionisti cross-disciplinary per mandati complessi."
+          "detail": "Attivazione rapida dei profili specialistici necessari, in funzione di priorità e rischio operativo."
         },
         {
-          "label": "Continuita di Coordinamento",
+          "label": "Continuità di coordinamento",
           "value": "97%",
-          "detail": "Alto tasso di continuita su progetti istituzionali multi-fase."
+          "detail": "Stabilita dei flussi di coordinamento lungo tutto il ciclo del mandato, anche in scenari dinamici."
         },
         {
-          "label": "Governance Compliance",
+          "label": "Allineamento compliance",
           "value": "100%",
-          "detail": "Allineamento compliance strutturato su ogni workflow di coordinamento."
+          "detail": "Presidio sistematico dei requisiti di conformità nei passaggi critici di execution."
         }
       ],
-      "areaLabel": "Dominio",
+      "areaLabel": "Ambito",
       "areas": [
         "Legale",
-        "Tributario",
+        "Fiscale",
         "Compliance",
         "Ingegneria",
-        "Consulenti Tecnici",
-        "Advisory Corporate"
+        "Consulenza tecnica",
+        "Corporate advisory"
       ],
-      "areaDescription": "Standard di coordinamento di livello istituzionale per iniziative strategiche e procedurali complesse."
+      "areaDescription": "Competenze attivate in logica integrata, con coordinamento NOETRA e responsabilità operative esplicite."
     },
     "contact": {
-      "eyebrow": "Contatto",
-      "title": "Richiedi una Consultazione Strategica Istituzionale",
-      "description": "Ambiente di inquiry executive per organizzazioni, professionisti e investitori impegnati in operazioni strategiche, legal-tech e AI-enabled complesse.",
-      "boxEyebrow": "Institutional Inquiry Box",
-      "boxTitle": "Intake per Consultazione Strategica",
-      "boxDescription": "Condividi contesto operativo, priorita strategiche e vincoli di governance per ricevere una risposta advisory coordinata.",
+      "eyebrow": "Contatti",
+      "title": "Richiedi una consultazione istituzionale",
+      "description": "Canale riservato per organizzazioni, professionisti e investitori che necessitano di supporto strategico, coordinamento legale-operativo o AI legal intelligence.",
+      "boxEyebrow": "Institutional inquiry",
+      "boxTitle": "Intake strategico riservato",
+      "boxDescription": "Condividi obiettivi, vincoli e urgenze del mandato: il team NOETRA valuta il perimetro operativo e definisce il percorso di interlocuzione più adeguato.",
       "boxBullets": [
-        "executive intelligence briefing",
-        "scoping multidisciplinare del mandato",
-        "assessment di coordinamento AI e legal-tech"
+        "inquadramento iniziale del mandato",
+        "analisi preliminare di complessità e priorità",
+        "definizione del canale operativo appropriato"
       ],
-      "channelsLabel": "Canali Email Professionali",
+      "channelsLabel": "Canali email professionali",
       "emails": {
-        "info": "Generale",
+        "info": "Istituzionale",
         "advisory": "Advisory",
-        "contact": "Coordinamento"
+        "contact": "Operativo"
       },
-      "boxCta": "Richiedi Consultazione Strategica",
-      "panelLabel": "Interfaccia di Coordinamento Executive",
-      "panelBadge": "Canale Istituzionale Prioritario",
-      "panelMicrocopy": "Ambiente di intake gestito per operazioni strategiche, coordinamento legale e mandati executive di AI advisory.",
+      "boxCta": "Avvia consultazione strategica",
+      "panelLabel": "Executive inquiry interface",
+      "panelBadge": "Canale a priorità istituzionale",
+      "panelMicrocopy": "Le richieste sono gestite con criteri di riservatezza, minimizzazione dei dati e presidio need-to-know.",
       "form": {
-        "name": "Nome",
-        "namePlaceholder": "Nome completo",
-        "email": "Email",
+        "name": "Nome e cognome",
+        "namePlaceholder": "Nome e cognome",
+        "email": "Email professionale",
         "emailPlaceholder": "nome@azienda.com",
         "company": "Organizzazione",
-        "companyPlaceholder": "Nome organizzazione",
-        "message": "Richiesta Strategica",
-        "messagePlaceholder": "Descrivi obiettivo strategico, contesto operativo e necessita di coordinamento",
-        "microcopy": "Ogni richiesta e gestita secondo protocolli advisory istituzionali con riservatezza e logica di risposta strutturata.",
-        "submit": "Invia Inquiry Istituzionale",
+        "companyPlaceholder": "Società, ente o studio",
+        "message": "Richiesta",
+        "messagePlaceholder": "Descrivi contesto, obiettivo, urgenza e principali vincoli operativi",
+        "microcopy": "L'invio del form non costituisce incarico professionale. I dati sono trattati esclusivamente per la gestione della richiesta e secondo criteri di riservatezza istituzionale.",
+        "submit": "Invia richiesta istituzionale",
         "loading": "Invio in corso...",
-        "success": "La tua richiesta advisory istituzionale e stata inviata con successo.",
-        "error": "Non e stato possibile inviare la richiesta in questo momento."
+        "success": "Richiesta ricevuta con successo. Il team NOETRA ti risponderà tramite il canale più appropriato.",
+        "error": "Al momento non è stato possibile inviare la richiesta."
       }
     }
   },
   "legalPage": {
     "eyebrow": "Legale",
-    "title": "Informazioni Legali e Societarie",
-    "description": "Informazioni legali istituzionali e riferimenti professionali per NOETRA STRATEGIES e i domini NOETRALEX.",
+    "title": "Informazioni legali e societarie",
+    "description": "Riferimenti legali e societari di NOETRA STRATEGIES, con canali di contatto istituzionali e domini NOETRALEX.",
     "institutionalName": "NOETRA STRATEGIES s.r.l.s.",
     "rows": [
       {
@@ -643,48 +637,48 @@
       }
     ],
     "emails": {
-      "info": "Desk Informativo",
-      "advisory": "Desk Advisory",
-      "contact": "Desk Coordinamento"
+      "info": "Canale istituzionale",
+      "advisory": "Canale advisory",
+      "contact": "Canale operativo"
     },
-    "domainLabel": "Domini NoetraLex"
+    "domainLabel": "Domini NOETRALEX"
   },
   "noetralexPage": {
     "eyebrow": "NOETRALEX",
-    "title": "Legal Intelligence Systems",
-    "description": "Coordinamento legale avanzato guidato da AI, procedural intelligence, sistemi documentali e supporto operativo strategico.",
-    "domainLabel": "Infrastruttura Domini NoetraLex",
-    "domainsNote": "noetralex.it e noetralex.com operano come riferimenti legal-tech intelligence per coordinamento procedurale AI e workflow legali strategici.",
+    "title": "Piattaforma di legal intelligence",
+    "description": "NOETRALEX non è uno studio legale tradizionale: è una piattaforma legal-tech per intelligence giuridica, analisi normativa avanzata e supporto strategico al contenzioso.",
+    "domainLabel": "Infrastruttura domini NOETRALEX",
+    "domainsNote": "noetralex.it e noetralex.com costituiscono l'infrastruttura digitale NOETRALEX per legal intelligence, analisi documentale e integrazione AI nelle legal operations.",
     "cards": [
       {
-        "title": "AI Legal Coordination",
-        "detail": "Sistemi di coordinamento legale AI-enabled progettati per affidabilita procedurale ed esecuzione legale strategica."
+        "title": "Piattaforma legal-tech",
+        "detail": "Ambiente operativo per coordinare analisi, workflow e supporto decisionale in processi giuridici complessi."
       },
       {
-        "title": "Procedural Intelligence",
-        "detail": "Layer di intelligence operativa per mappatura procedurale, monitoraggio segnali legali e readiness decisionale."
+        "title": "Intelligence giuridica",
+        "detail": "Lettura strutturata di fonti normative, provvedimenti e corpus documentali con priorità operative esplicite."
       },
       {
-        "title": "Document Systems",
-        "detail": "Sistemi documentali strutturati per workflow legali, logiche probatorie e reporting istituzionale."
+        "title": "Analisi normativa e documentale",
+        "detail": "Ricostruzione tecnica di quadri normativi e documentali a supporto di istruttorie e strategie di azione."
       },
       {
-        "title": "Strategic Operational Support",
-        "detail": "Architettura di supporto multidisciplinare legal-tech per scenari strategici e procedurali complessi."
+        "title": "Supporto strategico al contenzioso",
+        "detail": "Supporto operativo e informativo nelle fasi pre-contenziose e contenziose, nel rispetto dei ruoli legali professionali."
       },
       {
-        "title": "Compliance and Governance Automation",
-        "detail": "Controlli di governance automatizzati e orchestrazione compliance nelle operazioni legali."
+        "title": "AI + legal operations",
+        "detail": "Integrazione di strumenti AI in processi legali e regolatori per aumentare velocità, coerenza e controllo delle attività."
       }
     ],
-    "workflowTitle": "Griglia di Workflow Legale AI",
+    "workflowTitle": "Workflow di legal intelligence",
     "workflowNodes": [
-      "Case Intake",
-      "Procedural Intelligence",
-      "Strategic Legal Output"
+      "Intake del caso",
+      "Analisi giuridica",
+      "Output strategico"
     ],
-    "neuralLabel": "Sincronizzazione neurale del workflow legale attiva",
-    "comingSoon": "Rollout Strategico in Corso",
-    "comingNote": "L'ecosistema legal-tech NOETRALEX e in espansione con moduli istituzionali di coordinamento AI."
+    "neuralLabel": "Sincronizzazione operativa legal-tech attiva",
+    "comingSoon": "Programma operativo in rilascio",
+    "comingNote": "NOETRALEX è in espansione progressiva con nuovi moduli dedicati a contenzioso, compliance e governance documentale."
   }
 }

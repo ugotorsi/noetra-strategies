@@ -19,7 +19,7 @@ function buildTitle(pageTitle: string): string {
 
 function imageAltByLocale(locale: Locale): string {
   return locale === "it"
-    ? `${siteConfig.name} - Societa di Intelligence Strategica`
+    ? `${siteConfig.name} - Piattaforma istituzionale di intelligence strategica`
     : `${siteConfig.name} - Strategic Intelligence Firm`;
 }
 

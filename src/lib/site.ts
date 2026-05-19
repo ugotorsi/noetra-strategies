@@ -18,9 +18,9 @@ type SiteConfig = {
 
 export const siteConfig: SiteConfig = {
   name: "NOETRA STRATEGIES",
-  title: "NOETRA STRATEGIES | Strategic Intelligence and AI Advisory Platform",
+  title: "NOETRA STRATEGIES | Piattaforma istituzionale di strategic intelligence",
   description:
-    "Elite strategic intelligence platform for AI advisory, legal intelligence systems and multidisciplinary executive coordination.",
+    "Piattaforma istituzionale di strategic intelligence, advisory direzionale e legal-tech operations per contesti corporate e istituzionali complessi.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.noetra.it").replace(/\/$/, ""),
   email: process.env.CONTACT_EMAIL ?? "info@noetra.it",
   emails: {
@@ -33,15 +33,18 @@ export const siteConfig: SiteConfig = {
     noetralex: ["noetralex.it", "noetralex.com"],
   },
   keywords: [
+    "intelligence strategica",
     "strategic intelligence",
-    "operational intelligence",
+    "advisory direzionale",
+    "operations governance",
     "AI advisory",
+    "ai legal intelligence",
     "legal intelligence",
     "document intelligence",
     "executive coordination",
-    "multidisciplinary advisory",
-    "AI systems",
-    "institutional advisory",
+    "coordinamento multidisciplinare",
+    "supporto al contenzioso",
+    "compliance e governance",
   ],
 };
 
