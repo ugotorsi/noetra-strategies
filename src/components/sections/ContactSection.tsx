@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { getMessages, type Locale, withLocalePath } from "@/lib/i18n";
+import { siteConfig } from "@/lib/site";
 
 type InquiryFormData = {
   name: string;
@@ -32,6 +33,11 @@ type ContactSectionProps = {
 
 export function ContactSection({ locale }: ContactSectionProps) {
   const messages = getMessages(locale).sections.contact;
+  const inquiryChannels = [
+    { label: messages.emails.info, value: siteConfig.emails.info },
+    { label: messages.emails.advisory, value: siteConfig.emails.advisory },
+    { label: messages.emails.contact, value: siteConfig.emails.contact },
+  ];
   const [formData, setFormData] = useState<InquiryFormData>(initialFormData);
   const [formState, setFormState] = useState<FormState>("idle");
   const [feedback, setFeedback] = useState("");
@@ -122,6 +128,26 @@ export function ContactSection({ locale }: ContactSectionProps) {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-5 space-y-2">
+                <p className="text-[11px] uppercase tracking-[0.18em] text-[#4DA3FF]">
+                  {messages.channelsLabel}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {inquiryChannels.map((channel) => (
+                    <a
+                      key={channel.value}
+                      href={`mailto:${channel.value}`}
+                      className="rounded-full border border-white/12 bg-white/[0.03] px-3 py-1 text-[11px] tracking-[0.08em] text-[#F5F7FA]/75 transition hover:border-[#4DA3FF]/45 hover:text-white"
+                    >
+                      <span className="text-[#C6A96B]">{channel.label}</span>
+                      <span className="mx-1 text-[#F5F7FA]/45">|</span>
+                      <span>{channel.value}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
               <div className="mt-5">
                 <Button href={withLocalePath(locale, "/contact")} variant="outline" size="md">
                   <CalendarCheck2 size={16} />
@@ -141,6 +167,10 @@ export function ContactSection({ locale }: ContactSectionProps) {
                   <Zap size={12} className="text-[#4DA3FF]" />
                   {messages.panelBadge}
                 </div>
+
+                <p className="relative text-xs leading-6 text-[#F5F7FA]/65">
+                  {messages.panelMicrocopy}
+                </p>
               </div>
             </Card>
           </motion.div>
@@ -213,14 +243,16 @@ export function ContactSection({ locale }: ContactSectionProps) {
                 </div>
 
                 {feedback ? (
-                  <p
-                    className={`text-sm leading-7 ${
-                      formState === "success" ? "text-[#4DA3FF]" : "text-[#F5F7FA]/78"
+                  <div
+                    className={`rounded-xl border px-4 py-3 text-sm leading-7 ${
+                      formState === "success"
+                        ? "border-[#4DA3FF]/45 bg-[#4DA3FF]/10 text-[#9DCCFF]"
+                        : "border-[#C6A96B]/45 bg-[#C6A96B]/10 text-[#F5F7FA]/82"
                     }`}
                     role="status"
                   >
                     {feedback}
-                  </p>
+                  </div>
                 ) : null}
 
                 <div className="pt-2">

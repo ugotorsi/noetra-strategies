@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { LegalDisclaimer } from "@/components/sections/LegalDisclaimer";
 import { getMessages, type Locale, withLocalePath } from "@/lib/i18n";
+import { siteConfig } from "@/lib/site";
 
 import { Container } from "./Container";
 
@@ -20,6 +21,11 @@ type FooterProps = {
 
 export function Footer({ locale }: FooterProps) {
   const messages = getMessages(locale);
+  const emailLinks = [
+    { label: messages.footer.emails.info, value: siteConfig.emails.info },
+    { label: messages.footer.emails.advisory, value: siteConfig.emails.advisory },
+    { label: messages.footer.emails.contact, value: siteConfig.emails.contact },
+  ];
 
   return (
     <footer className="mt-24 border-t border-white/10 bg-[#0A0E13] py-10 text-[#F5F7FA]/65">
@@ -51,6 +57,46 @@ export function Footer({ locale }: FooterProps) {
         <p className="text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/45">
           {messages.footer.tagline}
         </p>
+
+        <div className="grid gap-5 border-t border-white/10 pt-6 md:grid-cols-[1.2fr_0.8fr]">
+          <div className="space-y-3">
+            <p className="text-[11px] uppercase tracking-[0.2em] text-[#C6A96B]">
+              {messages.footer.channelsLabel}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {emailLinks.map((item) => (
+                <Link
+                  key={item.value}
+                  href={`mailto:${item.value}`}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.03] px-3 py-1.5 text-xs tracking-[0.08em] text-[#F5F7FA]/75 transition hover:border-[#4DA3FF]/45 hover:text-white"
+                >
+                  <span className="text-[#C6A96B]">{item.label}</span>
+                  <span>{item.value}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <p className="text-[11px] uppercase tracking-[0.2em] text-[#4DA3FF]">
+              {messages.footer.domainsLabel}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {siteConfig.domains.noetralex.map((domain) => (
+                <Link
+                  key={domain}
+                  href={`https://${domain}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-[#4DA3FF]/28 bg-[#4DA3FF]/10 px-3 py-1.5 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/80 transition hover:border-[#4DA3FF]/55 hover:text-white"
+                >
+                  {domain}
+                </Link>
+              ))}
+            </div>
+            <p className="text-xs text-[#F5F7FA]/55">{messages.footer.domainNote}</p>
+          </div>
+        </div>
       </Container>
 
       <Container className="mt-7">

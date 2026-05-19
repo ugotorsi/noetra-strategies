@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import {
   Building2,
+  ChevronRight,
   Cpu,
   GraduationCap,
   Handshake,
@@ -65,6 +66,7 @@ export function ServicesSection({ locale }: ServicesSectionProps) {
                   show: { opacity: 1, y: 0 },
                 }}
                 transition={{ duration: 0.55, ease: "easeOut" }}
+                whileHover={{ y: -4 }}
               >
                 <Card className="group h-full border-white/12 p-6 transition-all duration-500 hover:border-[#4DA3FF]/45">
                   <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#4DA3FF]/40 bg-[#4DA3FF]/12 text-[#4DA3FF] shadow-[0_0_30px_-18px_rgba(77,163,255,0.9)] transition-all duration-500 group-hover:scale-110 group-hover:border-[#4DA3FF]/70">
@@ -74,6 +76,21 @@ export function ServicesSection({ locale }: ServicesSectionProps) {
                   <p className="mt-3 text-sm leading-7 text-[#F5F7FA]/74">
                     {service.description}
                   </p>
+                  <p className="mt-4 rounded-lg border border-[#4DA3FF]/20 bg-[#4DA3FF]/8 px-3 py-2 text-xs uppercase tracking-[0.14em] text-[#9DCCFF]">
+                    {service.executiveParagraph}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {service.operationalTerms.map((term) => (
+                      <span
+                        key={term}
+                        className="rounded-full border border-white/12 bg-white/[0.03] px-2.5 py-1 text-[10px] uppercase tracking-[0.12em] text-[#F5F7FA]/62"
+                      >
+                        {term}
+                      </span>
+                    ))}
+                  </div>
+
                   <div className="mt-5 h-px w-full bg-gradient-to-r from-transparent via-white/35 to-transparent" />
                   <motion.ul
                     initial={{ opacity: 0.6 }}
@@ -93,6 +110,16 @@ export function ServicesSection({ locale }: ServicesSectionProps) {
                       </motion.li>
                     ))}
                   </motion.ul>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 6 }}
+                    whileHover={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="mt-5 flex items-center justify-between rounded-xl border border-white/12 bg-white/[0.03] px-3 py-2 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/70"
+                  >
+                    <span>{service.reveal}</span>
+                    <ChevronRight size={14} className="text-[#4DA3FF]" />
+                  </motion.div>
                 </Card>
               </motion.div>
             );

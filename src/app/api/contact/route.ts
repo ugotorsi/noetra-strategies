@@ -62,7 +62,7 @@ function renderEmailTemplate(input: z.infer<typeof contactSchema>) {
 
 export async function POST(request: Request) {
   const resendApiKey = process.env.RESEND_API_KEY;
-  const destinationEmail = process.env.CONTACT_EMAIL || siteConfig.email;
+  const destinationEmail = process.env.CONTACT_EMAIL || siteConfig.emails.advisory;
 
   if (!resendApiKey) {
     return NextResponse.json(

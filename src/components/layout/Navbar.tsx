@@ -72,7 +72,7 @@ export function Navbar({ locale }: NavbarProps) {
             <LanguageSwitcher
               locale={locale}
               labels={messages.languageSwitcher}
-              className="hidden md:block"
+              className="block"
             />
 
             <button
@@ -96,8 +96,6 @@ export function Navbar({ locale }: NavbarProps) {
               className="border-t border-white/10 bg-[#0B0F14]/95 px-5 py-4 backdrop-blur-xl md:hidden"
             >
               <Container className="space-y-3 px-0">
-                <LanguageSwitcher locale={locale} labels={messages.languageSwitcher} />
-
                 {navItems.map((item) => (
                   <Link
                     key={item.key}

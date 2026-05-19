@@ -25,6 +25,27 @@ const organizationSchema = {
   url: siteConfig.url,
   logo: `${siteConfig.url}/favicon.svg`,
   description: siteConfig.description,
+  sameAs: siteConfig.domains.noetralex.map((domain) => `https://${domain}`),
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "general inquiry",
+      email: siteConfig.emails.info,
+      availableLanguage: ["English", "Italian"],
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "advisory",
+      email: siteConfig.emails.advisory,
+      availableLanguage: ["English", "Italian"],
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "contact",
+      email: siteConfig.emails.contact,
+      availableLanguage: ["English", "Italian"],
+    },
+  ],
   address: {
     "@type": "PostalAddress",
     addressCountry: "IT",
@@ -35,12 +56,20 @@ const organizationSchema = {
 const serviceSchemaPlaceholder = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: `${siteConfig.name} Advisory Platform`,
+  name: `${siteConfig.name} Strategic Intelligence Platform`,
   provider: {
     "@type": "Organization",
     name: siteConfig.name,
   },
-  serviceType: "Strategic Intelligence and AI-Driven Advisory",
+  serviceType: "Strategic Intelligence, AI Advisory and Legal Intelligence Coordination",
+  availableChannel: [
+    {
+      "@type": "ServiceChannel",
+      serviceUrl: `${siteConfig.url}/it/contact`,
+      availableLanguage: ["English", "Italian"],
+    },
+  ],
+  sameAs: siteConfig.domains.noetralex.map((domain) => `https://${domain}`),
   areaServed: "International",
 };
 
@@ -53,7 +82,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: siteConfig.keywords,
   applicationName: siteConfig.name,
-  category: "Strategic Advisory",
+  category: "Strategic Intelligence",
   creator: siteConfig.name,
   publisher: siteConfig.name,
   authors: [{ name: siteConfig.name }],
@@ -87,7 +116,7 @@ export const metadata: Metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "NOETRA STRATEGIES - Strategic Intelligence Firm",
+        alt: "NOETRA STRATEGIES - Strategic Intelligence, AI Advisory and Legal Intelligence",
       },
     ],
   },
@@ -100,7 +129,7 @@ export const metadata: Metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "NOETRA STRATEGIES - Strategic Intelligence Firm",
+        alt: "NOETRA STRATEGIES - Strategic Intelligence, AI Advisory and Legal Intelligence",
       },
     ],
     creator: "@noetra",

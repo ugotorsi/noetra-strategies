@@ -217,6 +217,34 @@ export function Hero({ locale }: HeroProps) {
             ))}
           </motion.div>
 
+          <motion.div
+            variants={reveal}
+            transition={{ duration: 0.88, ease: "easeOut" }}
+            className="grid gap-2 sm:grid-cols-3"
+          >
+            {messages.operationalIndicators.map((indicator) => (
+              <div
+                key={indicator.label}
+                className="rounded-xl border border-white/12 bg-[#111827]/55 px-3 py-2"
+              >
+                <p className="text-[10px] uppercase tracking-[0.16em] text-[#F5F7FA]/58">
+                  {indicator.label}
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-[0.14em] text-[#C6A96B]">
+                  {indicator.status}
+                </p>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.p
+            variants={reveal}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className="text-xs uppercase tracking-[0.16em] text-[#F5F7FA]/54"
+          >
+            {messages.premiumMicrocopy}
+          </motion.p>
+
           <motion.ul
             variants={reveal}
             transition={{ duration: 0.9, ease: "easeOut" }}

@@ -113,6 +113,26 @@ export function AboutSection({ locale }: AboutSectionProps) {
           </Card>
         </motion.div>
 
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card className="border-white/12 p-6">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-[#4DA3FF]">
+              {messages.operationalPhilosophyTitle}
+            </p>
+            <p className="mt-3 text-sm leading-7 text-[#F5F7FA]/74">
+              {messages.operationalPhilosophy}
+            </p>
+          </Card>
+
+          <Card className="border-white/12 p-6">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-[#C6A96B]">
+              {messages.advisoryModelTitle}
+            </p>
+            <p className="mt-3 text-sm leading-7 text-[#F5F7FA]/74">
+              {messages.advisoryModel}
+            </p>
+          </Card>
+        </div>
+
         <div className="grid gap-5 md:grid-cols-3">
           {messages.metrics.map((metric, index) => (
             <motion.div

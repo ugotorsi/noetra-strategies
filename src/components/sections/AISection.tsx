@@ -7,6 +7,7 @@ import { Container } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { getMessages, type Locale } from "@/lib/i18n";
+import { siteConfig } from "@/lib/site";
 
 const aiIcons = [Workflow, FileSearch, Bot, ChartColumnBig];
 
@@ -41,6 +42,17 @@ export function AISection({ locale }: AISectionProps) {
             <p className="text-sm leading-7 text-[#F5F7FA]/78">
               {messages.intro}
             </p>
+
+            <div className="mt-5 grid gap-2 sm:grid-cols-2">
+              {messages.focusAreas.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-lg border border-white/12 bg-white/[0.03] px-3 py-2 text-[11px] uppercase tracking-[0.14em] text-[#F5F7FA]/70"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
           </Card>
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -76,6 +88,7 @@ export function AISection({ locale }: AISectionProps) {
           <div className="pointer-events-none absolute -top-10 left-10 h-40 w-40 rounded-full bg-[#4DA3FF]/28 blur-[90px]" />
           <div className="pointer-events-none absolute -bottom-12 right-4 h-36 w-36 rounded-full bg-[#4DA3FF]/20 blur-[80px]" />
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#4DA3FF]/18 blur-[95px]" />
+          <div className="pointer-events-none absolute inset-0 opacity-45 [background:radial-gradient(circle_at_20%_30%,rgba(77,163,255,.35)_0,transparent_14%),radial-gradient(circle_at_75%_65%,rgba(77,163,255,.2)_0,transparent_12%)]" />
 
           <Card className="relative overflow-hidden border-[#4DA3FF]/35 bg-[#0B0F14]/85 p-6 sm:p-7">
             <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(77,163,255,0.12),transparent_45%,rgba(255,255,255,0.05))]" />
@@ -148,6 +161,21 @@ export function AISection({ locale }: AISectionProps) {
                 </div>
               </div>
 
+              <div className="grid gap-3 sm:grid-cols-3">
+                {messages.widgets.map((widget) => (
+                  <div
+                    key={widget.label}
+                    className="rounded-xl border border-white/12 bg-[#111827]/60 px-3 py-3"
+                  >
+                    <p className="text-[10px] uppercase tracking-[0.16em] text-[#F5F7FA]/55">
+                      {widget.label}
+                    </p>
+                    <p className="mt-2 text-lg font-semibold text-[#F5F7FA]">{widget.value}</p>
+                    <p className="mt-1 text-xs text-[#F5F7FA]/62">{widget.detail}</p>
+                  </div>
+                ))}
+              </div>
+
               <div className="rounded-2xl border border-white/10 bg-[#111827]/55 p-4">
                 <p className="text-xs uppercase tracking-[0.2em] text-[#F5F7FA]/65">
                   {messages.diagramTitle}
@@ -176,6 +204,29 @@ export function AISection({ locale }: AISectionProps) {
                     </div>
                   ))}
                 </div>
+              </div>
+
+              <div className="rounded-2xl border border-[#4DA3FF]/28 bg-[#4DA3FF]/8 p-4">
+                <p className="text-[11px] uppercase tracking-[0.18em] text-[#4DA3FF]">
+                  {messages.domainLabel}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {siteConfig.domains.noetralex.map((domain) => (
+                    <a
+                      key={domain}
+                      href={`https://${domain}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-full border border-[#4DA3FF]/35 bg-[#4DA3FF]/14 px-3 py-1.5 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/78 transition hover:border-[#4DA3FF]/65 hover:text-white"
+                    >
+                      {domain}
+                    </a>
+                  ))}
+                </div>
+                <p className="mt-3 text-xs text-[#F5F7FA]/62">{messages.domainNote}</p>
+                <p className="mt-2 text-[10px] uppercase tracking-[0.18em] text-[#F5F7FA]/52">
+                  {messages.neuralSignal}
+                </p>
               </div>
             </div>
           </Card>

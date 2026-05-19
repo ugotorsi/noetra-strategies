@@ -17,6 +17,12 @@ function buildTitle(pageTitle: string): string {
   return pageTitle.includes(siteConfig.name) ? pageTitle : `${pageTitle} | ${siteConfig.name}`;
 }
 
+function imageAltByLocale(locale: Locale): string {
+  return locale === "it"
+    ? `${siteConfig.name} - Societa di Intelligence Strategica`
+    : `${siteConfig.name} - Strategic Intelligence Firm`;
+}
+
 export function createLocalizedMetadata(
   locale: Locale,
   pathname: string,
@@ -27,6 +33,7 @@ export function createLocalizedMetadata(
   const englishPath = withLocalePath("en", pathname);
   const canonicalUrl = `${siteConfig.url}${canonicalPath}`;
   const pageTitle = buildTitle(seo.title);
+  const imageAlt = imageAltByLocale(locale);
 
   return {
     title: seo.title,
@@ -51,7 +58,7 @@ export function createLocalizedMetadata(
           url: "/og-image.svg",
           width: 1200,
           height: 630,
-          alt: `${siteConfig.name} - Strategic Intelligence Firm`,
+          alt: imageAlt,
         },
       ],
     },
@@ -64,7 +71,7 @@ export function createLocalizedMetadata(
           url: "/og-image.svg",
           width: 1200,
           height: 630,
-          alt: `${siteConfig.name} - Strategic Intelligence Firm`,
+          alt: imageAlt,
         },
       ],
       creator: "@noetra",

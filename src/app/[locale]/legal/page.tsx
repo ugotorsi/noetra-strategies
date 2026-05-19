@@ -19,6 +19,11 @@ export async function generateMetadata({ params }: LocalePageProps): Promise<Met
 export default async function LegalPage({ params }: LocalePageProps) {
   const locale = await getLocaleForPage(params);
   const messages = getMessages(locale).legalPage;
+  const legalEmails = [
+    { label: messages.emails.info, value: siteConfig.emails.info },
+    { label: messages.emails.advisory, value: siteConfig.emails.advisory },
+    { label: messages.emails.contact, value: siteConfig.emails.contact },
+  ];
 
   return (
     <main className="min-h-screen overflow-x-clip bg-[#0B0F14] text-[#F5F7FA]">
@@ -49,16 +54,37 @@ export default async function LegalPage({ params }: LocalePageProps) {
                   </div>
                 ))}
 
+                {legalEmails.map((entry) => (
+                  <div key={entry.value} className="grid gap-2 py-4 sm:grid-cols-[0.3fr_0.7fr]">
+                    <p className="text-xs uppercase tracking-[0.16em] text-[#F5F7FA]/55">
+                      {entry.label}
+                    </p>
+                    <Link
+                      href={`mailto:${entry.value}`}
+                      className="text-sm text-[#F5F7FA]/78 transition hover:text-white"
+                    >
+                      {entry.value}
+                    </Link>
+                  </div>
+                ))}
+
                 <div className="grid gap-2 py-4 sm:grid-cols-[0.3fr_0.7fr]">
                   <p className="text-xs uppercase tracking-[0.16em] text-[#F5F7FA]/55">
-                    {messages.emailLabel}
+                    {messages.domainLabel}
                   </p>
-                  <Link
-                    href={`mailto:${siteConfig.email}`}
-                    className="text-sm text-[#F5F7FA]/78 transition hover:text-white"
-                  >
-                    {siteConfig.email}
-                  </Link>
+                  <div className="flex flex-wrap gap-2">
+                    {siteConfig.domains.noetralex.map((domain) => (
+                      <Link
+                        key={domain}
+                        href={`https://${domain}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-full border border-[#4DA3FF]/35 bg-[#4DA3FF]/10 px-3 py-1 text-xs uppercase tracking-[0.12em] text-[#F5F7FA]/78 transition hover:border-[#4DA3FF]/55 hover:text-white"
+                      >
+                        {domain}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

@@ -11,7 +11,7 @@ export function LegalDisclaimer({ locale, className, compact = false }: LegalDis
   const messages = getMessages(locale).legalDisclaimer;
 
   return (
-    <section className={cn("relative", className)} aria-label="Regulatory disclaimer">
+    <section className={cn("relative", className)} aria-label={messages.ariaLabel}>
       <div
         className={cn(
           "rounded-2xl border border-white/12 bg-white/[0.03] backdrop-blur-lg",
