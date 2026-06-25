@@ -173,6 +173,9 @@ export function Hero({ locale }: HeroProps) {
               {messages.secondaryCta}
               <ArrowRight size={16} />
             </Button>
+            <Button href={withLocalePath(locale, "/insights")} variant="outline" size="lg">
+              {messages.tertiaryCta}
+            </Button>
           </motion.div>
 
           <motion.div

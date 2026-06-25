@@ -101,11 +101,13 @@ export function buildArticleSchema(locale: Locale, entry: InsightEntry) {
     inLanguage: locale,
     author: {
       "@type": "Organization",
-      name: "NOETRA STRATEGIES S.R.L.S.",
+      name: "NOETRA STRATEGIES Editorial Team",
+      url: siteConfig.url,
     },
     publisher: {
       "@type": "Organization",
       name: "NOETRA STRATEGIES S.R.L.S.",
+      url: siteConfig.url,
       logo: {
         "@type": "ImageObject",
         url: `${siteConfig.url}/favicon.svg`,
@@ -116,6 +118,12 @@ export function buildArticleSchema(locale: Locale, entry: InsightEntry) {
       "@id": `${siteConfig.url}${withLocalePath(locale, `/insights/${entry.slug}`)}`,
     },
     image: [`${siteConfig.url}/og-image.svg`],
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    about: [entry.primaryTopic, ...entry.secondaryTopics],
     articleSection: entry.category,
     keywords: entry.tags,
   };

@@ -6,6 +6,8 @@ import {
   getAllInsightEntries,
   getAlternateInsight,
   getInsightBySlug,
+  getRelatedInsights,
+  type InsightServiceKey,
 } from "@/content/insights";
 import { Container } from "@/components/layout/Container";
 import { Footer } from "@/components/layout/Footer";
@@ -94,6 +96,18 @@ function formatDate(locale: "it" | "en", value: string) {
   });
 }
 
+function getServiceLinkLabel(locale: "it" | "en", key: InsightServiceKey): string {
+  if (locale === "it") {
+    if (key === "strategic-advisory") return "Strategic advisory";
+    if (key === "legal-tech-regulatory") return "Legal-tech e regolatorio";
+    return "Compliance e rischio operativo";
+  }
+
+  if (key === "strategic-advisory") return "Strategic advisory";
+  if (key === "legal-tech-regulatory") return "Legal-tech and regulatory";
+  return "Compliance and operational risk";
+}
+
 export default async function InsightArticlePage({ params }: InsightArticleProps) {
   const { slug } = await params;
   const locale = await getLocaleForPage(params);
@@ -105,6 +119,7 @@ export default async function InsightArticlePage({ params }: InsightArticleProps
   }
 
   const alternate = getAlternateInsight(insight);
+  const relatedInsights = getRelatedInsights(insight);
 
   const webPageSchema = buildWebPageSchema(
     locale,
@@ -140,6 +155,18 @@ export default async function InsightArticlePage({ params }: InsightArticleProps
           />
 
           <header className="max-w-4xl space-y-5">
+            <nav className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-[#F5F7FA]/54">
+              <Link href={withLocalePath(locale, "")} className="transition hover:text-[#F5F7FA]/80">
+                {locale === "it" ? "Home" : "Home"}
+              </Link>
+              <span>/</span>
+              <Link href={withLocalePath(locale, "/insights")} className="transition hover:text-[#F5F7FA]/80">
+                {messages.title}
+              </Link>
+              <span>/</span>
+              <span className="text-[#F5F7FA]/72">{insight.primaryTopic}</span>
+            </nav>
+
             <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-[#F5F7FA]/60">
               <span className="rounded-full border border-white/12 bg-white/[0.03] px-2.5 py-1 text-[#4DA3FF]">
                 {insight.category}
@@ -164,6 +191,20 @@ export default async function InsightArticlePage({ params }: InsightArticleProps
                   {tag}
                 </span>
               ))}
+            </div>
+
+            <div className="rounded-2xl border border-white/12 bg-white/[0.03] p-5">
+              <p className="text-xs uppercase tracking-[0.16em] text-[#4DA3FF]">
+                {locale === "it" ? "In sintesi" : "Executive summary"}
+              </p>
+              <ul className="mt-3 space-y-2 text-sm leading-7 text-[#F5F7FA]/78">
+                {insight.executiveSummary.map((point) => (
+                  <li key={point} className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4DA3FF]" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </header>
 
@@ -213,6 +254,44 @@ export default async function InsightArticlePage({ params }: InsightArticleProps
                     </Link>
                   ) : null}
                 </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/12 bg-white/[0.03] p-5">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#4DA3FF]">
+                  {locale === "it" ? "Approfondimenti correlati" : "Related perspectives"}
+                </p>
+
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {insight.relatedServices.map((serviceKey) => (
+                    <Link
+                      key={serviceKey}
+                      href={withLocalePath(locale, "/services")}
+                      className="inline-flex min-h-10 items-center rounded-full border border-white/16 bg-white/[0.02] px-4 py-2 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/78 transition hover:border-white/35 hover:text-white"
+                    >
+                      {getServiceLinkLabel(locale, serviceKey)}
+                    </Link>
+                  ))}
+                  <Link
+                    href={withLocalePath(locale, "/contact")}
+                    className="inline-flex min-h-10 items-center rounded-full border border-[#4DA3FF]/35 bg-[#4DA3FF]/10 px-4 py-2 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/85 transition hover:border-[#4DA3FF]/65 hover:text-white"
+                  >
+                    {locale === "it" ? "Contatta il team" : "Contact the team"}
+                  </Link>
+                </div>
+
+                {relatedInsights.length > 0 ? (
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    {relatedInsights.map((related) => (
+                      <Link
+                        key={related.slug}
+                        href={withLocalePath(locale, `/insights/${related.slug}`)}
+                        className="inline-flex min-h-10 items-center rounded-full border border-white/16 bg-white/[0.02] px-4 py-2 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/78 transition hover:border-white/35 hover:text-white"
+                      >
+                        {related.primaryTopic}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
               </div>
             </div>
           </Card>

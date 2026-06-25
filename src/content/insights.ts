@@ -7,6 +7,11 @@ export type InsightSection = {
   bullets?: string[];
 };
 
+export type InsightServiceKey =
+  | "strategic-advisory"
+  | "legal-tech-regulatory"
+  | "compliance-operational-risk";
+
 export type InsightEntry = {
   topicId: "strategic-intelligence" | "legal-tech-ai-analysis" | "compliance-operational-intelligence";
   locale: Locale;
@@ -24,6 +29,12 @@ export type InsightEntry = {
     title: string;
     description: string;
   };
+  primaryTopic: string;
+  secondaryTopics: string[];
+  strategicIntent: string;
+  relatedInsightSlugs: string[];
+  relatedServices: InsightServiceKey[];
+  executiveSummary: string[];
   sections: InsightSection[];
 };
 
@@ -34,7 +45,7 @@ const insightEntries: InsightEntry[] = [
     slug: "intelligenza-strategica-decisioni-complesse",
     title: "Intelligenza strategica e decisioni complesse: oltre la consulenza tradizionale",
     description:
-      "Perche i contesti ad alta complessita richiedono un modello di advisory integrato tra analisi strategica, legal-tech, AI-assisted intelligence e coordinamento operativo.",
+      "Perché i contesti ad alta complessità richiedono un modello di advisory integrato tra analisi strategica, legal-tech, AI-assisted intelligence e coordinamento operativo.",
     date: "2026-06-25",
     category: "Strategic Advisory",
     readingTime: "10 min",
@@ -46,7 +57,7 @@ const insightEntries: InsightEntry[] = [
       "decision governance",
     ],
     excerpt:
-      "Nei mandati ad alta complessita non basta produrre raccomandazioni: serve una cabina di regia in grado di connettere analisi, esecuzione e responsabilita operative.",
+      "Nei mandati ad alta complessità non basta produrre raccomandazioni: serve una cabina di regia in grado di connettere analisi, esecuzione e responsabilità operative.",
     ctaLabel: "Contatta il desk advisory",
     ctaHref: "/it/contact",
     seo: {
@@ -54,47 +65,60 @@ const insightEntries: InsightEntry[] = [
       description:
         "Come integrare strategic advisory, legal-tech e AI-assisted document intelligence per governare decisioni complesse in contesti corporate e istituzionali.",
     },
+    primaryTopic: "Intelligenza Strategica",
+    secondaryTopics: ["Legal-Tech", "AI-Assisted Analysis", "Decision Governance"],
+    strategicIntent: "Guidare decisori executive verso un modello integrato di governance delle decisioni complesse.",
+    relatedInsightSlugs: [
+      "legal-tech-ai-analysis-contesti-regolatori-contenziosi",
+      "compliance-operational-intelligence-governo-rischio-documenti-decisioni",
+    ],
+    relatedServices: ["strategic-advisory", "legal-tech-regulatory", "compliance-operational-risk"],
+    executiveSummary: [
+      "Nei mandati complessi conta la qualità della regia, non la quantità di pareri isolati.",
+      "Strategic intelligence significa orchestrare segnali, priorità e responsabilità esecutive in un unico framework.",
+      "Legal-tech e AI-assisted analysis rafforzano il controllo informativo, con supervisione umana centrale.",
+    ],
     sections: [
       {
-        heading: "Perche la complessita rende insufficiente la consulenza lineare",
+        heading: "Perché la complessità rende insufficiente la consulenza lineare",
         paragraphs: [
-          "Nei contesti corporate e istituzionali ad alta intensita regolatoria, il problema non e solo scegliere la soluzione teoricamente corretta, ma governare simultaneamente vincoli normativi, interdipendenze operative, tempi decisionali e aspettative di stakeholder eterogenei. La consulenza tradizionale, organizzata per silos disciplinari, tende a produrre output verticali che spesso non dialogano tra loro con sufficiente velocita.",
-          "Quando il board riceve analisi frammentate, cresce il rischio di disallineamento tra decisione strategica ed esecuzione operativa. In queste condizioni, anche una valutazione tecnicamente valida puo perdere efficacia se non e tradotta in una sequenza concreta di azioni, ownership e checkpoint. L'intelligenza strategica nasce proprio per ridurre questa distanza tra valutazione e governo del mandato.",
+          "Nei contesti corporate e istituzionali ad alta intensità regolatoria, il problema non è solo scegliere la soluzione teoricamente corretta, ma governare simultaneamente vincoli normativi, interdipendenze operative, tempi decisionali e aspettative di stakeholder eterogenei. La consulenza tradizionale, organizzata per silos disciplinari, tende a produrre output verticali che spesso non dialogano tra loro con sufficiente velocità.",
+          "Quando il board riceve analisi frammentate, cresce il rischio di disallineamento tra decisione strategica ed esecuzione operativa. In queste condizioni, anche una valutazione tecnicamente valida può perdere efficacia se non è tradotta in una sequenza concreta di azioni, ownership e checkpoint. L'intelligenza strategica nasce proprio per ridurre questa distanza tra valutazione e governo del mandato.",
         ],
       },
       {
         heading: "Dal parere al sistema: la logica della strategic intelligence",
         paragraphs: [
-          "Un approccio di strategic intelligence non sostituisce le competenze specialistiche, ma le orchestra. L'obiettivo non e accumulare documenti, ma costruire un sistema decisionale dove ogni evidenza e classificata per rilevanza, impatto, urgenza e dipendenze. In pratica, la domanda chiave diventa: quali decisioni devono essere prese, da chi, con quali rischi residui e con quale sequenza esecutiva.",
-          "Questo passaggio cambia la metrica di successo. Non basta consegnare un elaborato completo; occorre assicurare che il management disponga di un quadro leggibile, aggiornabile e difendibile. Un framework robusto include mappe di scenario, trigger decisionali, logiche di priorita e protocolli di escalation, con responsabilita chiare tra area legale, funzione tecnica, compliance e governance direzionale.",
+          "Un approccio di strategic intelligence non sostituisce le competenze specialistiche, ma le orchestra. L'obiettivo non è accumulare documenti, ma costruire un sistema decisionale dove ogni evidenza è classificata per rilevanza, impatto, urgenza e dipendenze. In pratica, la domanda chiave diventa: quali decisioni devono essere prese, da chi, con quali rischi residui e con quale sequenza esecutiva.",
+          "Questo passaggio cambia la metrica di successo. Non basta consegnare un elaborato completo; occorre assicurare che il management disponga di un quadro leggibile, aggiornabile e difendibile. Un framework robusto include mappe di scenario, trigger decisionali, logiche di priorità e protocolli di escalation, con responsabilità chiare tra area legale, funzione tecnica, compliance e governance direzionale.",
         ],
       },
       {
         heading: "Legal-tech e AI-assisted intelligence come leva di controllo, non di automatismo",
         paragraphs: [
-          "L'integrazione di strumenti legal-tech e AI-assisted analysis consente di accelerare compiti ad alta intensita documentale: clustering di atti, estrazione di segnali ricorrenti, riconoscimento di timeline procedurali e confronto tra versioni di documenti complessi. Il valore non risiede nella tecnologia in se, ma nella sua capacita di migliorare la qualita del controllo informativo e la tracciabilita delle decisioni.",
-          "E essenziale chiarire che questi strumenti non sostituiscono il giudizio professionale umano. Al contrario, lo rendono piu informato e tempestivo, riducendo la probabilita di omissioni, incoerenze e ritardi. In un mandato complesso, la combinazione tra analisi assistita e supervisione esperta permette di mantenere un equilibrio tra profondita tecnica e rapidita esecutiva.",
+          "L'integrazione di strumenti legal-tech e AI-assisted analysis consente di accelerare compiti ad alta intensità documentale: clustering di atti, estrazione di segnali ricorrenti, riconoscimento di timeline procedurali e confronto tra versioni di documenti complessi. Il valore non risiede nella tecnologia in sé, ma nella sua capacità di migliorare la qualità del controllo informativo e la tracciabilità delle decisioni.",
+          "È essenziale chiarire che questi strumenti non sostituiscono il giudizio professionale umano. Al contrario, lo rendono più informato e tempestivo, riducendo la probabilità di omissioni, incoerenze e ritardi. In un mandato complesso, la combinazione tra analisi assistita e supervisione esperta permette di mantenere un equilibrio tra profondità tecnica e rapidità esecutiva.",
         ],
       },
       {
         heading: "Coordinamento operativo: la variabile spesso sottostimata",
         paragraphs: [
-          "Molti fallimenti strategici non derivano da un'analisi iniziale sbagliata, ma da una governance esecutiva debole. Senza una regia condivisa, i team lavorano con priorita divergenti, gli aggiornamenti arrivano fuori tempo e le decisioni vengono prese su informazioni non sincronizzate. In queste condizioni aumentano costi indiretti, esposizione reputazionale e rischio di contenzioso.",
-          "Un modello multidisciplinare efficace definisce invece una matrice operativa comune: chi valida cosa, entro quali finestre temporali, con quale livello di evidenza e con quali criteri di rilascio. Questa struttura produce continuita decisionale, riduce gli attriti tra funzioni e rende piu robusta la capacita di risposta in scenari dinamici.",
+          "Molti fallimenti strategici non derivano da un'analisi iniziale sbagliata, ma da una governance esecutiva debole. Senza una regia condivisa, i team lavorano con priorità divergenti, gli aggiornamenti arrivano fuori tempo e le decisioni vengono prese su informazioni non sincronizzate. In queste condizioni aumentano costi indiretti, esposizione reputazionale e rischio di contenzioso.",
+          "Un modello multidisciplinare efficace definisce invece una matrice operativa comune: chi valida cosa, entro quali finestre temporali, con quale livello di evidenza e con quali criteri di rilascio. Questa struttura produce continuità decisionale, riduce gli attriti tra funzioni e rende più robusta la capacità di risposta in scenari dinamici.",
         ],
       },
       {
         heading: "Decision governance e accountability",
         paragraphs: [
-          "In una prospettiva executive, la governance non e burocrazia ma strumento di protezione del mandato. Documentare assunzioni, alternative considerate, rischi residui e razionale delle scelte migliora la qualita del confronto interno e la difendibilita esterna della decisione. La presenza di audit trail coerenti diventa particolarmente rilevante in settori regolati o ad elevata esposizione mediatica.",
-          "La strategic intelligence introduce una disciplina operativa che combina chiarezza metodologica e pragmatismo. Ogni decisione e contestualizzata in un ciclo continuo: raccolta segnali, interpretazione, prioritizzazione, azione, verifica. Il risultato non e solo una migliore decisione puntuale, ma una maggiore maturita organizzativa nel governare la complessita nel tempo.",
+          "In una prospettiva executive, la governance non è burocrazia ma strumento di protezione del mandato. Documentare assunzioni, alternative considerate, rischi residui e razionale delle scelte migliora la qualità del confronto interno e la difendibilità esterna della decisione. La presenza di audit trail coerenti diventa particolarmente rilevante in settori regolati o ad elevata esposizione mediatica.",
+          "La strategic intelligence introduce una disciplina operativa che combina chiarezza metodologica e pragmatismo. Ogni decisione è contestualizzata in un ciclo continuo: raccolta segnali, interpretazione, prioritizzazione, azione, verifica. Il risultato non è solo una migliore decisione puntuale, ma una maggiore maturità organizzativa nel governare la complessità nel tempo.",
         ],
       },
       {
         heading: "Oltre la consulenza tradizionale: un posizionamento di sistema",
         paragraphs: [
-          "Per organizzazioni che affrontano operazioni straordinarie, contesti regolatori complessi o progetti ad alto impatto, la differenza competitiva non e nella quantita di pareri disponibili ma nella qualita del coordinamento tra analisi e execution. Un advisory multidisciplinare diventa realmente strategico quando agisce come sistema di integrazione tra competenze, dati e decisioni.",
-          "In questa logica, il posizionamento NOETRA si concentra su un principio semplice: fornire ai decisori una piattaforma operativa di intelligence capace di unire rigore analitico, lettura legale, supporto AI-assisted e controllo delle dipendenze esecutive. Non una consulenza episodica, ma una architettura di governo orientata a continuita, responsabilita e risultati verificabili.",
+          "Per organizzazioni che affrontano operazioni straordinarie, contesti regolatori complessi o progetti ad alto impatto, la differenza competitiva non è nella quantità di pareri disponibili ma nella qualità del coordinamento tra analisi e execution. Un advisory multidisciplinare diventa realmente strategico quando agisce come sistema di integrazione tra competenze, dati e decisioni.",
+          "In questa logica, il posizionamento NOETRA si concentra su un principio semplice: fornire ai decisori una piattaforma operativa di intelligence capace di unire rigore analitico, lettura legale, supporto AI-assisted e controllo delle dipendenze esecutive. Non una consulenza episodica, ma una architettura di governo orientata a continuità, responsabilità e risultati verificabili.",
         ],
       },
     ],
@@ -125,6 +149,19 @@ const insightEntries: InsightEntry[] = [
       description:
         "How strategic advisory, legal-tech and AI-assisted document intelligence support complex decisions across institutional and corporate environments.",
     },
+    primaryTopic: "Strategic Intelligence",
+    secondaryTopics: ["Legal-Tech", "AI-Assisted Analysis", "Decision Governance"],
+    strategicIntent: "Position NOETRA as an executive partner for integrated decision governance in complex mandates.",
+    relatedInsightSlugs: [
+      "legal-tech-ai-assisted-analysis-regulatory-complex-litigation",
+      "compliance-operational-intelligence-governing-risk-documents-decisions",
+    ],
+    relatedServices: ["strategic-advisory", "legal-tech-regulatory", "compliance-operational-risk"],
+    executiveSummary: [
+      "Complex mandates require synchronized legal, operational and executive governance.",
+      "Strategic intelligence connects analytical depth with execution clarity and accountability.",
+      "AI-assisted legal-tech capabilities improve decision quality when embedded in controlled workflows.",
+    ],
     sections: [
       {
         heading: "Why linear advisory fails in complex environments",
@@ -176,7 +213,7 @@ const insightEntries: InsightEntry[] = [
     slug: "legal-tech-ai-analysis-contesti-regolatori-contenziosi",
     title: "Legal-tech e AI-assisted analysis nei contesti regolatori e contenziosi complessi",
     description:
-      "Come integrare analisi documentale assistita, risk mapping e governance delle evidenze per supportare decisioni legali e operative in scenari ad alta complessita.",
+      "Come integrare analisi documentale assistita, risk mapping e governance delle evidenze per supportare decisioni legali e operative in scenari ad alta complessità.",
     date: "2026-06-25",
     category: "Legal-Tech Intelligence",
     readingTime: "11 min",
@@ -188,7 +225,7 @@ const insightEntries: InsightEntry[] = [
       "evidence governance",
     ],
     excerpt:
-      "Nei contesti regolatori e contenziosi complessi, il vantaggio competitivo risiede nella capacita di leggere rapidamente i segnali rilevanti senza perdere profondita giuridica e controllo operativo.",
+      "Nei contesti regolatori e contenziosi complessi, il vantaggio competitivo risiede nella capacità di leggere rapidamente i segnali rilevanti senza perdere profondità giuridica e controllo operativo.",
     ctaLabel: "Richiedi un confronto operativo",
     ctaHref: "/it/contact",
     seo: {
@@ -196,47 +233,60 @@ const insightEntries: InsightEntry[] = [
       description:
         "Metodi e pratiche per usare legal-tech e AI-assisted document intelligence in contesti regolatori e contenziosi complessi, con governance e supervisione umana.",
     },
+    primaryTopic: "Legal-Tech & AI-Assisted Analysis",
+    secondaryTopics: ["Risk Mapping", "Evidence Governance", "Regulatory Intelligence"],
+    strategicIntent: "Consolidare la leadership su legal-tech intelligence e governance delle evidenze in scenari regolatori complessi.",
+    relatedInsightSlugs: [
+      "intelligenza-strategica-decisioni-complesse",
+      "compliance-operational-intelligence-governo-rischio-documenti-decisioni",
+    ],
+    relatedServices: ["legal-tech-regulatory", "strategic-advisory", "compliance-operational-risk"],
+    executiveSummary: [
+      "La velocità analitica è utile solo se accompagnata da metodo, validazione e tracciabilità.",
+      "Risk mapping dinamico e governance documentale sono leve decisive in contesti regolatori e contenziosi.",
+      "L'AI assiste l'analisi, ma responsabilità e giudizio restano in capo ai professionisti.",
+    ],
     sections: [
       {
-        heading: "Contesti regolatori complessi: la sfida non e solo normativa",
+        heading: "Contesti regolatori complessi: la sfida non è solo normativa",
         paragraphs: [
-          "Nei settori sottoposti a forte pressione regolatoria, la difficolta principale non consiste unicamente nel conoscere la norma applicabile, ma nel comprendere come tale norma interagisce con processi interni, vincoli documentali, tempistiche decisionali e rischi reputazionali. Le organizzazioni devono affrontare contemporaneamente interpretazione giuridica, valutazione operativa e gestione del cambiamento.",
-          "In assenza di una metodologia integrata, il rischio e quello di reagire in modo frammentato: un team presidia la compliance formale, un altro gestisce il contenzioso, un altro ancora governa la comunicazione interna. Questo approccio produce sovrapposizioni informative e lacune critiche, proprio quando sarebbe necessario convergere su un'unica sequenza decisionale.",
+          "Nei settori sottoposti a forte pressione regolatoria, la difficoltà principale non consiste unicamente nel conoscere la norma applicabile, ma nel comprendere come tale norma interagisce con processi interni, vincoli documentali, tempistiche decisionali e rischi reputazionali. Le organizzazioni devono affrontare contemporaneamente interpretazione giuridica, valutazione operativa e gestione del cambiamento.",
+          "In assenza di una metodologia integrata, il rischio è quello di reagire in modo frammentato: un team presidia la compliance formale, un altro gestisce il contenzioso, un altro ancora governa la comunicazione interna. Questo approccio produce sovrapposizioni informative e lacune critiche, proprio quando sarebbe necessario convergere su un'unica sequenza decisionale.",
         ],
       },
       {
-        heading: "AI-assisted document intelligence: velocita con metodo",
+        heading: "AI-assisted document intelligence: velocità con metodo",
         paragraphs: [
-          "L'AI-assisted analysis offre un supporto concreto nei compiti ad alta intensita documentale: classificazione di atti, individuazione di pattern ricorrenti, segnalazione di incongruenze e ricostruzione di timeline. In contenziosi estesi o dossier multi-sorgente, questa capacita consente di ridurre tempi di analisi e migliorare la priorita delle verifiche umane.",
-          "Il valore emerge quando l'automazione e inserita in una pipeline controllata. Ogni risultato deve essere contestualizzato, validato e tracciato da professionisti qualificati. Senza questa governance, l'accelerazione tecnica rischia di generare falsa sicurezza. Con una supervisione adeguata, invece, l'AI diventa moltiplicatore di rigore, non scorciatoia interpretativa.",
+          "L'AI-assisted analysis offre un supporto concreto nei compiti ad alta intensità documentale: classificazione di atti, individuazione di pattern ricorrenti, segnalazione di incongruenze e ricostruzione di timeline. In contenziosi estesi o dossier multi-sorgente, questa capacità consente di ridurre tempi di analisi e migliorare la priorità delle verifiche umane.",
+          "Il valore emerge quando l'automazione è inserita in una pipeline controllata. Ogni risultato deve essere contestualizzato, validato e tracciato da professionisti qualificati. Senza questa governance, l'accelerazione tecnica rischia di generare falsa sicurezza. Con una supervisione adeguata, invece, l'AI diventa moltiplicatore di rigore, non scorciatoia interpretativa.",
         ],
       },
       {
         heading: "Risk mapping e scenari: dalla fotografia al presidio dinamico",
         paragraphs: [
-          "Nei mandati complessi e essenziale superare una logica statica del rischio. Un risk mapping realmente utile deve essere aggiornabile e collegato a trigger operativi: quali eventi impattano la posizione giuridica, quali segnali anticipano escalation, quali dipendenze possono compromettere la strategia processuale o regolatoria.",
-          "L'integrazione tra legal-tech e decision intelligence permette di passare da una fotografia puntuale a un presidio dinamico. Le mappe di rischio diventano strumenti di governance, con livelli di priorita, scenari alternativi e criteri di risposta differenziati. Questo riduce l'improvvisazione e aumenta la capacita dell'organizzazione di mantenere coerenza in ambienti volatili.",
+          "Nei mandati complessi è essenziale superare una logica statica del rischio. Un risk mapping realmente utile deve essere aggiornabile e collegato a trigger operativi: quali eventi impattano la posizione giuridica, quali segnali anticipano escalation, quali dipendenze possono compromettere la strategia processuale o regolatoria.",
+          "L'integrazione tra legal-tech e decision intelligence permette di passare da una fotografia puntuale a un presidio dinamico. Le mappe di rischio diventano strumenti di governance, con livelli di priorità, scenari alternativi e criteri di risposta differenziati. Questo riduce l'improvvisazione e aumenta la capacità dell'organizzazione di mantenere coerenza in ambienti volatili.",
         ],
       },
       {
         heading: "Evidenze e timeline: architettura informativa difendibile",
         paragraphs: [
-          "Nei procedimenti complessi, la qualita della decisione dipende spesso dalla qualita dell'architettura informativa. Evidenze non normalizzate, versioni documentali incoerenti o timeline incomplete generano attriti che rallentano il lavoro professionale e indeboliscono la posizione difensiva. La governance documentale deve quindi essere progettata come infrastruttura critica.",
-          "Una pipeline efficace combina tassonomie condivise, protocolli di naming, verifiche di integrita e regole di accesso coerenti con il principio need-to-know. Il risultato e un ambiente dove le informazioni sono reperibili, verificabili e contestualizzate. In questo modo, team legali e direzionali possono concentrarsi sulle scelte ad alto valore, riducendo il tempo perso in riallineamenti manuali.",
+          "Nei procedimenti complessi, la qualità della decisione dipende spesso dalla qualità dell'architettura informativa. Evidenze non normalizzate, versioni documentali incoerenti o timeline incomplete generano attriti che rallentano il lavoro professionale e indeboliscono la posizione difensiva. La governance documentale deve quindi essere progettata come infrastruttura critica.",
+          "Una pipeline efficace combina tassonomie condivise, protocolli di naming, verifiche di integrità e regole di accesso coerenti con il principio need-to-know. Il risultato è un ambiente dove le informazioni sono reperibili, verificabili e contestualizzate. In questo modo, team legali e direzionali possono concentrarsi sulle scelte ad alto valore, riducendo il tempo perso in riallineamenti manuali.",
         ],
       },
       {
         heading: "Il ruolo insostituibile del giudizio professionale umano",
         paragraphs: [
-          "L'adozione di strumenti AI non modifica un principio fondamentale: la responsabilita della decisione resta umana. In contesti legali e regolatori, il giudizio professionale non e delegabile a modelli statistici. I sistemi assistiti devono essere governati da standard di verifica, soglie di confidenza e criteri di audit in grado di rendere trasparente il percorso decisionale.",
-          "Questo approccio riduce sia il rischio di automazione acritica sia quello opposto di rifiuto tecnologico. Il punto non e scegliere tra professionista e tecnologia, ma definire un perimetro operativo in cui ciascuno contribuisca secondo la propria funzione: l'AI accelera l'analisi, il professionista assegna significato giuridico e strategico.",
+          "L'adozione di strumenti AI non modifica un principio fondamentale: la responsabilità della decisione resta umana. In contesti legali e regolatori, il giudizio professionale non è delegabile a modelli statistici. I sistemi assistiti devono essere governati da standard di verifica, soglie di confidenza e criteri di audit in grado di rendere trasparente il percorso decisionale.",
+          "Questo approccio riduce sia il rischio di automazione acritica sia quello opposto di rifiuto tecnologico. Il punto non è scegliere tra professionista e tecnologia, ma definire un perimetro operativo in cui ciascuno contribuisca secondo la propria funzione: l'AI accelera l'analisi, il professionista assegna significato giuridico e strategico.",
         ],
       },
       {
         heading: "Verso un modello operativo integrato",
         paragraphs: [
-          "La maturita organizzativa si misura nella capacita di trasformare strumenti e competenze in un sistema decisionale coerente. Nei contesti regolatori e contenziosi complessi, questo significa unire legal-tech, analisi assistita, risk mapping e governance esecutiva in un framework unico, con accountability esplicita e monitoraggio continuo.",
-          "Una simile architettura non promette certezze assolute, ma aumenta la qualita delle scelte e la tenuta operativa nel tempo. Per le organizzazioni che operano in ambienti ad alta complessita, e questa la differenza tra reazione episodica e controllo strategico: non piu gestione per emergenze, ma governo metodico di informazioni, rischi e decisioni.",
+          "La maturità organizzativa si misura nella capacità di trasformare strumenti e competenze in un sistema decisionale coerente. Nei contesti regolatori e contenziosi complessi, questo significa unire legal-tech, analisi assistita, risk mapping e governance esecutiva in un framework unico, con accountability esplicita e monitoraggio continuo.",
+          "Una simile architettura non promette certezze assolute, ma aumenta la qualità delle scelte e la tenuta operativa nel tempo. Per le organizzazioni che operano in ambienti ad alta complessità, è questa la differenza tra reazione episodica e controllo strategico: non più gestione per emergenze, ma governo metodico di informazioni, rischi e decisioni.",
         ],
       },
     ],
@@ -267,6 +317,19 @@ const insightEntries: InsightEntry[] = [
       description:
         "Methods for applying legal-tech and AI-assisted document intelligence in regulatory and complex litigation environments with human-led governance.",
     },
+    primaryTopic: "Legal-Tech & AI-Assisted Analysis",
+    secondaryTopics: ["Risk Mapping", "Evidence Governance", "Regulatory Intelligence"],
+    strategicIntent: "Strengthen authority on legal-tech intelligence for regulatory and complex litigation operations.",
+    relatedInsightSlugs: [
+      "strategic-intelligence-complex-decisions",
+      "compliance-operational-intelligence-governing-risk-documents-decisions",
+    ],
+    relatedServices: ["legal-tech-regulatory", "strategic-advisory", "compliance-operational-risk"],
+    executiveSummary: [
+      "Regulatory complexity requires legal interpretation plus execution governance.",
+      "AI-assisted document intelligence accelerates analysis when confidence thresholds are supervised.",
+      "Strategic defensibility depends on evidence integrity, role clarity and workflow control.",
+    ],
     sections: [
       {
         heading: "Regulatory complexity is not only a legal interpretation issue",
@@ -318,7 +381,7 @@ const insightEntries: InsightEntry[] = [
     slug: "compliance-operational-intelligence-governo-rischio-documenti-decisioni",
     title: "Dalla compliance alla operational intelligence: governare rischio, documenti e decisioni",
     description:
-      "Perche la compliance formale non basta e come costruire un sistema operativo di intelligence per presidiare segnali, rischi, documenti e decisioni in modo continuo.",
+      "Perché la compliance formale non basta e come costruire un sistema operativo di intelligence per presidiare segnali, rischi, documenti e decisioni in modo continuo.",
     date: "2026-06-25",
     category: "Operational Intelligence",
     readingTime: "10 min",
@@ -330,55 +393,68 @@ const insightEntries: InsightEntry[] = [
       "decision intelligence",
     ],
     excerpt:
-      "La compliance e necessaria ma non sufficiente: senza una logica di intelligence operativa, il presidio del rischio resta reattivo e frammentato.",
+      "La compliance è necessaria ma non sufficiente: senza una logica di intelligence operativa, il presidio del rischio resta reattivo e frammentato.",
     ctaLabel: "Parla con il team NOETRA",
     ctaHref: "/it/contact",
     seo: {
       title: "Dalla compliance alla operational intelligence | NOETRA",
       description:
-        "Framework operativo per integrare compliance, governance documentale e decision intelligence nella gestione di rischio, segnali critici e responsabilita esecutive.",
+        "Framework operativo per integrare compliance, governance documentale e decision intelligence nella gestione di rischio, segnali critici e responsabilità esecutive.",
     },
+    primaryTopic: "Compliance & Operational Intelligence",
+    secondaryTopics: ["Risk Governance", "Document Intelligence", "Decision Continuity"],
+    strategicIntent: "Evidenziare il passaggio da compliance formale a governance operativa continua e misurabile.",
+    relatedInsightSlugs: [
+      "intelligenza-strategica-decisioni-complesse",
+      "legal-tech-ai-analysis-contesti-regolatori-contenziosi",
+    ],
+    relatedServices: ["compliance-operational-risk", "strategic-advisory", "legal-tech-regulatory"],
+    executiveSummary: [
+      "La compliance è una baseline: il vantaggio competitivo nasce dal controllo operativo continuo.",
+      "Segnali, ownership e workflow verificabili riducono inerzia e conflitti interpretativi.",
+      "Document governance e decision intelligence migliorano resilienza e difendibilità istituzionale.",
+    ],
     sections: [
       {
         heading: "La compliance come baseline, non come traguardo",
         paragraphs: [
-          "Molte organizzazioni trattano la compliance come un adempimento periodico: check list, evidenze minime, report di conformita. Questa impostazione e utile per presidiare requisiti formali, ma spesso non e sufficiente quando il contesto operativo cambia rapidamente. Il rischio reale emerge nelle interazioni tra funzioni, processi e decisioni, non solo nelle clausole normative.",
-          "Quando la compliance resta confinata a una logica documentale retrospettiva, il management riceve segnali tardivi. In pratica, i problemi diventano visibili quando hanno gia prodotto impatti su tempi, costi o reputazione. Per questo e necessario evolvere verso un modello in cui conformita e intelligence operativa lavorano in modo integrato e continuo.",
+          "Molte organizzazioni trattano la compliance come un adempimento periodico: check list, evidenze minime, report di conformità. Questa impostazione è utile per presidiare requisiti formali, ma spesso non è sufficiente quando il contesto operativo cambia rapidamente. Il rischio reale emerge nelle interazioni tra funzioni, processi e decisioni, non solo nelle clausole normative.",
+          "Quando la compliance resta confinata a una logica documentale retrospettiva, il management riceve segnali tardivi. In pratica, i problemi diventano visibili quando hanno già prodotto impatti su tempi, costi o reputazione. Per questo è necessario evolvere verso un modello in cui conformità e intelligence operativa lavorano in modo integrato e continuo.",
         ],
       },
       {
         heading: "Operational intelligence: che cosa cambia davvero",
         paragraphs: [
-          "Operational intelligence significa trasformare dati, documenti e segnali in decisioni governabili. Non e una dashboard estetica, ma una disciplina che collega priorita strategiche, eventi operativi e responsabilita esecutive. Il punto centrale e ridurre l'inerzia decisionale: rendere evidente cosa sta cambiando, quale rischio aumenta e quale azione deve essere attivata.",
-          "Questo richiede regole esplicite di classificazione e escalation. Ogni segnale deve avere un livello di criticita, un owner, una finestra temporale e un criterio di chiusura. In assenza di queste regole, l'organizzazione accumula informazioni ma non produce orientamento. Con esse, i flussi diventano leggibili e traducibili in governance.",
+          "Operational intelligence significa trasformare dati, documenti e segnali in decisioni governabili. Non è una dashboard estetica, ma una disciplina che collega priorità strategiche, eventi operativi e responsabilità esecutive. Il punto centrale è ridurre l'inerzia decisionale: rendere evidente cosa sta cambiando, quale rischio aumenta e quale azione deve essere attivata.",
+          "Questo richiede regole esplicite di classificazione e escalation. Ogni segnale deve avere un livello di criticità, un owner, una finestra temporale e un criterio di chiusura. In assenza di queste regole, l'organizzazione accumula informazioni ma non produce orientamento. Con esse, i flussi diventano leggibili e traducibili in governance.",
         ],
       },
       {
         heading: "Governance documentale come infrastruttura decisionale",
         paragraphs: [
-          "Il documento non e solo supporto probatorio: e un nodo operativo che influenza scelte, sequenze e responsabilita. Una governance documentale matura prevede standard di classificazione, controllo versioni, metadati coerenti e policy di accesso calibrate su ruoli e rischi. Questo riduce le ambiguita che spesso compromettono l'esecuzione.",
-          "Nei contesti complessi, il valore della documentazione dipende dalla sua contestualizzazione. Sapere dove si trova un file non basta: occorre sapere perche e rilevante, quali decisioni impatta e quali dipendenze genera. La document intelligence, anche assistita da strumenti AI, rende possibile questa lettura relazionale in tempi compatibili con l'operativita.",
+          "Il documento non è solo supporto probatorio: è un nodo operativo che influenza scelte, sequenze e responsabilità. Una governance documentale matura prevede standard di classificazione, controllo versioni, metadati coerenti e policy di accesso calibrate su ruoli e rischi. Questo riduce le ambiguità che spesso compromettono l'esecuzione.",
+          "Nei contesti complessi, il valore della documentazione dipende dalla sua contestualizzazione. Sapere dove si trova un file non basta: occorre sapere perché è rilevante, quali decisioni impatta e quali dipendenze genera. La document intelligence, anche assistita da strumenti AI, rende possibile questa lettura relazionale in tempi compatibili con l'operatività.",
         ],
       },
       {
-        heading: "Segnali, responsabilita, workflow",
+        heading: "Segnali, responsabilità, workflow",
         paragraphs: [
-          "Un sistema di intelligence operativo efficace unisce tre elementi: segnali affidabili, responsabilita chiare, workflow verificabili. I segnali individuano deviazioni e opportunita; le responsabilita assegnano ownership; i workflow garantiscono che le decisioni attraversino i passaggi necessari senza rallentamenti improduttivi.",
-          "Questo modello e particolarmente utile quando piu funzioni devono convergere su decisioni ad alto impatto. Legale, compliance, area tecnica e management possono operare su una base informativa comune, riducendo conflitti interpretativi e tempi di riallineamento. La qualita della collaborazione migliora perche il perimetro decisionale e condiviso e tracciabile.",
+          "Un sistema di intelligence operativo efficace unisce tre elementi: segnali affidabili, responsabilità chiare, workflow verificabili. I segnali individuano deviazioni e opportunità; le responsabilità assegnano ownership; i workflow garantiscono che le decisioni attraversino i passaggi necessari senza rallentamenti improduttivi.",
+          "Questo modello è particolarmente utile quando più funzioni devono convergere su decisioni ad alto impatto. Legale, compliance, area tecnica e management possono operare su una base informativa comune, riducendo conflitti interpretativi e tempi di riallineamento. La qualità della collaborazione migliora perché il perimetro decisionale è condiviso e tracciabile.",
         ],
       },
       {
         heading: "Dalla reazione al controllo strategico",
         paragraphs: [
-          "Il passaggio da compliance formale a operational intelligence consente di spostare l'organizzazione da una postura reattiva a una postura di controllo. Invece di intervenire solo su criticita gia emerse, il management puo agire su segnali anticipatori, scenari alternativi e priorita evolutive. Questo migliora la resilienza e riduce il costo della complessita.",
-          "La continuita decisionale diventa un asset competitivo: meno interruzioni, maggiore coerenza tra strategia e execution, migliore capacita di documentare razionale e scelte. In ambienti regolati o litigiosi, questa continuita ha anche un valore difensivo, perche rende piu robusta la tracciabilita delle decisioni adottate.",
+          "Il passaggio da compliance formale a operational intelligence consente di spostare l'organizzazione da una postura reattiva a una postura di controllo. Invece di intervenire solo su criticità già emerse, il management può agire su segnali anticipatori, scenari alternativi e priorità evolutive. Questo migliora la resilienza e riduce il costo della complessità.",
+          "La continuità decisionale diventa un asset competitivo: meno interruzioni, maggiore coerenza tra strategia e execution, migliore capacità di documentare razionale e scelte. In ambienti regolati o litigiosi, questa continuità ha anche un valore difensivo, perché rende più robusta la tracciabilità delle decisioni adottate.",
         ],
       },
       {
         heading: "Un framework operativo per organizzazioni complesse",
         paragraphs: [
-          "Per implementare un modello credibile servono pochi principi, applicati con disciplina: mappa dei rischi dinamica, governance documentale strutturata, protocolli di escalation, dashboard decisionali orientate all'azione, revisione periodica delle priorita. L'obiettivo non e aumentare la complessita del controllo, ma ridurre la complessita percepita dai decisori.",
-          "In definitiva, la compliance resta una condizione necessaria, ma l'operational intelligence ne rappresenta l'evoluzione strategica. E il livello in cui rischio, documenti e decisioni vengono governati come un unico sistema. Per organizzazioni che vogliono mantenere affidabilita in scenari instabili, questo approccio costituisce una base operativa di lungo periodo.",
+          "Per implementare un modello credibile servono pochi principi, applicati con disciplina: mappa dei rischi dinamica, governance documentale strutturata, protocolli di escalation, dashboard decisionali orientate all'azione, revisione periodica delle priorità. L'obiettivo non è aumentare la complessità del controllo, ma ridurre la complessità percepita dai decisori.",
+          "In definitiva, la compliance resta una condizione necessaria, ma l'operational intelligence ne rappresenta l'evoluzione strategica. È il livello in cui rischio, documenti e decisioni vengono governati come un unico sistema. Per organizzazioni che vogliono mantenere affidabilità in scenari instabili, questo approccio costituisce una base operativa di lungo periodo.",
         ],
       },
     ],
@@ -409,6 +485,19 @@ const insightEntries: InsightEntry[] = [
       description:
         "Operational framework to integrate compliance, document governance and decision intelligence for risk control, critical signals and accountable execution.",
     },
+    primaryTopic: "Compliance & Operational Intelligence",
+    secondaryTopics: ["Risk Governance", "Document Intelligence", "Decision Continuity"],
+    strategicIntent: "Move compliance narrative toward proactive operational governance and scalable decision control.",
+    relatedInsightSlugs: [
+      "strategic-intelligence-complex-decisions",
+      "legal-tech-ai-assisted-analysis-regulatory-complex-litigation",
+    ],
+    relatedServices: ["compliance-operational-risk", "strategic-advisory", "legal-tech-regulatory"],
+    executiveSummary: [
+      "Compliance is foundational, but operational intelligence enables proactive control under pressure.",
+      "Decision quality increases when risk signals, ownership and workflows are explicitly governed.",
+      "Integrated document governance improves resilience, traceability and execution continuity.",
+    ],
     sections: [
       {
         heading: "Compliance as baseline, not destination",
@@ -473,6 +562,18 @@ export function getInsightByTopic(locale: Locale, topicId: InsightEntry["topicId
 export function getAlternateInsight(entry: InsightEntry): InsightEntry | undefined {
   const alternateLocale: Locale = entry.locale === "it" ? "en" : "it";
   return getInsightByTopic(alternateLocale, entry.topicId);
+}
+
+export function getRelatedInsights(entry: InsightEntry): InsightEntry[] {
+  return entry.relatedInsightSlugs
+    .map((slug) => getInsightBySlug(entry.locale, slug))
+    .filter((candidate): candidate is InsightEntry => Boolean(candidate));
+}
+
+export function getInsightsByTopic(locale: Locale, topicId: InsightEntry["topicId"]): InsightEntry[] {
+  return insightEntries
+    .filter((entry) => entry.locale === locale && entry.topicId === topicId)
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export function getAllInsightEntries(): InsightEntry[] {

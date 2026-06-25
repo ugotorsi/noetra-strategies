@@ -30,7 +30,7 @@
       "title": "Profilo istituzionale e advisory multidisciplinare",
       "description": "Posizionamento istituzionale NOETRA: strategic advisory, governance operativa e coordinamento multidisciplinare per scenari complessi.",
       "keywords": [
-        "identita istituzionale",
+        "identità istituzionale",
         "intelligence strategica",
         "supporto decisionale",
         "coordinamento multidisciplinare"
@@ -59,7 +59,7 @@
     },
     "network": {
       "title": "Network istituzionale e coordinamento professionale",
-      "description": "Coordinamento multidisciplinare di competenze legali, tecniche e advisory per mandati corporate e istituzionali ad alta complessita.",
+      "description": "Coordinamento multidisciplinare di competenze legali, tecniche e advisory per mandati corporate e istituzionali ad alta complessità.",
       "keywords": [
         "network istituzionale",
         "coordinamento professionale",
@@ -69,7 +69,7 @@
     },
     "contact": {
       "title": "Contatto executive per advisory strategico",
-      "description": "Canale riservato per strategic advisory, legal-tech operations e coordinamento multidisciplinare in contesti ad alta complessita.",
+      "description": "Canale riservato per strategic advisory, legal-tech operations e coordinamento multidisciplinare in contesti ad alta complessità.",
       "keywords": [
         "contatto istituzionale",
         "advisory strategico",
@@ -98,11 +98,11 @@
       ]
     },
     "legal": {
-      "title": "Informazioni legali e societarie istituzionali",
-      "description": "Dati societari ufficiali, riferimenti legali e nota informativa istituzionale di NOETRA STRATEGIES S.R.L.S.",
+      "title": "Informazioni legali e societàrie istituzionali",
+      "description": "Dati societàri ufficiali, riferimenti legali e nota informativa istituzionale di NOETRA STRATEGIES S.R.L.S.",
       "keywords": [
         "informazioni legali",
-        "informazioni societarie",
+        "informazioni societàrie",
         "noetralex",
         "legal-tech"
       ]
@@ -181,6 +181,7 @@
       "subheadline": "NOETRA STRATEGIES affianca istituzioni, imprese e investitori nella gestione di operazioni complesse, con un modello integrato di advisory direzionale, coordinamento legale e AI-enabled operations.",
       "primaryCta": "Richiedi consultazione strategica",
       "secondaryCta": "Esplora le capacità operative",
+      "tertiaryCta": "Leggi insights",
       "executiveBadges": [
         "Strategic intelligence",
         "Advisory direzionale",
@@ -330,7 +331,7 @@
           "microTag": "STRATEGIC",
           "tier": "primary",
           "status": "ACTIVE",
-          "description": "Supporto executive per governance, assetti societari e operazioni straordinarie.",
+          "description": "Supporto executive per governance, assetti societàri e operazioni straordinarie.",
           "indicators": [
             "GOVERNANCE",
             "BOARD TRACK"
@@ -366,7 +367,7 @@
           "microTag": "CORPORATE",
           "tier": "secondary",
           "status": "LIVE",
-          "description": "Analisi tributaria e societaria integrata in operazioni patrimoniali e corporate.",
+          "description": "Analisi tributaria e societària integrata in operazioni patrimoniali e corporate.",
           "indicators": [
             "TAX",
             "ASSET IMPACT"
@@ -414,8 +415,8 @@
         },
         {
           "tag": "CORPORATE GOVERNANCE",
-          "title": "Riorganizzazione societaria e rischio operativo",
-          "summary": "Supporto multidisciplinare in una fase di riassetto societario con impatti su governance, accountability e continuità operativa.",
+          "title": "Riorganizzazione societària e rischio operativo",
+          "summary": "Supporto multidisciplinare in una fase di riassetto societàrio con impatti su governance, accountability e continuità operativa.",
           "status": "MONITORED",
           "flow": [
             "Governance Review",
@@ -488,7 +489,7 @@
           "value": "28"
         },
         {
-          "label": "Segnali prioritari",
+          "label": "Segnali prioritàri",
           "value": "42"
         }
       ],
@@ -541,7 +542,7 @@
         },
         {
           "title": "Integrazione AI",
-          "detail": "Applicazione di modelli AI in processi documentali e flussi operativi ad alta intensita informativa."
+          "detail": "Applicazione di modelli AI in processi documentali e flussi operativi ad alta intensità informativa."
         },
         {
           "title": "Coordinamento legale",
@@ -596,7 +597,7 @@
     "ai": {
       "eyebrow": "Innovazione",
       "title": "AI e legal intelligence per operations regolamentate",
-      "description": "NOETRA integra sistemi AI e legal intelligence per accelerare analisi documentale, orchestrazione dei workflow e supporto alle decisioni in contesti ad alta criticita.",
+      "description": "NOETRA integra sistemi AI e legal intelligence per accelerare analisi documentale, orchestrazione dei workflow e supporto alle decisioni in contesti ad alta criticità.",
       "intro": "Un'architettura AI orientata a tracciabilità, controllo e qualità decisionale: progettata per ambienti istituzionali, non per uso sperimentale.",
       "focusAreas": [
         "document intelligence",
@@ -712,7 +713,7 @@
         },
         {
           "title": "Fiscale",
-          "description": "Analisi e coordinamento di profili fiscali, tributari e societari integrati in operazioni corporate e patrimoniali."
+          "description": "Analisi e coordinamento di profili fiscali, tributari e societàri integrati in operazioni corporate e patrimoniali."
         },
         {
           "title": "Compliance",
@@ -728,7 +729,7 @@
         },
         {
           "title": "Corporate advisory",
-          "description": "Assistenza strategica per assetti societari, operazioni straordinarie, governance e sviluppo istituzionale."
+          "description": "Assistenza strategica per assetti societàri, operazioni straordinarie, governance e sviluppo istituzionale."
         }
       ]
     },
@@ -773,10 +774,10 @@
   },
   "legalPage": {
     "eyebrow": "Legale",
-    "title": "Informazioni legali e societarie",
-    "description": "Dati societari ufficiali e nota informativa istituzionale di NOETRA STRATEGIES S.R.L.S.",
+    "title": "Informazioni legali e societàrie",
+    "description": "Dati societàri ufficiali e nota informativa istituzionale di NOETRA STRATEGIES S.R.L.S.",
     "companyName": "NOETRA STRATEGIES S.R.L.S.",
-    "corporateCardLabel": "Dati societari",
+    "corporateCardLabel": "Dati societàri",
     "corporateRows": [
       {
         "label": "Sede legale",
@@ -876,7 +877,7 @@
       },
       {
         "label": "Nota",
-        "value": "Nessun dato personale viene venduto o ceduto per finalita commerciali."
+        "value": "Nessun dato personale viene venduto o ceduto per finalità commerciali."
       }
     ]
   },
@@ -887,11 +888,11 @@
     "points": [
       "Il sito utilizza esclusivamente cookie tecnici e funzionali necessari al corretto funzionamento.",
       "Il cookie NOETRA_LOCALE viene utilizzato per la persistenza della lingua selezionata.",
-      "Vercel Analytics puo essere utilizzato per statistiche aggregate, ove attivo.",
+      "Vercel Analytics può essere utilizzato per statistiche aggregate, ove attivo.",
       "Allo stato attuale non risultano cookie di marketing o profilazione.",
       "Non sono presenti Meta Pixel, Google Ads o LinkedIn Insight Tag.",
-      "L'utente puo gestire o disabilitare i cookie direttamente dalle impostazioni del browser.",
-      "In caso di introduzione futura di strumenti marketing verra implementato un apposito banner di consenso."
+      "L'utente può gestire o disabilitare i cookie direttamente dalle impostazioni del browser.",
+      "In caso di introduzione futura di strumenti marketing verrà implementato un apposito banner di consenso."
     ]
   },
   "insightsPage": {

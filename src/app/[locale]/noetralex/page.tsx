@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Bot, FileSearch, Gavel, Radar, ShieldCheck } from "lucide-react";
 
+import { getInsightByTopic } from "@/content/insights";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import { getMessages } from "@/lib/i18n";
+import { getMessages, withLocalePath } from "@/lib/i18n";
 import { siteConfig } from "@/lib/site";
 
 import { getLocalizedMetadata, getLocaleForPage, type LocalePageProps } from "../locale-utils";
@@ -21,6 +23,7 @@ export async function generateMetadata({ params }: LocalePageProps): Promise<Met
 export default async function NoetralexPage({ params }: LocalePageProps) {
   const locale = await getLocaleForPage(params);
   const messages = getMessages(locale).noetralexPage;
+  const legalTechInsight = getInsightByTopic(locale, "legal-tech-ai-analysis");
 
   return (
     <main className="relative min-h-screen overflow-x-clip bg-[#070B12] text-[#F5F7FA]">
@@ -104,6 +107,23 @@ export default async function NoetralexPage({ params }: LocalePageProps) {
             </Button>
             <p className="text-sm text-[#F5F7FA]/65">{messages.comingNote}</p>
           </div>
+
+          {legalTechInsight ? (
+            <Card className="border-[#4DA3FF]/30 bg-[#0B0F14]/72 p-5">
+              <div className="space-y-3">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#4DA3FF]">
+                  {locale === "it" ? "Insight correlato" : "Related insight"}
+                </p>
+                <p className="text-sm leading-7 text-[#F5F7FA]/76">{legalTechInsight.title}</p>
+                <Link
+                  href={withLocalePath(locale, `/insights/${legalTechInsight.slug}`)}
+                  className="inline-flex min-h-10 items-center rounded-full border border-[#4DA3FF]/35 bg-[#4DA3FF]/10 px-4 py-2 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/85 transition hover:border-[#4DA3FF]/65 hover:text-white"
+                >
+                  {locale === "it" ? "Apri analisi legal-tech" : "Open legal-tech analysis"}
+                </Link>
+              </div>
+            </Card>
+          ) : null}
         </Container>
       </section>
 
