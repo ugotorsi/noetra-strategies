@@ -85,11 +85,11 @@ export function StrategicSignalDashboardSection({ locale }: StrategicSignalDashb
                 })}
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-4">
+              <div className="grid gap-3 grid-cols-2 sm:grid-cols-4">
                 {messages.counters.map((counter) => (
                   <div
                     key={counter.label}
-                    className="rounded-xl border border-white/10 bg-[#111827]/55 px-3 py-3"
+                    className="min-w-0 rounded-xl border border-white/10 bg-[#111827]/55 px-3 py-3"
                   >
                     <p className="text-[10px] uppercase tracking-[0.14em] text-[#F5F7FA]/55">
                       {counter.label}
@@ -147,8 +147,8 @@ export function StrategicSignalDashboardSection({ locale }: StrategicSignalDashb
                 <p className="text-xs uppercase tracking-[0.2em] text-[#F5F7FA]/66">{messages.nodesTitle}</p>
                 <div className="mt-3 flex flex-wrap items-center gap-2">
                   {messages.nodes.map((node, index) => (
-                    <div key={node} className="flex items-center gap-2">
-                      <span className="rounded-lg border border-white/12 bg-white/[0.03] px-3 py-1.5 text-[10px] uppercase tracking-[0.14em] text-[#F5F7FA]/74">
+                    <div key={node} className="flex min-w-0 items-center gap-2">
+                      <span className="rounded-lg border border-white/12 bg-white/[0.03] px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] text-[#F5F7FA]/74 sm:tracking-[0.14em]">
                         {node}
                       </span>
                       {index < messages.nodes.length - 1 ? (

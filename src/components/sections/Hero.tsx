@@ -137,7 +137,7 @@ export function Hero({ locale }: HeroProps) {
           <motion.p
             variants={reveal}
             transition={{ duration: 0.65, ease: "easeOut" }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-4 py-2 text-xs font-medium uppercase tracking-[0.26em] text-[#F5F7FA]/80"
+            className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-4 py-2 text-[10px] font-medium uppercase tracking-[0.2em] text-[#F5F7FA]/80 sm:text-xs sm:tracking-[0.26em]"
           >
             <Sparkles size={14} className="text-[#C6A96B]" />
             {messages.eyebrow}
@@ -270,7 +270,7 @@ export function Hero({ locale }: HeroProps) {
             <div className="absolute inset-0 bg-[linear-gradient(125deg,rgba(77,163,255,0.15),transparent_36%,rgba(198,169,107,0.1))]" />
             <div className="relative space-y-6">
               <div className="flex items-center justify-between">
-                <p className="text-xs uppercase tracking-[0.26em] text-[#F5F7FA]/65">
+                <p className="min-w-0 text-xs uppercase tracking-[0.2em] text-[#F5F7FA]/65 sm:tracking-[0.26em]">
                   {messages.dashboard.title}
                 </p>
                 <span className="rounded-full border border-[#4DA3FF]/40 bg-[#4DA3FF]/10 px-3 py-1 text-[11px] font-medium text-[#4DA3FF]">
@@ -278,7 +278,7 @@ export function Hero({ locale }: HeroProps) {
                 </span>
               </div>
 
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
                 {messages.dashboard.categoryTags.map((tag, index) => {
                   const Icon = categoryIcons[index] ?? Building2;
 
@@ -294,7 +294,7 @@ export function Hero({ locale }: HeroProps) {
                 })}
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {messages.dashboard.flowCards.map((item, index) => (
                   <div
                     key={item}

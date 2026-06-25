@@ -173,7 +173,7 @@ export function ContactSection({ locale }: ContactSectionProps) {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <Card className="border-[#C6A96B]/35 p-7">
+            <Card className="border-[#C6A96B]/35 p-6 sm:p-7">
               <p className="text-xs uppercase tracking-[0.2em] text-[#C6A96B]">{messages.boxEyebrow}</p>
               <h3 className="mt-3 text-xl font-semibold text-[#F5F7FA]">
                 {messages.boxTitle}
@@ -199,11 +199,11 @@ export function ContactSection({ locale }: ContactSectionProps) {
                     <a
                       key={channel.value}
                       href={`mailto:${channel.value}`}
-                      className="rounded-full border border-white/12 bg-white/[0.03] px-3 py-1 text-[11px] tracking-[0.08em] text-[#F5F7FA]/75 transition hover:border-[#4DA3FF]/45 hover:text-white"
+                      className="w-full min-w-0 rounded-2xl border border-white/12 bg-white/[0.03] px-3 py-2 text-[11px] tracking-[0.08em] text-[#F5F7FA]/75 transition hover:border-[#4DA3FF]/45 hover:text-white sm:w-auto sm:rounded-full sm:py-1"
                     >
                       <span className="text-[#C6A96B]">{channel.label}</span>
                       <span className="mx-1 text-[#F5F7FA]/45">|</span>
-                      <span>{channel.value}</span>
+                      <span className="break-all">{channel.value}</span>
                     </a>
                   ))}
                 </div>
@@ -242,7 +242,7 @@ export function ContactSection({ locale }: ContactSectionProps) {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.08 }}
           >
-            <Card className="p-7 sm:p-8">
+            <Card className="p-6 sm:p-8">
               <form className="grid gap-4" onSubmit={handleSubmit}>
                 <label className="space-y-2 text-sm text-[#F5F7FA]/80">
                   {messages.form.name}

@@ -109,16 +109,18 @@ export function ServicesSection({ locale }: ServicesSectionProps) {
                     </div>
 
                     <h3 className="text-xl font-semibold text-[#F5F7FA]">{service.title}</h3>
-                    <p className="text-sm leading-7 text-[#F5F7FA]/76">{service.description}</p>
+                    <p className="break-words text-sm leading-7 text-[#F5F7FA]/76">
+                      {service.description}
+                    </p>
 
                     <div className="grid gap-2 sm:grid-cols-2">
                       {service.indicators.map((indicator) => (
                         <div
                           key={indicator}
-                          className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-[10px] uppercase tracking-[0.14em] text-[#F5F7FA]/70"
+                          className="inline-flex min-w-0 items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-[10px] uppercase tracking-[0.12em] text-[#F5F7FA]/70 sm:tracking-[0.14em]"
                         >
                           <span className="h-1.5 w-1.5 rounded-full bg-[#C6A96B]" />
-                          {indicator}
+                          <span className="break-words">{indicator}</span>
                         </div>
                       ))}
                     </div>

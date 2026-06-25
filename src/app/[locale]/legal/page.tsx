@@ -44,21 +44,21 @@ export default async function LegalPage({ params }: LocalePageProps) {
                 <div className="divide-y divide-white/10">
                   {messages.corporateRows.map((row) => (
                     <div key={row.label} className="grid gap-2 py-4 sm:grid-cols-[0.38fr_0.62fr]">
-                      <p className="text-xs uppercase tracking-[0.16em] text-[#F5F7FA]/55">
+                      <p className="min-w-0 text-xs uppercase tracking-[0.16em] text-[#F5F7FA]/55">
                         {row.label}
                       </p>
-                      <div className="space-y-1.5">
+                      <div className="min-w-0 space-y-1.5">
                         {row.values.map((value) =>
                           row.isEmail ? (
                             <Link
                               key={value}
                               href={`mailto:${value}`}
-                              className="block text-sm text-[#F5F7FA]/78 transition hover:text-white"
+                              className="block break-all text-sm text-[#F5F7FA]/78 transition hover:text-white"
                             >
                               {value}
                             </Link>
                           ) : (
-                            <p key={value} className="text-sm text-[#F5F7FA]/78">
+                            <p key={value} className="break-words text-sm text-[#F5F7FA]/78">
                               {value}
                             </p>
                           ),

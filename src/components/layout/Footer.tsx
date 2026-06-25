@@ -48,7 +48,7 @@ export function Footer({ locale }: FooterProps) {
               <Link
                 key={link.key}
                 href={withLocalePath(locale, link.path)}
-                className="rounded-full border border-white/12 px-3 py-1.5 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/70 transition hover:border-[#4DA3FF]/45 hover:text-[#F5F7FA]"
+                className="min-w-0 rounded-full border border-white/12 px-3 py-1.5 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/70 transition hover:border-[#4DA3FF]/45 hover:text-[#F5F7FA]"
               >
                 {messages.footer.links[link.key as keyof typeof messages.footer.links]}
               </Link>
@@ -70,10 +70,10 @@ export function Footer({ locale }: FooterProps) {
                 <Link
                   key={item.value}
                   href={`mailto:${item.value}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.03] px-3 py-1.5 text-xs tracking-[0.08em] text-[#F5F7FA]/75 transition hover:border-[#4DA3FF]/45 hover:text-white"
+                  className="inline-flex w-full min-w-0 flex-wrap items-center gap-2 rounded-2xl border border-white/12 bg-white/[0.03] px-3 py-2 text-xs tracking-[0.08em] text-[#F5F7FA]/75 transition hover:border-[#4DA3FF]/45 hover:text-white sm:w-auto sm:flex-nowrap sm:rounded-full sm:py-1.5"
                 >
                   <span className="text-[#C6A96B]">{item.label}</span>
-                  <span>{item.value}</span>
+                  <span className="break-all">{item.value}</span>
                 </Link>
               ))}
             </div>

@@ -812,13 +812,6 @@
           "advisory@noetra.it"
         ],
         "isEmail": true
-      },
-      {
-        "label": "Amministratore Unico",
-        "values": [
-          "Ugo Torsi"
-        ],
-        "isEmail": false
       }
     ],
     "noteCardLabel": "Nota informativa",

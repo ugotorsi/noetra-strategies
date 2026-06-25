@@ -92,12 +92,14 @@ export function OperationalScenariosSection({ locale }: OperationalScenariosSect
                         </div>
 
                         <h3 className="text-xl font-semibold text-[#F5F7FA]">{scenario.title}</h3>
-                        <p className="text-sm leading-7 text-[#F5F7FA]/74">{scenario.summary}</p>
+                        <p className="break-words text-sm leading-7 text-[#F5F7FA]/74">
+                          {scenario.summary}
+                        </p>
 
                         <div className="grid gap-2 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-center">
                           {scenario.flow.map((node, nodeIndex) => (
                             <div key={node} className="contents">
-                              <div className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 text-[10px] uppercase tracking-[0.14em] text-[#F5F7FA]/72">
+                              <div className="min-w-0 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 text-[10px] uppercase tracking-[0.12em] text-[#F5F7FA]/72 sm:tracking-[0.14em]">
                                 {node}
                               </div>
                               {nodeIndex < scenario.flow.length - 1 ? (

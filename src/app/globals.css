@@ -21,10 +21,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   min-height: 100%;
+  overflow-x: clip;
   color: var(--site-text);
   font-family: var(--font-body), "Inter", "Segoe UI", sans-serif;
   background: radial-gradient(

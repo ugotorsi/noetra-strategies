@@ -816,13 +816,6 @@
           "advisory@noetra.it"
         ],
         "isEmail": true
-      },
-      {
-        "label": "Sole Director",
-        "values": [
-          "Ugo Torsi"
-        ],
-        "isEmail": false
       }
     ],
     "noteCardLabel": "Informative Note",
