@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "NOETRA STRATEGIES | Piattaforma istituzionale di strategic intelligence, advisory e legal-tech operations",
-    "description": "Piattaforma istituzionale di strategic intelligence per advisory direzionale, legal-tech operations e coordinamento multidisciplinare ad alta complessità.",
+    "title": "NOETRA STRATEGIES | Strategic Intelligence & Advisory",
+    "description": "Consulenza strategica multidisciplinare, legal-tech e AI-assisted intelligence per decisioni complesse, contesti regolatori e operazioni corporate.",
     "keywords": [
       "intelligence strategica",
       "strategic intelligence",
@@ -16,8 +16,8 @@
   },
   "seo": {
     "home": {
-      "title": "Piattaforma istituzionale di strategic intelligence e advisory",
-      "description": "NOETRA STRATEGIES integra strategic intelligence, advisory direzionale e legal-tech operations per operazioni corporate e istituzionali complesse.",
+      "title": "NOETRA STRATEGIES | Strategic Intelligence & Advisory",
+      "description": "Consulenza strategica multidisciplinare, legal-tech e AI-assisted intelligence per decisioni complesse, contesti regolatori e operazioni corporate.",
       "keywords": [
         "intelligence strategica",
         "advisory direzionale",
@@ -27,8 +27,8 @@
       ]
     },
     "about": {
-      "title": "Identita istituzionale",
-      "description": "Profilo istituzionale di NOETRA: intelligence strategica, coordinamento multidisciplinare e supporto decisionale in contesti complessi.",
+      "title": "Profilo istituzionale e advisory multidisciplinare",
+      "description": "Posizionamento istituzionale NOETRA: strategic advisory, governance operativa e coordinamento multidisciplinare per scenari complessi.",
       "keywords": [
         "identita istituzionale",
         "intelligence strategica",
@@ -37,8 +37,8 @@
       ]
     },
     "services": {
-      "title": "Servizi strategico-operativi",
-      "description": "Servizi concreti per advisory strategico, coordinamento legale, analisi documentale, compliance, governance e crisis operations.",
+      "title": "Servizi di strategic advisory e operational intelligence",
+      "description": "Framework operativo per advisory strategico, legal-tech coordination, compliance intelligence e decision governance in contesti complessi.",
       "keywords": [
         "advisory strategico",
         "coordinamento legale",
@@ -48,8 +48,8 @@
       ]
     },
     "innovation": {
-      "title": "AI e legal intelligence",
-      "description": "Infrastrutture AI e legal intelligence per document analysis, workflow orchestration e decision support in ambienti regolati.",
+      "title": "AI-assisted intelligence e legal-tech systems",
+      "description": "Integrazione AI-assisted analysis, document intelligence e orchestrazione workflow per supportare decisioni executive e regolatorie.",
       "keywords": [
         "ai legal intelligence",
         "document analysis",
@@ -58,8 +58,8 @@
       ]
     },
     "network": {
-      "title": "Network istituzionale",
-      "description": "Rete professionale qualificata coordinata da NOETRA per mandati corporate e istituzionali ad alta complessità.",
+      "title": "Network istituzionale e coordinamento professionale",
+      "description": "Coordinamento multidisciplinare di competenze legali, tecniche e advisory per mandati corporate e istituzionali ad alta complessita.",
       "keywords": [
         "network istituzionale",
         "coordinamento professionale",
@@ -68,8 +68,8 @@
       ]
     },
     "contact": {
-      "title": "Contatto istituzionale",
-      "description": "Canale riservato per richieste di advisory strategico, legal-tech operations e coordinamento multidisciplinare.",
+      "title": "Contatto executive per advisory strategico",
+      "description": "Canale riservato per strategic advisory, legal-tech operations e coordinamento multidisciplinare in contesti ad alta complessita.",
       "keywords": [
         "contatto istituzionale",
         "advisory strategico",
@@ -79,7 +79,7 @@
     },
     "privacy": {
       "title": "Privacy Policy",
-      "description": "Informativa sul trattamento dei dati personali per richieste di contatto istituzionale e advisory inquiry.",
+      "description": "Informativa sul trattamento dei dati personali relativi a richieste istituzionali, advisory inquiry e comunicazioni professionali.",
       "keywords": [
         "privacy policy",
         "trattamento dati",
@@ -89,7 +89,7 @@
     },
     "cookiePolicy": {
       "title": "Cookie Policy",
-      "description": "Informativa sui cookie tecnici e funzionali utilizzati dal sito, inclusa la persistenza della lingua.",
+      "description": "Informativa su cookie tecnici, persistenza lingua e metriche aggregate utilizzate dal sito in ottica istituzionale.",
       "keywords": [
         "cookie policy",
         "cookie tecnici",
@@ -98,8 +98,8 @@
       ]
     },
     "legal": {
-      "title": "Informazioni legali e societarie",
-      "description": "Riferimenti legali e societari di NOETRA STRATEGIES e quadro istituzionale operativo di NOETRALEX.",
+      "title": "Informazioni legali e societarie istituzionali",
+      "description": "Dati societari ufficiali, riferimenti legali e nota informativa istituzionale di NOETRA STRATEGIES S.R.L.S.",
       "keywords": [
         "informazioni legali",
         "informazioni societarie",
@@ -108,13 +108,23 @@
       ]
     },
     "noetralex": {
-      "title": "NOETRALEX | Piattaforma di legal intelligence",
-      "description": "NOETRALEX è una piattaforma legal-tech per intelligence giuridica, supporto strategico al contenzioso e integrazione AI nelle legal operations.",
+      "title": "NOETRALEX | Legal-tech intelligence platform",
+      "description": "Piattaforma legal-tech per intelligence giuridica, analisi assistita e supporto operativo in contesti regolatori e contenziosi complessi.",
       "keywords": [
         "piattaforma legal-tech",
         "intelligence giuridica",
         "supporto contenzioso",
         "ai legal operations"
+      ]
+    },
+    "insights": {
+      "title": "Insights strategici e legal-tech intelligence",
+      "description": "Analisi istituzionali su strategic advisory, legal-tech, AI-assisted intelligence, compliance e decision governance per contesti complessi.",
+      "keywords": [
+        "insights strategici",
+        "legal-tech intelligence",
+        "operational intelligence",
+        "decision governance"
       ]
     }
   },
@@ -883,6 +893,13 @@
       "L'utente puo gestire o disabilitare i cookie direttamente dalle impostazioni del browser.",
       "In caso di introduzione futura di strumenti marketing verra implementato un apposito banner di consenso."
     ]
+  },
+  "insightsPage": {
+    "eyebrow": "Insights",
+    "title": "Insights strategici",
+    "description": "Analisi istituzionali su strategic advisory, legal-tech, AI-assisted intelligence e decision governance per contesti corporate e regolatori complessi.",
+    "readArticle": "Leggi analisi",
+    "switchLanguageArticle": "Versione alternativa"
   },
   "noetralexPage": {
     "eyebrow": "NOETRALEX",

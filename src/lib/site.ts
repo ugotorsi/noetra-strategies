@@ -18,9 +18,9 @@ type SiteConfig = {
 
 export const siteConfig: SiteConfig = {
   name: "NOETRA STRATEGIES",
-  title: "NOETRA STRATEGIES | Piattaforma istituzionale di strategic intelligence",
+  title: "NOETRA STRATEGIES | Strategic Intelligence & Advisory",
   description:
-    "Piattaforma istituzionale di strategic intelligence, advisory direzionale e legal-tech operations per contesti corporate e istituzionali complessi.",
+    "Multidisciplinary strategic advisory, legal-tech and AI-assisted intelligence for complex decisions, regulatory contexts and corporate operations.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.noetra.it").replace(/\/$/, ""),
   email: process.env.CONTACT_EMAIL ?? "info@noetra.it",
   emails: {

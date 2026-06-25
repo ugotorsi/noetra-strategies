@@ -23,6 +23,10 @@ function imageAltByLocale(locale: Locale): string {
     : `${siteConfig.name} - Strategic Intelligence Firm`;
 }
 
+function toAlternateOpenGraphLocale(locale: Locale): string {
+  return locale === "it" ? "en_US" : "it_IT";
+}
+
 export function createLocalizedMetadata(
   locale: Locale,
   pathname: string,
@@ -36,7 +40,7 @@ export function createLocalizedMetadata(
   const imageAlt = imageAltByLocale(locale);
 
   return {
-    title: seo.title,
+    title: pageTitle,
     description: seo.description,
     keywords: seo.keywords ?? siteConfig.keywords,
     alternates: {
@@ -49,6 +53,7 @@ export function createLocalizedMetadata(
     openGraph: {
       type: "website",
       locale: toOpenGraphLocale(locale),
+      alternateLocale: [toAlternateOpenGraphLocale(locale)],
       url: canonicalUrl,
       title: pageTitle,
       description: seo.description,
@@ -75,6 +80,14 @@ export function createLocalizedMetadata(
         },
       ],
       creator: "@noetra",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
     },
   };
 }

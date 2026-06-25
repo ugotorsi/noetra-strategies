@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 
 import { RuntimeEffects } from "@/components/layout/RuntimeEffects";
 import { siteConfig } from "@/lib/site";
+import { buildOrganizationSchema, buildWebsiteSchema } from "@/lib/structured-data";
 
 import "./globals.css";
 
@@ -18,61 +19,8 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: siteConfig.name,
-  url: siteConfig.url,
-  logo: `${siteConfig.url}/favicon.svg`,
-  description: siteConfig.description,
-  sameAs: siteConfig.domains.noetralex.map((domain) => `https://${domain}`),
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      contactType: "canale istituzionale",
-      email: siteConfig.emails.info,
-      availableLanguage: ["English", "Italian"],
-    },
-    {
-      "@type": "ContactPoint",
-      contactType: "advisory strategico",
-      email: siteConfig.emails.advisory,
-      availableLanguage: ["English", "Italian"],
-    },
-    {
-      "@type": "ContactPoint",
-      contactType: "coordinamento operativo",
-      email: siteConfig.emails.contact,
-      availableLanguage: ["English", "Italian"],
-    },
-  ],
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "IT",
-  },
-  areaServed: "International",
-};
-
-const serviceSchemaPlaceholder = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: `${siteConfig.name} | Strategic Intelligence Platform`,
-  provider: {
-    "@type": "Organization",
-    name: siteConfig.name,
-  },
-  serviceType:
-    "Strategic intelligence, advisory direzionale, legal-tech operations e coordinamento multidisciplinare",
-  availableChannel: [
-    {
-      "@type": "ServiceChannel",
-      serviceUrl: `${siteConfig.url}/it/contact`,
-      availableLanguage: ["English", "Italian"],
-    },
-  ],
-  sameAs: siteConfig.domains.noetralex.map((domain) => `https://${domain}`),
-  areaServed: "International",
-};
+const organizationSchema = buildOrganizationSchema();
+const websiteSchema = buildWebsiteSchema();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -159,7 +107,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaPlaceholder) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <div className="noise-layer" aria-hidden="true" />
         <div className="gradient-mesh-layer" aria-hidden="true" />

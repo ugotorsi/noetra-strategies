@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "NOETRA STRATEGIES | Strategic Intelligence and AI Advisory Platform",
-    "description": "Elite strategic intelligence platform for AI advisory, legal intelligence systems and multidisciplinary executive coordination.",
+    "title": "NOETRA STRATEGIES | Strategic Intelligence & Advisory",
+    "description": "Multidisciplinary strategic advisory, legal-tech and AI-assisted intelligence for complex decisions, regulatory contexts and corporate operations.",
     "keywords": [
       "strategic intelligence",
       "operational intelligence",
@@ -16,8 +16,8 @@
   },
   "seo": {
     "home": {
-      "title": "Strategic Intelligence and AI Advisory Platform",
-      "description": "Elite strategic intelligence platform for AI advisory, legal intelligence systems and multidisciplinary executive coordination.",
+      "title": "NOETRA STRATEGIES | Strategic Intelligence & Advisory",
+      "description": "Multidisciplinary strategic advisory, legal-tech and AI-assisted intelligence for complex decisions, regulatory contexts and corporate operations.",
       "keywords": [
         "strategic intelligence",
         "operational intelligence",
@@ -31,8 +31,8 @@
       ]
     },
     "about": {
-      "title": "Strategic Profile",
-      "description": "Institutional profile of an independent strategic intelligence firm combining advisory depth, AI systems and operational governance.",
+      "title": "Institutional Profile and Multidisciplinary Advisory",
+      "description": "Institutional positioning of NOETRA across strategic advisory, operational governance and multidisciplinary coordination for complex mandates.",
       "keywords": [
         "strategic intelligence",
         "multidisciplinary advisory",
@@ -41,8 +41,8 @@
       ]
     },
     "services": {
-      "title": "Strategic Services",
-      "description": "Enterprise-grade services for complex operations, institutional advisory, legal-regulatory coordination and AI-enabled execution.",
+      "title": "Strategic Advisory and Operational Intelligence Services",
+      "description": "Operational framework for strategic advisory, legal-tech coordination, compliance intelligence and decision governance in complex contexts.",
       "keywords": [
         "institutional advisory",
         "operational intelligence",
@@ -51,8 +51,8 @@
       ]
     },
     "innovation": {
-      "title": "AI Innovation Systems",
-      "description": "AI coordination systems, document intelligence, workflow orchestration and strategic analytics for executive environments.",
+      "title": "AI-Assisted Intelligence and Legal-Tech Systems",
+      "description": "AI-assisted analysis, document intelligence and workflow orchestration supporting executive decisions in regulated environments.",
       "keywords": [
         "AI systems",
         "document intelligence",
@@ -61,8 +61,8 @@
       ]
     },
     "network": {
-      "title": "Institutional Network",
-      "description": "Multidisciplinary professional orchestration framework for legal, technical and institutional execution.",
+      "title": "Institutional Network and Professional Coordination",
+      "description": "Multidisciplinary orchestration across legal, technical and advisory functions for institutional and corporate execution.",
       "keywords": [
         "executive coordination",
         "institutional advisory",
@@ -71,8 +71,8 @@
       ]
     },
     "contact": {
-      "title": "Executive Contact",
-      "description": "Institutional advisory inquiry channel for strategic consultations, complex mandates and AI-enabled coordination projects.",
+      "title": "Executive Contact for Strategic Advisory",
+      "description": "Confidential channel for strategic advisory, legal-tech operations and multidisciplinary coordination in high-complexity mandates.",
       "keywords": [
         "strategic consultation",
         "executive coordination",
@@ -82,7 +82,7 @@
     },
     "privacy": {
       "title": "Privacy Policy",
-      "description": "Core information on personal data processing for institutional contact requests and advisory inquiries.",
+      "description": "Core notice on personal data processing related to institutional requests, advisory inquiries and professional communications.",
       "keywords": [
         "privacy policy",
         "data processing",
@@ -92,7 +92,7 @@
     },
     "cookiePolicy": {
       "title": "Cookie Policy",
-      "description": "Core information about technical cookies and functional storage currently used by the website.",
+      "description": "Core notice on technical cookies, language persistence and aggregate measurement used by the website.",
       "keywords": [
         "cookie policy",
         "technical cookies",
@@ -102,7 +102,7 @@
     },
     "legal": {
       "title": "Legal Information",
-      "description": "Institutional legal and corporate information for NOETRA STRATEGIES and NOETRALEX legal intelligence systems.",
+      "description": "Official corporate data, legal references and institutional notice for NOETRA STRATEGIES S.R.L.S.",
       "keywords": [
         "legal intelligence",
         "legal information",
@@ -112,13 +112,23 @@
     },
     "noetralex": {
       "title": "NOETRALEX | Legal Intelligence Systems",
-      "description": "Advanced AI-driven legal coordination, procedural intelligence, document systems and strategic operational support.",
+      "description": "Legal-tech platform for procedural intelligence, AI-assisted analysis and strategic support in regulatory and complex litigation contexts.",
       "keywords": [
         "legal intelligence",
         "procedural intelligence",
         "document intelligence",
         "AI legal systems",
         "operational support"
+      ]
+    },
+    "insights": {
+      "title": "Strategic and Legal-Tech Insights",
+      "description": "Institutional analysis on strategic advisory, legal-tech, AI-assisted intelligence, compliance and decision governance for complex mandates.",
+      "keywords": [
+        "strategic insights",
+        "legal-tech intelligence",
+        "operational intelligence",
+        "decision governance"
       ]
     }
   },
@@ -887,6 +897,13 @@
       "Users can manage or disable cookies through browser settings.",
       "If marketing tools are introduced in the future, a dedicated consent banner will be implemented."
     ]
+  },
+  "insightsPage": {
+    "eyebrow": "Insights",
+    "title": "Strategic Insights",
+    "description": "Institutional analysis on strategic advisory, legal-tech, AI-assisted intelligence and decision governance for complex regulatory and corporate environments.",
+    "readArticle": "Read analysis",
+    "switchLanguageArticle": "Alternate language"
   },
   "noetralexPage": {
     "eyebrow": "NOETRALEX",
