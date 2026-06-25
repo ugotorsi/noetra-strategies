@@ -7,6 +7,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Card } from "@/components/ui/Card";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { getMessages } from "@/lib/i18n";
+import { withLocalePath } from "@/lib/i18n-config";
+import { siteConfig } from "@/lib/site";
 
 import { getLocalizedMetadata, getLocaleForPage, type LocalePageProps } from "../locale-utils";
 
@@ -17,6 +19,24 @@ export async function generateMetadata({ params }: LocalePageProps): Promise<Met
 export default async function LegalPage({ params }: LocalePageProps) {
   const locale = await getLocaleForPage(params);
   const messages = getMessages(locale).legalPage;
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: locale === "it" ? "Home" : "Home",
+        item: `${siteConfig.url}${withLocalePath(locale, "")}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: messages.title,
+        item: `${siteConfig.url}${withLocalePath(locale, "/legal")}`,
+      },
+    ],
+  };
 
   return (
     <main className="min-h-screen overflow-x-clip bg-[#0B0F14] text-[#F5F7FA]">
@@ -25,6 +45,10 @@ export default async function LegalPage({ params }: LocalePageProps) {
       <section className="relative py-24 sm:py-28">
         <div className="section-transition-glow absolute inset-x-0 top-0" />
         <Container className="space-y-10">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+          />
           <SectionTitle
             eyebrow={messages.eyebrow}
             title={messages.title}
@@ -53,7 +77,7 @@ export default async function LegalPage({ params }: LocalePageProps) {
                             <Link
                               key={value}
                               href={`mailto:${value}`}
-                              className="block break-all text-sm text-[#F5F7FA]/78 transition hover:text-white"
+                              className="inline-flex min-h-9 items-center break-all py-0.5 text-sm text-[#F5F7FA]/78 transition hover:text-white"
                             >
                               {value}
                             </Link>

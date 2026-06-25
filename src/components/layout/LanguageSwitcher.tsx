@@ -60,7 +60,7 @@ export function LanguageSwitcher({ locale, labels, className }: LanguageSwitcher
               key={targetLocale}
               href={href}
               onClick={() => persistLocale(targetLocale)}
-              className="relative rounded-full px-3 py-1.5 text-xs font-medium tracking-[0.14em] text-[#F5F7FA]/75 transition-colors hover:text-white"
+              className="relative inline-flex min-h-9 min-w-10 items-center justify-center rounded-full px-3 py-1.5 text-xs font-medium tracking-[0.14em] text-[#F5F7FA]/75 transition-colors hover:text-white"
             >
               {isActive ? (
                 <motion.span

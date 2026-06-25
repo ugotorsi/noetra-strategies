@@ -43,12 +43,12 @@ export function Footer({ locale }: FooterProps) {
             </p>
           </div>
 
-          <nav className="flex flex-wrap gap-2 md:justify-end">
+          <nav className="flex flex-wrap gap-2 md:justify-end" aria-label="Footer navigation">
             {footerLinks.map((link) => (
               <Link
                 key={link.key}
                 href={withLocalePath(locale, link.path)}
-                className="min-w-0 rounded-full border border-white/12 px-3 py-1.5 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/70 transition hover:border-[#4DA3FF]/45 hover:text-[#F5F7FA]"
+                className="min-h-10 min-w-0 rounded-full border border-white/12 px-3 py-2 text-xs uppercase tracking-[0.14em] text-[#F5F7FA]/70 transition hover:border-[#4DA3FF]/45 hover:text-[#F5F7FA]"
               >
                 {messages.footer.links[link.key as keyof typeof messages.footer.links]}
               </Link>

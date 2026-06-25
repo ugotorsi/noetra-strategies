@@ -47,7 +47,7 @@ export function Navbar({ locale }: NavbarProps) {
         <Container className="flex h-20 items-center justify-between">
           <Link
             href={withLocalePath(locale)}
-            className="group inline-flex items-center gap-2 text-sm font-semibold tracking-[0.28em] text-[#F5F7FA]"
+            className="group inline-flex min-h-10 items-center gap-2 text-xs font-semibold tracking-[0.2em] text-[#F5F7FA] sm:text-sm sm:tracking-[0.28em]"
           >
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#C6A96B] shadow-[0_0_20px_rgba(198,169,107,0.9)]" />
             <span className="text-[#F5F7FA]/95 transition-colors group-hover:text-white">
@@ -76,7 +76,7 @@ export function Navbar({ locale }: NavbarProps) {
             />
 
             <button
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-[#F5F7FA] transition hover:bg-white/10 md:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-[#F5F7FA] transition hover:bg-white/10 md:hidden"
               onClick={() => setMenuOpen((value) => !value)}
               aria-label={messages.navigation.toggle}
               aria-expanded={menuOpen}
