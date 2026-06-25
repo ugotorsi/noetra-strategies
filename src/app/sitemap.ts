@@ -10,6 +10,8 @@ const routes = [
   "/innovation",
   "/network",
   "/contact",
+  "/privacy",
+  "/cookie-policy",
   "/legal",
   "/noetralex",
 ];

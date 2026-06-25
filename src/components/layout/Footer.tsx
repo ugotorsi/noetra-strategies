@@ -12,6 +12,8 @@ const footerLinks = [
   { key: "innovation", path: "/innovation" },
   { key: "network", path: "/network" },
   { key: "contact", path: "/contact" },
+  { key: "privacy", path: "/privacy" },
+  { key: "cookiePolicy", path: "/cookie-policy" },
   { key: "legal", path: "/legal" },
 ];
 

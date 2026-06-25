@@ -80,6 +80,26 @@
         "institutional advisory"
       ]
     },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Core information on personal data processing for institutional contact requests and advisory inquiries.",
+      "keywords": [
+        "privacy policy",
+        "data processing",
+        "contact form",
+        "data subject rights"
+      ]
+    },
+    "cookiePolicy": {
+      "title": "Cookie Policy",
+      "description": "Core information about technical cookies and functional storage currently used by the website.",
+      "keywords": [
+        "cookie policy",
+        "technical cookies",
+        "noetra_locale",
+        "vercel analytics"
+      ]
+    },
     "legal": {
       "title": "Legal Information",
       "description": "Institutional legal and corporate information for NOETRA STRATEGIES and NOETRALEX legal intelligence systems.",
@@ -128,7 +148,9 @@
       "innovation": "Innovation",
       "network": "Network",
       "contact": "Contact",
-      "legal": "Legal"
+      "privacy": "Privacy Policy",
+      "cookiePolicy": "Cookie Policy",
+      "legal": "Legal Information"
     },
     "channelsLabel": "Professional Channels",
     "domainsLabel": "NoetraLex Domains",
@@ -772,6 +794,67 @@
       "contact": "Coordination Desk"
     },
     "domainLabel": "NoetraLex Domains"
+  },
+  "privacyPage": {
+    "eyebrow": "Compliance",
+    "title": "Privacy Policy",
+    "description": "Essential notice on personal data processing related to institutional contact channels.",
+    "items": [
+      {
+        "label": "Data Controller",
+        "value": "NOETRA STRATEGIES S.R.L.S."
+      },
+      {
+        "label": "Data Collected",
+        "value": "Name, email, organization and message content submitted through the contact form."
+      },
+      {
+        "label": "Purpose",
+        "value": "Managing contact requests, advisory inquiries and related professional communications."
+      },
+      {
+        "label": "Legal Basis",
+        "value": "Pre-contractual measures, legitimate interest of the controller, and consent where applicable."
+      },
+      {
+        "label": "Processing Method",
+        "value": "Digital processing, confidential handling and protected access limited to authorized personnel."
+      },
+      {
+        "label": "Retention",
+        "value": "For the time necessary to manage the request and to comply with applicable legal obligations."
+      },
+      {
+        "label": "Recipients",
+        "value": "Strictly necessary technical providers, hosting infrastructure and email delivery provider."
+      },
+      {
+        "label": "Data Subject Rights",
+        "value": "Access, rectification, erasure, restriction of processing and objection, as provided by applicable law."
+      },
+      {
+        "label": "Privacy Contact",
+        "value": "privacy@noetra.it, or info@noetra.it."
+      },
+      {
+        "label": "Note",
+        "value": "No personal data is sold or transferred for commercial marketing purposes."
+      }
+    ]
+  },
+  "cookiePolicyPage": {
+    "eyebrow": "Compliance",
+    "title": "Cookie Policy",
+    "description": "Essential notice on cookies and technical measurement tools currently active on the website.",
+    "points": [
+      "This website uses only technical and functional cookies necessary for core operations.",
+      "The NOETRA_LOCALE cookie is used to persist the selected language.",
+      "Vercel Analytics may be used for aggregate statistics, where active.",
+      "No marketing or profiling cookies are currently in use.",
+      "Meta Pixel, Google Ads and LinkedIn Insight Tag are not implemented.",
+      "Users can manage or disable cookies through browser settings.",
+      "If marketing tools are introduced in the future, a dedicated consent banner will be implemented."
+    ]
   },
   "noetralexPage": {
     "eyebrow": "NOETRALEX",

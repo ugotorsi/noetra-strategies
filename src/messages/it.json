@@ -77,6 +77,26 @@
         "coordinamento executive"
       ]
     },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Informativa sul trattamento dei dati personali per richieste di contatto istituzionale e advisory inquiry.",
+      "keywords": [
+        "privacy policy",
+        "trattamento dati",
+        "contatto istituzionale",
+        "diritti interessato"
+      ]
+    },
+    "cookiePolicy": {
+      "title": "Cookie Policy",
+      "description": "Informativa sui cookie tecnici e funzionali utilizzati dal sito, inclusa la persistenza della lingua.",
+      "keywords": [
+        "cookie policy",
+        "cookie tecnici",
+        "noetra_locale",
+        "vercel analytics"
+      ]
+    },
     "legal": {
       "title": "Informazioni legali e societarie",
       "description": "Riferimenti legali e societari di NOETRA STRATEGIES e quadro istituzionale operativo di NOETRALEX.",
@@ -124,7 +144,9 @@
       "innovation": "Innovazione",
       "network": "Network",
       "contact": "Contatti",
-      "legal": "Legale"
+      "privacy": "Privacy Policy",
+      "cookiePolicy": "Cookie Policy",
+      "legal": "Informazioni legali"
     },
     "channelsLabel": "Canali professionali",
     "domainsLabel": "Domini NOETRALEX",
@@ -768,6 +790,67 @@
       "contact": "Canale operativo"
     },
     "domainLabel": "Domini NOETRALEX"
+  },
+  "privacyPage": {
+    "eyebrow": "Compliance",
+    "title": "Privacy Policy",
+    "description": "Informativa essenziale sul trattamento dei dati personali raccolti tramite i canali di contatto istituzionali.",
+    "items": [
+      {
+        "label": "Titolare del trattamento",
+        "value": "NOETRA STRATEGIES S.R.L.S."
+      },
+      {
+        "label": "Dati trattati",
+        "value": "Nome, email, organizzazione e contenuto della richiesta inviati tramite form di contatto."
+      },
+      {
+        "label": "Finalita",
+        "value": "Risposta a richieste di contatto, advisory inquiry e gestione delle comunicazioni connesse."
+      },
+      {
+        "label": "Base giuridica",
+        "value": "Esecuzione di misure precontrattuali, legittimo interesse del titolare e consenso ove applicabile."
+      },
+      {
+        "label": "Modalita di trattamento",
+        "value": "Trattamento digitale, riservato e protetto con accesso limitato ai soggetti autorizzati."
+      },
+      {
+        "label": "Conservazione",
+        "value": "Per il tempo necessario alla gestione della richiesta e per eventuali obblighi di legge applicabili."
+      },
+      {
+        "label": "Destinatari",
+        "value": "Fornitori tecnici strettamente necessari, infrastruttura hosting ed email delivery provider."
+      },
+      {
+        "label": "Diritti dell'interessato",
+        "value": "Accesso, rettifica, cancellazione, limitazione del trattamento e opposizione nei limiti previsti dalla normativa."
+      },
+      {
+        "label": "Contatto privacy",
+        "value": "privacy@noetra.it, oppure info@noetra.it."
+      },
+      {
+        "label": "Nota",
+        "value": "Nessun dato personale viene venduto o ceduto per finalita commerciali."
+      }
+    ]
+  },
+  "cookiePolicyPage": {
+    "eyebrow": "Compliance",
+    "title": "Cookie Policy",
+    "description": "Informativa essenziale su cookie e strumenti tecnici attivi allo stato attuale del sito.",
+    "points": [
+      "Il sito utilizza esclusivamente cookie tecnici e funzionali necessari al corretto funzionamento.",
+      "Il cookie NOETRA_LOCALE viene utilizzato per la persistenza della lingua selezionata.",
+      "Vercel Analytics puo essere utilizzato per statistiche aggregate, ove attivo.",
+      "Allo stato attuale non risultano cookie di marketing o profilazione.",
+      "Non sono presenti Meta Pixel, Google Ads o LinkedIn Insight Tag.",
+      "L'utente puo gestire o disabilitare i cookie direttamente dalle impostazioni del browser.",
+      "In caso di introduzione futura di strumenti marketing verra implementato un apposito banner di consenso."
+    ]
   },
   "noetralexPage": {
     "eyebrow": "NOETRALEX",
