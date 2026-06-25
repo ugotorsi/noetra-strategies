@@ -768,32 +768,71 @@
   "legalPage": {
     "eyebrow": "Legal",
     "title": "Legal and Corporate Information",
-    "description": "Institutional legal information and professional contact references for NOETRA STRATEGIES and NOETRALEX domains.",
-    "institutionalName": "NOETRA STRATEGIES s.r.l.s.",
-    "rows": [
+    "description": "Official corporate details and institutional legal notice for NOETRA STRATEGIES S.R.L.S.",
+    "companyName": "NOETRA STRATEGIES S.R.L.S.",
+    "corporateCardLabel": "Corporate Data",
+    "corporateRows": [
       {
         "label": "Registered Office",
-        "value": "Italy"
+        "values": [
+          "Via Ferdinando Iannaccone, 4",
+          "83100 Avellino (AV) - Italy"
+        ],
+        "isEmail": false
       },
       {
-        "label": "VAT Number",
-        "value": "[PLACEHOLDER]"
+        "label": "VAT / Tax Code",
+        "values": [
+          "03250700642"
+        ],
+        "isEmail": false
       },
       {
-        "label": "REA",
-        "value": "[PLACEHOLDER]"
+        "label": "REA Number",
+        "values": [
+          "AV-315078"
+        ],
+        "isEmail": false
       },
       {
-        "label": "Certified Email",
-        "value": "[PLACEHOLDER]"
+        "label": "Companies Register",
+        "values": [
+          "Chamber of Commerce Irpinia Sannio"
+        ],
+        "isEmail": false
+      },
+      {
+        "label": "Certified Email (PEC)",
+        "values": [
+          "noetra.strategies@pec.it"
+        ],
+        "isEmail": true
+      },
+      {
+        "label": "Institutional Emails",
+        "values": [
+          "info@noetra.it",
+          "contact@noetra.it",
+          "advisory@noetra.it"
+        ],
+        "isEmail": true
+      },
+      {
+        "label": "Sole Director",
+        "values": [
+          "Ugo Torsi"
+        ],
+        "isEmail": false
       }
     ],
-    "emails": {
-      "info": "General Desk",
-      "advisory": "Advisory Desk",
-      "contact": "Coordination Desk"
-    },
-    "domainLabel": "NoetraLex Domains"
+    "noteCardLabel": "Informative Note",
+    "noteHeading": "INFORMATIVE NOTE",
+    "noteParagraphs": [
+      "NOETRA STRATEGIES S.R.L.S. operates as a multidisciplinary strategic advisory company, coordinating specialist expertise across legal, tax, technical, engineering, compliance and corporate advisory domains.",
+      "The information published on this website is provided exclusively for informational and institutional purposes. It does not constitute professional advice, legal or technical opinion, nor a contractual offer, unless expressly set out in specific agreements signed with the client.",
+      "Each professional engagement is performed in accordance with principles of confidentiality, independence, fairness and compliance with applicable laws.",
+      "Use of website content is permitted exclusively for informational purposes. Any reproduction, including partial reproduction, is prohibited without prior written authorization from NOETRA STRATEGIES S.R.L.S."
+    ]
   },
   "privacyPage": {
     "eyebrow": "Compliance",
