@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { LogIn, Menu, X } from "lucide-react";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { useState } from "react";
 
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { getMessages, type Locale, withLocalePath } from "@/lib/i18n";
+import { getPlatformLoginUrl } from "@/lib/platform";
 import { cn } from "@/lib/utils";
 
 import { Container } from "./Container";
@@ -29,6 +30,7 @@ export function Navbar({ locale }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
   const messages = getMessages(locale);
+  const platformLoginUrl = getPlatformLoginUrl();
 
   const progress = useSpring(scrollYProgress, {
     stiffness: 130,
@@ -56,7 +58,7 @@ export function Navbar({ locale }: NavbarProps) {
             <span className="text-[#C6A96B]">STRATEGIES</span>
           </Link>
 
-          <nav className="hidden items-center gap-1 md:flex">
+          <nav className="hidden items-center gap-1 xl:flex">
             {navItems.map((item) => (
               <Link
                 key={item.key}
@@ -75,8 +77,18 @@ export function Navbar({ locale }: NavbarProps) {
               className="block"
             />
 
+            {platformLoginUrl ? (
+              <a
+                href={platformLoginUrl}
+                className="hidden min-h-10 items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-[#F5F7FA]/80 transition hover:border-[#C6A96B]/55 hover:text-white xl:inline-flex"
+              >
+                <LogIn size={16} aria-hidden="true" />
+                {messages.navigation.restrictedArea}
+              </a>
+            ) : null}
+
             <button
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-[#F5F7FA] transition hover:bg-white/10 md:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-[#F5F7FA] transition hover:bg-white/10 xl:hidden"
               onClick={() => setMenuOpen((value) => !value)}
               aria-label={messages.navigation.toggle}
               aria-expanded={menuOpen}
@@ -93,7 +105,7 @@ export function Navbar({ locale }: NavbarProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="border-t border-white/10 bg-[#0B0F14]/95 px-5 py-4 backdrop-blur-xl md:hidden"
+              className="border-t border-white/10 bg-[#0B0F14]/95 px-5 py-4 backdrop-blur-xl xl:hidden"
             >
               <Container className="space-y-3 px-0">
                 {navItems.map((item) => (
@@ -109,6 +121,16 @@ export function Navbar({ locale }: NavbarProps) {
                     {messages.navigation[item.key as keyof typeof messages.navigation]}
                   </Link>
                 ))}
+                {platformLoginUrl ? (
+                  <a
+                    href={platformLoginUrl}
+                    onClick={() => setMenuOpen(false)}
+                    className="flex min-h-11 items-center gap-2 rounded-xl border border-white/12 px-4 py-3 text-sm font-medium text-[#F5F7FA]/85 transition hover:border-[#C6A96B]/45 hover:bg-white/5 hover:text-white"
+                  >
+                    <LogIn size={17} aria-hidden="true" />
+                    {messages.navigation.restrictedArea}
+                  </a>
+                ) : null}
               </Container>
             </motion.nav>
           ) : null}

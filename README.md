@@ -54,8 +54,11 @@ Copy `.env.example` and configure values for your environment.
 ```env
 RESEND_API_KEY=
 NEXT_PUBLIC_SITE_URL=
+NEXT_PUBLIC_PLATFORM_URL=
 CONTACT_EMAIL=info@noetra.it
 ```
+
+`NEXT_PUBLIC_PLATFORM_URL` is the public base URL of the reserved platform. Use a local URL in development, the platform staging URL in Preview, and `https://app.noetra.it` in Production after domain and security hardening.
 
 ## Deployment Instructions (Vercel)
 
