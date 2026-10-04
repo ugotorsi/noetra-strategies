@@ -16,6 +16,7 @@ const navItems = [
   { key: "about", path: "/about" },
   { key: "services", path: "/services" },
   { key: "innovation", path: "/innovation" },
+  { key: "projects", path: "/projects" },
   { key: "network", path: "/network" },
   { key: "contact", path: "/contact" },
   { key: "legal", path: "/legal" },

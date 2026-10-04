@@ -60,6 +60,16 @@
         "strategic analytics"
       ]
     },
+    "projects": {
+      "title": "Legal-Tech Projects and Proprietary Systems",
+      "description": "An institutional overview of legal-tech projects and proprietary systems developed by NOETRA to support complex professional activities.",
+      "keywords": [
+        "legal-tech projects",
+        "proprietary systems",
+        "complex case management",
+        "port concessions"
+      ]
+    },
     "network": {
       "title": "Institutional Network and Professional Coordination",
       "description": "Multidisciplinary orchestration across legal, technical and advisory functions for institutional and corporate execution.",
@@ -137,6 +147,7 @@
     "about": "About",
     "services": "Services",
     "innovation": "Innovation",
+    "projects": "Projects",
     "network": "Network",
     "contact": "Contact",
     "legal": "Legal",
@@ -668,6 +679,30 @@
       "domainLabel": "Legal Intelligence Domains",
       "domainNote": "NOETRALEX domains host dedicated legal-tech intelligence experiences for AI-enabled procedural coordination.",
       "neuralSignal": "Neural system signal continuity monitored"
+    },
+    "projects": {
+      "eyebrow": "Projects",
+      "title": "Projects developed for complex professional contexts",
+      "description": "A selection of proprietary initiatives developed within NOETRA's activities, combining structured processes, human oversight and progressive operational integration.",
+      "projectLabel": "Legal-tech project",
+      "name": "Concessioni Portuali",
+      "status": "Restricted access",
+      "summary": "A proprietary legal-tech platform developed within NOETRA's activities for the structured management, analysis and reconstruction of complex concession and public-domain case files.",
+      "capabilitiesTitle": "Functional areas",
+      "capabilities": [
+        "Document organization",
+        "Chronological reconstruction",
+        "Relevant parties and relationships",
+        "Titles, acts and deadlines",
+        "Identification of critical issues and contradictions",
+        "Support for regulatory and case-law research",
+        "Structured report production",
+        "Human-reviewed workflows"
+      ],
+      "developmentNote": "The architecture is prepared for the progressive integration of analytical and operational support capabilities. Features in development are made available as individual workflows reach the appropriate level of maturity.",
+      "humanOversight": "Professional assessments and decisions remain subject to human oversight.",
+      "ownership": "Concessioni Portuali is a proprietary project developed within the activities of NOETRA STRATEGIES.",
+      "cta": "Access platform"
     },
     "network": {
       "eyebrow": "Network",

@@ -57,6 +57,16 @@
         "decision support"
       ]
     },
+    "projects": {
+      "title": "Progetti legal-tech e sistemi proprietari",
+      "description": "Presentazione istituzionale dei progetti legal-tech e dei sistemi proprietari sviluppati da NOETRA per supportare attività professionali complesse.",
+      "keywords": [
+        "progetti legal-tech",
+        "sistemi proprietari",
+        "gestione fascicoli complessi",
+        "concessioni portuali"
+      ]
+    },
     "network": {
       "title": "Network istituzionale e coordinamento professionale",
       "description": "Coordinamento multidisciplinare di competenze legali, tecniche e advisory per mandati corporate e istituzionali ad alta complessità.",
@@ -133,6 +143,7 @@
     "about": "Chi siamo",
     "services": "Servizi",
     "innovation": "Innovazione",
+    "projects": "Progetti",
     "network": "Network",
     "contact": "Contatti",
     "legal": "Legale",
@@ -664,6 +675,30 @@
       "domainLabel": "Domini di legal intelligence",
       "domainNote": "I domini NOETRALEX supportano analisi normativa avanzata, document intelligence e legal operations integrate.",
       "neuralSignal": "Segnale operativo monitorato in continuo"
+    },
+    "projects": {
+      "eyebrow": "Progetti",
+      "title": "Progetti sviluppati per contesti professionali complessi",
+      "description": "Una selezione di iniziative proprietarie sviluppate nell'ambito delle attività di NOETRA, con approccio strutturato, controllo umano e progressiva integrazione operativa.",
+      "projectLabel": "Progetto legal-tech",
+      "name": "Concessioni Portuali",
+      "status": "Accesso riservato",
+      "summary": "Piattaforma legal-tech proprietaria sviluppata nell'ambito delle attività di NOETRA per la gestione, analisi e ricostruzione strutturata di fascicoli complessi in materia concessoria e demaniale.",
+      "capabilitiesTitle": "Ambiti funzionali",
+      "capabilities": [
+        "Organizzazione documentale",
+        "Ricostruzione cronologica",
+        "Soggetti e rapporti rilevanti",
+        "Titoli, atti e scadenze",
+        "Individuazione di criticità e contraddizioni",
+        "Supporto alla ricerca normativa e giurisprudenziale",
+        "Produzione di report strutturati",
+        "Workflow con revisione umana"
+      ],
+      "developmentNote": "L'architettura è predisposta per l'integrazione progressiva di capacità di analisi e supporto operativo. Le funzionalità in sviluppo vengono rese disponibili in base alla maturità dei singoli workflow.",
+      "humanOversight": "Le valutazioni e decisioni professionali restano soggette a controllo umano.",
+      "ownership": "Concessioni Portuali è un progetto proprietario sviluppato nell'ambito delle attività di NOETRA STRATEGIES.",
+      "cta": "Accedi alla piattaforma"
     },
     "network": {
       "eyebrow": "Network",
