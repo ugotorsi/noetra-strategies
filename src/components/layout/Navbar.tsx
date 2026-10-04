@@ -21,6 +21,8 @@ const navItems = [
   { key: "legal", path: "/legal" },
 ];
 
+const RESERVED_AREA_URL = "https://app.noetra.it";
+
 type NavbarProps = {
   locale: Locale;
 };
@@ -69,6 +71,13 @@ export function Navbar({ locale }: NavbarProps) {
           </nav>
 
           <div className="flex items-center gap-3">
+            <a
+              href={RESERVED_AREA_URL}
+              className="hidden rounded-full border border-[#C6A96B]/45 bg-[#C6A96B]/10 px-4 py-2 text-sm font-medium text-[#F5F7FA] transition-all duration-300 hover:border-[#C6A96B]/70 hover:bg-[#C6A96B]/15 md:inline-flex"
+            >
+              {messages.navigation.reservedArea}
+            </a>
+
             <LanguageSwitcher
               locale={locale}
               labels={messages.languageSwitcher}
@@ -109,6 +118,18 @@ export function Navbar({ locale }: NavbarProps) {
                     {messages.navigation[item.key as keyof typeof messages.navigation]}
                   </Link>
                 ))}
+                <div className="border-t border-white/10 pt-3">
+                  <a
+                    href={RESERVED_AREA_URL}
+                    onClick={() => setMenuOpen(false)}
+                    className={cn(
+                      "block rounded-xl border border-[#C6A96B]/40 bg-[#C6A96B]/10 px-4 py-3 text-center text-sm font-medium text-[#F5F7FA]",
+                      "transition hover:border-[#C6A96B]/65 hover:bg-[#C6A96B]/15",
+                    )}
+                  >
+                    {messages.navigation.reservedArea}
+                  </a>
+                </div>
               </Container>
             </motion.nav>
           ) : null}
